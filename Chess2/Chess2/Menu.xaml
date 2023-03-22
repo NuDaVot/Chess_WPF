@@ -35,7 +35,7 @@
                 <Button Margin="0, 26" 
                         Height="120" 
                         Width="530" 
-                        Style="{StaticResource ButtonStyle}"
+                        Style="{StaticResource ButtonStyleBlue}"
                         Content="Выйти"/>
             </StackPanel>
         </Viewbox>

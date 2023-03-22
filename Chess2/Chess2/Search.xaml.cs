@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Chess2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Search.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Search : Window
     {
-        public MainWindow()
+        public Search()
         {
             InitializeComponent();
-            MW.Navigate(new Menu());
         }
     }
 }

@@ -8,7 +8,7 @@
         d:DesignHeight="1080" d:DesignWidth="1920" 
         Title="Menu_Authorized_">
     <Window.Background>
-        <ImageBrush ImageSource="Resources/Меню.png"/>
+        <ImageBrush ImageSource="Resources/Pictures/Меню.png"/>
     </Window.Background>
     <Grid>
         <Viewbox Stretch="Uniform" 
