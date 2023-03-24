@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\79991\source\repos\NuDaVot\Chess_WPF\Chess2\Chess2\App.xaml
-11407045341
+8-846484984
 
-6572246053
+23-988787198
 227-1911314362
-MainWindow.xaml;
+Views\MainWindow.xaml;Views\Menu.xaml;Views\MenuA.xaml;Views\Profile.xaml;Views\ProfileSet.xaml;Views\Search.xaml;Views\SignIn.xaml;Views\SignUp.xaml;
 
 False
 
