@@ -37,7 +37,8 @@
                         Height="120" 
                         Width="530" 
                         Style="{StaticResource ButtonStyle}"
-                        Content="Таблица лидеров"/>
+                        Command="{Binding LeaderboardCommand, IsAsync=True}"
+                        Content="Таблица лидеров"  />
             </StackPanel>
         </Viewbox>
     </Grid>

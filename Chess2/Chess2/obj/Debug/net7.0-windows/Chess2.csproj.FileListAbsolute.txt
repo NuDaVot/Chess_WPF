@@ -155,3 +155,12 @@ C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Authorization.png
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Icon.png
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Registr.png
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ChooseColor.g.cs
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ChooseColor.baml
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\HeadsOrTails.g.cs
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Leaderboard.g.cs
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\HeadsOrTails.baml
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Leaderboard.baml
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Fonts\Oswald-Bold.ttf
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Fonts\Oswald-ExtraLight.ttf
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Fonts\Oswald-Light.ttf

@@ -8,5 +8,6 @@
             _pageService = pageService;
         }
         public DelegateCommand RegistrCommand => new(() => _pageService.ChangePage(new Menu()));
+        public DelegateCommand CanselCommand => new(() => _pageService.ChangePage(new MenuA()));
     }
 }

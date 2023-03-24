@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-bold.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-extralight.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-light.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/background.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/authorization.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%93%d0%b0%d0%bb%d0%ba%d0%b0.png")]

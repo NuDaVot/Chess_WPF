@@ -36,8 +36,30 @@
                     </Trigger>
                 </Style.Triggers>
             </Style>
+            <Style x:Key="ButtonStyleBlackOpponent" TargetType="Button">
+                <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
+                <Setter Property="Background" Value="Black"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background"  Value="#F5F5F5"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
             <Style x:Key="ButtonStyleBlue" TargetType="Button">
-                <Setter Property="FontFamily" Value="Resources\#Rajdhani"/>
                 <Setter Property="VerticalContentAlignment" Value="Center"/>
                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 <Setter Property="Background" Value="#40A1A7"/>
@@ -75,13 +97,18 @@
                 <Setter Property="FontSize" Value="100"/>
                 <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
             </Style>
+
+            <Style x:Key="TextBlockStyle1" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="100"/>
+                <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+            </Style>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

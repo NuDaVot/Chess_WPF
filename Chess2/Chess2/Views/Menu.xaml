@@ -29,6 +29,7 @@
                         Height="120" 
                         Width="530"
                         Style="{StaticResource ButtonStyle}"
+                        Command="{Binding LeaderboardCommand, IsAsync=True}"
                         Content="Таблица лидеров"/>
                 <Button Margin="0, 26" 
                         Height="120" 

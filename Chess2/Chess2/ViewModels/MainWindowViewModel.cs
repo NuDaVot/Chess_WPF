@@ -1,6 +1,4 @@
-﻿using System.Resources;
-using System.Windows.Media.Imaging;
-
+﻿
 namespace Chess2.ViewModels
 {
     public class MainWindowViewModel: BindableBase

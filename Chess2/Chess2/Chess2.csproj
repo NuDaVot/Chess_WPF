@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\Oswald-Bold.ttf" />
+    <None Remove="Resources\Fonts\Oswald-ExtraLight.ttf" />
+    <None Remove="Resources\Fonts\Oswald-Light.ttf" />
     <None Remove="Resources\Pictures\Authorization.png" />
     <None Remove="Resources\Pictures\Background.png" />
     <None Remove="Resources\Pictures\Icon.png" />
@@ -21,6 +24,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\Fonts\Oswald-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Oswald-ExtraLight.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Oswald-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Pictures\Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
