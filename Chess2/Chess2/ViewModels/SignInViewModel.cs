@@ -8,6 +8,7 @@ namespace Chess2.ViewModels
 		{
 			_pageService = pageService;
 		}
-		public DelegateCommand SignInCommand => new(() => _pageService.ChangePage(new Menu()));
-	}
+		public DelegateCommand AuthorizationCommand => new(() => _pageService.ChangePage(new Menu()));
+        public DelegateCommand CanselCommand => new(() => _pageService.ChangePage(new MenuA()));
+    }
 }

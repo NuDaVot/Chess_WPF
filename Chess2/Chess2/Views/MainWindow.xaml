@@ -9,5 +9,5 @@
       Title="MainWindow" DataContext="{Binding MainWindowViewModel, 
                 Source={StaticResource ViewModelLocator}}">
 
-    <Frame NavigationUIVisibility="Hidden" Content="{Binding PageSource}"/>
+    <Frame NavigationUIVisibility="Hidden" Content="{Binding PageSource}" Background="{Binding Background}"/>
 </Window>

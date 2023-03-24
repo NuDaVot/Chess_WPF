@@ -18,7 +18,7 @@
                     <TextBlock Text="Регистрация" 
                                Style="{StaticResource TextBlockStyle}"
                                FontSize="85"/>
-                    <Image Source="\Resources/Pictures/регистрация.png"/>
+                    <Image Source="\Resources/Pictures/Registr.png"/>
                 </StackPanel>
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Логин"
@@ -49,6 +49,7 @@
                             Height="63"
                             Width="235"
                             Style="{StaticResource ButtonStyle}"
+                            Command="{Binding RegistrCommand, IsAsync=True}"
                             FontSize="45"
                             Content="Регистрация"/>
                     <Button Margin="60,30,0,0"

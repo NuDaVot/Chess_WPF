@@ -8,6 +8,7 @@
 			_pageService = pageService;
 		}
 		public DelegateCommand SearchCommand => new(() => _pageService.ChangePage(new Search()));
-		
-	}
+        public DelegateCommand ExitCommand => new(() => _pageService.ChangePage(new MenuA()));
+
+    }
 }

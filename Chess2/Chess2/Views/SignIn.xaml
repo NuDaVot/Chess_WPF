@@ -18,7 +18,7 @@
                     <TextBlock Text="Войти"
                                Style="{StaticResource TextBlockStyle}"
                                FontSize="100" Margin="0,0,20,0"/>
-                    <Image Source="\Resources/Pictures/Авторизация.png"/>
+                    <Image Source="/Resources/Pictures/authorization.png"/>
                 </StackPanel>
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Логин"
@@ -37,6 +37,7 @@
                             Height="63"
                             Width="235"
                             Style="{StaticResource ButtonStyle}"
+                            Command="{Binding AuthorizationCommand, IsAsync=True}"
                             FontSize="45"
                             Content="Войти"/>
                     <Button Margin="60,30,0,0"
@@ -44,6 +45,7 @@
                             Width="235"
                             Style="{StaticResource ButtonStyleBlue}"
                             Content="Отмена"
+                            Command="{Binding CanselCommand, IsAsync=True}"
                             FontSize="45"/>
                 </StackPanel>
             </StackPanel>

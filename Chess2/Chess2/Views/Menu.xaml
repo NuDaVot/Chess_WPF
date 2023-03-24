@@ -17,7 +17,7 @@
                     <TextBlock Text="Chess"
                                Style="{StaticResource TextBlockStyle}"
                                Margin="100,0,0,0"/>
-                    <Image Source="Resources/Иконкаприложения.png" Margin="10,0,0,0"/>
+                    <Image Source="/Resources/Pictures/Icon.png" Margin="10,0,0,0"/>
                 </StackPanel>
                 <Button Margin="0, 26" 
                         Height="120" 
@@ -34,6 +34,7 @@
                         Height="120" 
                         Width="530" 
                         Style="{StaticResource ButtonStyleBlue}"
+                        Command="{Binding ExitCommand, IsAsync=True}"
                         Content="Выйти"/>
             </StackPanel>
         </Viewbox>

@@ -20,6 +20,7 @@
                     <Button Height="63"
                         Width="235"
                         Style="{StaticResource ButtonStyleBlue}"
+                        Command="{Binding CancelCommand, IsAsync=True}"
                         Content="Отмена"
                         FontSize="45" Margin="0,70,0,0"/>
             </StackPanel>
