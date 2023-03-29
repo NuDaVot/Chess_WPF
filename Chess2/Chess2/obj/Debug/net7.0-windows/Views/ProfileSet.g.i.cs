@@ -57,7 +57,7 @@ namespace Chess2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Chess2;component/views/profileset.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Chess2;V1.0.0.0;component/views/profileset.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ProfileSet.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
