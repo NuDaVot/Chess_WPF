@@ -30,7 +30,11 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0">
                 <TextBlock Style="{StaticResource TextBlockStyle}"
-                           Text="Выберите сторону" FontSize="100" FontWeight="SemiBold"/>
+                           Text="Жеребьевка" FontSize="100" FontWeight="SemiBold"/>
+                <TextBlock Style="{StaticResource TextBlockStyle}"
+                               Text="Выберите сторону" 
+                               FontSize="50" 
+                           Foreground="#FF8A8A8A"/>
             </StackPanel>
             <StackPanel Grid.Row="1"
                         Orientation="Horizontal">
