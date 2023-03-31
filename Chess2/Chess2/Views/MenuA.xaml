@@ -1,14 +1,16 @@
-﻿<Page x:Class="Chess2.MenuA"
+﻿<Page x:Class="Chess2.Views.MenuA"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Chess2"
+        xmlns:local="clr-namespace:Chess2.Views"
+        xmlns:vm="clr-namespace:Chess2.ViewModels"
         mc:Ignorable="d"
         d:DesignHeight="1080" d:DesignWidth="1920" 
-        Title="MenuA" 
-        DataContext="{Binding MenuAViewModel,
-            Source={StaticResource ViewModelLocator}}">
+        Title="MenuA">
+    <Page.DataContext>
+        <vm:MenuAViewModel/>
+    </Page.DataContext>
     <Grid>
         <Viewbox Stretch="Uniform" 
                  MaxWidth="550"

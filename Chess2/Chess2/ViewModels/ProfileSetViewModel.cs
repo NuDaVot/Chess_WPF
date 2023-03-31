@@ -2,10 +2,11 @@
 {
    public class ProfileSetViewModel : BindableBase
    {
-        private readonly PageService _pageService;
-        public ProfileSetViewModel(PageService pageService)
+		readonly ProfileSetModel _model = new ProfileSetModel();
+		public ProfileSetViewModel()
         {
-            _pageService = pageService;
-        }
-    }
+			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+
+		}
+	}
 }

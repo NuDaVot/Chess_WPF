@@ -3,10 +3,21 @@ namespace Chess2.ViewModels
 {
     public class ChooseColorViewModel : BindableBase
     {
-        private readonly PageService _pageService;
-        public ChooseColorViewModel(PageService pageService)
+		readonly ChooseColorModel _model = new ChooseColorModel();
+		public ChooseColorViewModel()
         {
-            _pageService = pageService;
-        }
-    }
+			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+			Black = new DelegateCommand<string>(str =>
+			{
+				_model.IsBlack();
+			});
+			White = new DelegateCommand<string>(str =>
+			{
+				_model.IsWhite();
+			});
+		}
+		public DelegateCommand<string> Black { get; }
+		public DelegateCommand<string> White { get; }
+
+	}
 }
