@@ -2,10 +2,9 @@
 {
     public class ProfileViewModel : BindableBase
     {
-        private readonly PageService _pageService;
-        public ProfileViewModel(PageService pageService)
+        
+        public ProfileViewModel()
         {
-            _pageService = pageService;
         }
     }
 }

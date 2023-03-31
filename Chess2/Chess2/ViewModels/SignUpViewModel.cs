@@ -2,12 +2,10 @@
 {
     public class SignUpViewModel : BindableBase
     {
-        private readonly PageService _pageService;
-        public SignUpViewModel(PageService pageService)
+        public SignUpViewModel()
         {
-            _pageService = pageService;
         }
-        public DelegateCommand RegistrCommand => new(() => _pageService.ChangePage(new Menu()));
-        public DelegateCommand CanselCommand => new(() => _pageService.ChangePage(new MenuA()));
+        //public DelegateCommand RegistrCommand => new(() => _pageService.ChangePage(new Menu()));
+        //public DelegateCommand CanselCommand => new(() => _pageService.ChangePage(new MenuA()));
     }
 }

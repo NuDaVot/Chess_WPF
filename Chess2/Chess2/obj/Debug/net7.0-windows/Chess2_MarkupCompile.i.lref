@@ -1,14 +1,5 @@
-﻿C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.i.cs
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\App.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\ChooseColor.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\HeadsOrTails.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\Leaderboard.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\MainWindow.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\Menu.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\MenuA.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\Profile.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\ProfileSet.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\Search.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\SignIn.xaml;;
-FC:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\Views\SignUp.xaml;;
+﻿
+
+FD:\Chess_WPF\Chess2\Chess2\Views\HeadsOrTails.xaml;;
+FD:\Chess_WPF\Chess2\Chess2\Views\SignIn.xaml;;
 

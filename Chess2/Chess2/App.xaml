@@ -5,7 +5,6 @@
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <local:ViewModelLocator x:Key="ViewModelLocator"/>
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="FontFamily" Value="Resources\#Rajdhani"/>
                 <Setter Property="VerticalContentAlignment" Value="Center"/>

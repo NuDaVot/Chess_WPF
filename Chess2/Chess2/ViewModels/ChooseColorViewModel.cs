@@ -3,10 +3,9 @@ namespace Chess2.ViewModels
 {
     public class ChooseColorViewModel : BindableBase
     {
-        private readonly PageService _pageService;
-        public ChooseColorViewModel(PageService pageService)
+        public ChooseColorViewModel()
         {
-            _pageService = pageService;
+            
         }
     }
 }
