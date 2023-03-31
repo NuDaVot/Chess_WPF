@@ -30,11 +30,12 @@
                             Width="235"
                             Style="{StaticResource ButtonStyle}"
                             FontSize="45"
-                            Content="Content"/>
+                            Content="Doc"/>
                     <Button Margin="60,30,0,0"
                             Height="63"
                             Width="235"
                             Style="{StaticResource ButtonStyleBlue}"
+                            Command="{Binding CancelCommand,IsAsync=True}"
                             Content="Отмена"
                             FontSize="45"/>
                 </StackPanel>

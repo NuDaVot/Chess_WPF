@@ -4,10 +4,10 @@ namespace Chess2.Model
 {
     class HeadsOrTailsModel : BindableBase
     {
-		MainWindowModel _mainWimdow;
+		MainWindowModel _mainWindow;
 		public HeadsOrTailsModel()
 		{
-			_mainWimdow = MainWindowViewModel._metod;
+			_mainWindow = MainWindowViewModel._metod;
 		}
 
 	}

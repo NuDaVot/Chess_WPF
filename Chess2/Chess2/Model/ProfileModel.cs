@@ -4,10 +4,10 @@ namespace Chess2.Model
 {
     class ProfileModel : BindableBase
 	{
-		MainWindowModel _mainWimdow;
+		MainWindowModel _mainWindow;
 		public ProfileModel()
 		{
-			_mainWimdow = MainWindowViewModel._metod;
+			_mainWindow = MainWindowViewModel._metod;
 		}
 	}
 }
