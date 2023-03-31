@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "0JP/2oRb+W44ONAVzApiv2Xdgg1sJg5JuXa/b4FDPNltJ45HFP4FKV/X6CR8auHHlnZlpbxtJswaDW2974kZHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\nudan\\Source\\Repos\\NuDaVot\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
@@ -65,4 +66,11 @@
       ]
     }
   ]
+=======
+  "dgSpecHash": "NuMOpTNjelaCMHEEAQDoJmhV6sElPfnnPAlKYi9JdIEs9NKKXCWVOogkMST4QgZdLSpeLEhSR4SZATH1wf+CGw==",
+  "success": true,
+  "projectFilePath": "D:\\3 курс 2\\GidHab\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> Stashed changes
 }
