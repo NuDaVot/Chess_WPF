@@ -4,10 +4,14 @@ namespace Chess2.Model
 {
     class SearchModel : BindableBase
 	{
-		MainWindowModel _mainWimdow;
+		MainWindowModel _mainWindow;
 		public SearchModel()
 		{
-			_mainWimdow = MainWindowViewModel._metod;
+			_mainWindow = MainWindowViewModel._metod;
+		}
+		public void IsCancel()
+		{
+			_mainWindow.Navipage("Menu.xaml");
 		}
 	}
 }

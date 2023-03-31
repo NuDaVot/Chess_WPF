@@ -2,9 +2,17 @@
 {
     public class SearchViewModel : BindableBase
     {
-        public SearchViewModel()
+		readonly SearchModel _model = new SearchModel();
+		public SearchViewModel()
         {
-        }
-        //public DelegateCommand CancelCommand => new(() => _pageService.ChangePage(new Menu()));
-    }
+			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+			CancelCommand = new DelegateCommand<string>(str =>
+			{
+				_model.IsCancel();
+			});
+		}
+		public DelegateCommand<string> CancelCommand { get; }
+
+		//public DelegateCommand CancelCommand => new(() => _pageService.ChangePage(new Menu()));
+	}
 }

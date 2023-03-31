@@ -1,13 +1,19 @@
-﻿
-
-namespace Chess2.Model
+﻿namespace Chess2.Model
 {
     class SignInModel : BindableBase
 	{
-		MainWindowModel _mainWimdow;
+		MainWindowModel _mainWindow;
 		public SignInModel()
 		{
-			_mainWimdow = MainWindowViewModel._metod;
+			_mainWindow = MainWindowViewModel._metod;
+		}
+		public void IsAuthorization()
+		{
+			_mainWindow.Navipage("Menu.xaml");
+		}
+		public void IsCansel()
+		{
+			_mainWindow.Navipage("MenuA.xaml");
 		}
 	}
 }

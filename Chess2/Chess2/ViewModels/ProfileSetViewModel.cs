@@ -2,9 +2,11 @@
 {
    public class ProfileSetViewModel : BindableBase
    {
-        
-        public ProfileSetViewModel()
+		readonly ProfileSetModel _model = new ProfileSetModel();
+		public ProfileSetViewModel()
         {
-        }
-    }
+			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+
+		}
+	}
 }

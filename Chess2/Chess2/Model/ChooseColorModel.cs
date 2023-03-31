@@ -4,10 +4,18 @@ namespace Chess2.Model
 {
     class ChooseColorModel : BindableBase
 	{
-		MainWindowModel _mainWimdow; 
+		MainWindowModel _mainWindow; 
 		public ChooseColorModel()
 		{
-			_mainWimdow = MainWindowViewModel._metod;
+			_mainWindow = MainWindowViewModel._metod;
+		}
+		public void IsBlack()
+		{
+			_mainWindow.Navipage("SIgnInPage.xaml");
+		}
+		public void IsWhite()
+		{
+			_mainWindow.Navipage("SIgnInPage.xaml");
 		}
 
 	}

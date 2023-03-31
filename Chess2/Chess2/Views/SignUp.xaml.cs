@@ -1,4 +1,4 @@
-﻿namespace Chess2
+﻿namespace Chess2.Views
 {
     /// <summary>
     /// Логика взаимодействия для SignUp.xaml
