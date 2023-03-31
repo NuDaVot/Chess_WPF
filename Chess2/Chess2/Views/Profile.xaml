@@ -1,0 +1,134 @@
+﻿<Page x:Class="Chess2.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chess2"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Profile" Background="#FFFFF0" DataContext="{Binding ProfileViewModel, Source={StaticResource ViewModelLocator}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Viewbox Stretch="Uniform" 
+                 MaxWidth="1920"
+                 MaxHeight="1080"
+                 Grid.Row="0">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Top"
+                        Grid.Row="0" 
+                        Margin="0,20,0,0">
+                <TextBlock Style="{StaticResource TextBlockStyle}"
+                           Text="Faker(2684)" 
+                           FontSize="100" 
+                           Margin="50,0,0,0"/>
+                <Button Style="{StaticResource ButtonStyle}"
+                        Margin="525,0,0,0">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Resources/Pictures/Порядок.png" 
+                                   Margin="50,0,0,0"/>
+                            <TextBlock Text="50"
+                                       Style="{StaticResource TextBlockStyle}"
+                                       FontSize="50"
+                                       TextAlignment="Center" 
+                                       Margin="20,40,20,0"/>
+                            <Image Source="Resources/Pictures/Галка.png" 
+                                   Margin="10,0,0,0"/>
+                            <TextBlock Text="20"
+                                       Style="{StaticResource TextBlockStyle}"
+                                       FontSize="50"
+                                       TextAlignment="Center" 
+                                       Margin="20,40,20,0"/>
+                            <Image Source="Resources/Pictures/Крестик.png"/>
+                            <TextBlock Text="25"
+                                       Style="{StaticResource TextBlockStyle}"
+                                       FontSize="50"
+                                       TextAlignment="Center" 
+                                       Margin="20,40,20,0"/>
+                            <Image Source="Resources/Pictures/Процент.png"/>
+                            <TextBlock Text="10"
+                                       Style="{StaticResource TextBlockStyle}"
+                                       FontSize="50"
+                                       TextAlignment="Center" 
+                                       Margin="20,40,40,0"/>
+                        </StackPanel>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Column="1">
+
+                
+                
+                
+            </ListView>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" Background="#EBECD0" Margin="0,20,0,50">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" 
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center" 
+                                Margin="0,15,0,0">
+                        <Image Source="Resources/Pictures/КрекстикКрасный.png" Margin="0,0,10,0"/>
+                        <TextBlock Text="10:00"
+                                       Style="{StaticResource TextBlockStyle}" 
+                                       Background="White" 
+                                       Foreground="#FF696868"
+                                       FontSize="45"
+                                       Width="250"/>
+                        <Image Source="Resources/Pictures/КрекстикКрасный.png" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,15,0,0">
+                        <Button Content="Faker(2684)"
+                                Background="Black"
+                                Width="130" Margin="0,0,11,0"/>
+                        <Button Content="FisserGR(2467)"
+                                Background="White"
+                                Foreground="Black"
+                                Width="130" Margin="11,0,0,0"/>
+                    </StackPanel>
+                    <ListView Grid.Row="2">
+                        
+                    </ListView>
+                </Grid>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/Pictures/Шахматная доска.png"
+                           Grid.Row="0"
+                           Margin="20"/>
+                    <StackPanel Grid.Row="1" Margin="30,200,30,0" >
+                        <Button Style="{StaticResource ButtonStyle}"
+                                Content="Отчет профиля" Margin="0,0,0,30"
+                                FontSize="40"/>
+                        <Button Style="{StaticResource ButtonStyleBlue}"
+                                Content="Назад"
+                                FontSize="40"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

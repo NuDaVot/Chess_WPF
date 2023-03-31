@@ -9,4 +9,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Chess2
-build_property.ProjectDir = C:\Users\79991\source\repos\NuDaVot\Chess_WPF\Chess2\Chess2\
+<<<<<<< Updated upstream
+build_property.ProjectDir = C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\
+=======
+build_property.ProjectDir = D:\3 курс 2\GidHab\Chess_WPF\Chess2\Chess2\
+>>>>>>> Stashed changes
