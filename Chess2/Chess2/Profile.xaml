@@ -10,7 +10,7 @@
       Title="Profile" Background="#FFFFF0">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Viewbox Stretch="Uniform"
@@ -24,19 +24,24 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Left"
                             VerticalAlignment="Center">
                     <TextBlock Text="Faker(2684)"
                                Style="{StaticResource TextBlockStyle}"
-                               Margin="35,0,150,0"
-                               FontSize="90"/>
+                               Height="130"
+                               MinWidth="450"
+                               FontSize="80"
+                               TextAlignment="Left"
+                               Margin="0,0,50,0"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1"
                             Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal"
                                 Margin="50">
                         <Image Source="Resources/Pictures/Шахматы Иконка.png"
-                               Margin="0,0,0,0"/>
+                               Margin="0,0,0,0"
+                               Height="82"
+                               Width="82"/>
                         <TextBlock Style="{StaticResource TextBlockStyle}"
                                Text="10"
                                Foreground="#FFCC2326"
@@ -48,7 +53,9 @@
                             Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal"
                                 Margin="50">
-                        <Image Source="Resources/Pictures/ГалкаВариант.png"/>
+                        <Image Source="Resources/Pictures/ГалкаВариант.png"
+                               Height="82"
+                               Width="82"/>
                         <TextBlock Style="{StaticResource TextBlockStyle}"
                                Text="10"
                                Foreground="#FFCC2326"
@@ -60,7 +67,9 @@
                             Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal"
                                 Margin="50">
-                        <Image Source="Resources/Pictures/КрестКрасный.png"/>
+                        <Image Source="Resources/Pictures/КрестКрасный.png"
+                               Height="82"
+                               Width="82"/>
                         <TextBlock Style="{StaticResource TextBlockStyle}"
                                Text="10"
                                Foreground="#FFCC2326"
@@ -72,7 +81,9 @@
                             Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal"
                                 Margin="50">
-                        <Image Source="Resources/Pictures/ПроцентКрасный.png"/>
+                        <Image Source="Resources/Pictures/ПроцентКрасный.png"
+                               Height="82"
+                               Width="82"/>
                         <TextBlock Style="{StaticResource TextBlockStyle}"
                                Text="10"
                                Foreground="#FFCC2326"
@@ -84,18 +95,20 @@
         </Viewbox>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.7*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="3.3*"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
                     <Image Source="Resources/Pictures/Шахматная доска.png"
-                           Margin="35"/>
+                           Margin="35"
+                           Height="555"
+                           Width="555"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1"
                             Orientation="Vertical"
@@ -115,7 +128,7 @@
                         CornerRadius="10"
                         Margin="35">
                     <Grid>
-                        <Viewbox>
+                        <Viewbox Stretch="Uniform">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -187,12 +200,12 @@
                 </Border>
             </StackPanel>
             <StackPanel Grid.Column="2">
-                <Viewbox>
+                <Viewbox Grid.Column="2">
                     <StackPanel Orientation="Horizontal">
                         <ListView>
                             <ListViewItem FontSize="80">Shamilaaaaaaaaaaaaa</ListViewItem>
-                            <ListViewItem FontSize="80">Shamil</ListViewItem>
-                            <ListViewItem FontSize="80">Shamil</ListViewItem>
+                            <ListViewItem FontSize="40">Shamil</ListViewItem>
+                            <ListViewItem FontSize="40">Shamil</ListViewItem>
                         </ListView>
                         <ScrollBar/>
                     </StackPanel>
