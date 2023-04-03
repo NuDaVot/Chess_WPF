@@ -20,7 +20,10 @@
                     <TextBlock Text="Chess" 
                                Margin="100,0,0,0"
                                Style="{StaticResource TextBlockStyle}"/>
-                    <Image Source="Resources/Иконкаприложения.png" Margin="10,0,0,0"/>
+                    <Image Source="Resources/Pictures/Иконкаприложения.png" 
+                           Margin="10,0,0,0"
+                           Height="100"
+                           Width="100"/>
                 </StackPanel>
                 <Button Margin="0, 26" 
                         Height="120" 

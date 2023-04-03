@@ -140,7 +140,9 @@
                                             Orientation="Horizontal"
                                             HorizontalAlignment="Center">
                                     <Image Source="Resources/Pictures/ГалкаЗеленый.png"
-                                           Margin="40,10,20,0"/>
+                                           Margin="40,10,20,0"
+                                           Height="40"
+                                           Width="40"/>
                                     <Border BorderBrush="Black"
                                             BorderThickness="1"
                                             CornerRadius="10"
@@ -157,7 +159,9 @@
                                                    Margin="70,0,70,0" FontWeight="SemiBold"/>
                                     </Border>
                                     <Image Source="Resources/Pictures/КрекстикКрасный.png"
-                                           Margin="20,10,40,0"/>
+                                           Margin="20,10,40,0"
+                                           Height="40"
+                                           Width="40"/>
                                 </StackPanel>
                                 <StackPanel Grid.Row="1"
                                             Orientation="Horizontal"
@@ -203,7 +207,7 @@
                 <Viewbox Grid.Column="2">
                     <StackPanel Orientation="Horizontal">
                         <ListView>
-                            <ListViewItem FontSize="80">Shamilaaaaaaaaaaaaa</ListViewItem>
+                            <ListViewItem FontSize="80">Shamil</ListViewItem>
                             <ListViewItem FontSize="40">Shamil</ListViewItem>
                             <ListViewItem FontSize="40">Shamil</ListViewItem>
                         </ListView>
