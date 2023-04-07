@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:smtx="namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+        xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
         xmlns:local="clr-namespace:Chess2"
         mc:Ignorable="d"
         Title="GamePage" Height="1080" Width="1920" Background="#FFFFF0">
@@ -36,7 +36,7 @@
                            TextAlignment="Left"
                            Margin="30,0,0,0"
                            Foreground="#FF696868"/>
-                <Border BorderBrush="Black"
+                <Border BorderBrush="White"
                         BorderThickness="1"
                         CornerRadius="10"
                         Padding="4"
@@ -70,7 +70,7 @@
                            TextAlignment="Left"
                            Margin="30,0,0,0"
                            Foreground="#FF696868"/>
-                <Border BorderBrush="White"
+                <Border BorderBrush="Black"
                         BorderThickness="1"
                         CornerRadius="10"
                         Padding="4"
@@ -120,5 +120,12 @@
                 </Button>
             </StackPanel>
         </Viewbox>
+        <smtx:XamlDisplay Grid.Column="2"
+                          Grid.RowSpan="4">
+            <materialDesign:DrawerHost Name="DrawerHost"
+                                       Background="Black">
+                
+            </materialDesign:DrawerHost>
+        </smtx:XamlDisplay>
     </Grid>
 </Window>

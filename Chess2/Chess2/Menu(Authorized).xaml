@@ -20,7 +20,7 @@
                     <TextBlock Text="Chess" 
                                Margin="100,0,0,0"
                                Style="{StaticResource TextBlockStyle}"/>
-                    <Image Source="Resources/Pictures/Иконкаприложения.png" 
+                    <Image Source="Resources/Pictures/ИконкаПриложения.png" 
                            Margin="10,0,0,0"
                            Height="100"
                            Width="100"/>
