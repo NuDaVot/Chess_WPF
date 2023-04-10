@@ -8,6 +8,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/bb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/bw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/kb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/kw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/nb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/nw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/pb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/pw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/qb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/qw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/rb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/rw.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-bold.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-extralight.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-light.ttf")]

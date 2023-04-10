@@ -11,10 +11,10 @@ false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\App.xaml
 121673126375
-141083451811
+26-303256393
 43-1562309489
 227-1357362007
 Views\Board.xaml;Views\ChooseColor.xaml;Views\HeadsOrTails.xaml;Views\Leaderboard.xaml;Views\MainWindow.xaml;Views\Menu.xaml;Views\MenuA.xaml;Views\Profile.xaml;Views\ProfileSet.xaml;Views\Search.xaml;Views\SignIn.xaml;Views\SignUp.xaml;
 
-False
+True
 

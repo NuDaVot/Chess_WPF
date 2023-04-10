@@ -353,3 +353,15 @@ C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-win
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Board.g.cs
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Board.baml
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Orel.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\BB.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\BW.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\KB.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\KW.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\NB.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\NW.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\PB.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\PW.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\QB.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\QW.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\RB.png
+C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\RW.png
