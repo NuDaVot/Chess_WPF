@@ -205,13 +205,72 @@
             </StackPanel>
             <StackPanel Grid.Column="2">
                 <Viewbox Grid.Column="2">
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                Margin="20">
                         <ListView>
-                            <ListViewItem FontSize="80">Shamil</ListViewItem>
-                            <ListViewItem FontSize="40">Shamil</ListViewItem>
-                            <ListViewItem FontSize="40">Shamil</ListViewItem>
+                            <ListViewItem>
+                                <Button Style="{StaticResource ButtonStyle}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="0"
+                                               Source="Resources/Pictures/БыстрыйРежим.png"
+                                               Height="42"
+                                               Width="42"
+                                               Margin="35,15,50,15"/>
+                                        <StackPanel Grid.Column="1"
+                                                    Orientation="Vertical"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Margin="0,0,0,0">
+                                            <StackPanel Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center">
+                                                <Image Source="Resources/Pictures/БелыйМелкий.png" 
+                                                       Height="20"
+                                                       Width="20"
+                                                       Margin="0,0,7,10"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="Оппонент 1(1999)"
+                                                           FontSize="15"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center">
+                                                <Image Source="Resources/Pictures/ЧерныйМелкий.png" 
+                                                       Height="20"
+                                                       Width="20"
+                                                       Margin="0,0,7,0"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="Оппонент 1(1999)"
+                                                           FontSize="15"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <Image Grid.Column="2"
+                                               Source="Resources/Pictures/ГалкаБелый.png"
+                                               Height="40"
+                                               Width="40"
+                                               Margin="33,0,53,0"/>
+                                        <StackPanel HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Grid.Column="3">
+                                            <TextBlock Grid.Column="3"
+                                                       Text="12.03.2023 14:59"
+                                                       Style="{StaticResource TextBlockStyle}"
+                                                       FontSize="20"
+                                                       Margin="0,0,35,0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Button>
+                            </ListViewItem>
                         </ListView>
-                        <ScrollBar/>
+                        <ScrollBar Background="#FFC31818" BorderBrush="#FFC31818" Foreground="#FF6B2222"/>
                     </StackPanel>
                 </Viewbox>
             </StackPanel>
