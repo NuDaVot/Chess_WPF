@@ -156,7 +156,8 @@
                                                    Background="White" 
                                                    Foreground="#FF696868"
                                                    FontSize="23"
-                                                   Margin="70,0,70,0" FontWeight="SemiBold"/>
+                                                   Margin="70,0,70,0" 
+                                                   FontWeight="SemiBold"/>
                                     </Border>
                                     <Image Source="Resources/Pictures/КрестикКрасный.png"
                                            Margin="20,10,40,0"
@@ -270,7 +271,9 @@
                                 </Button>
                             </ListViewItem>
                         </ListView>
-                        <ScrollBar Background="#FFC31818" BorderBrush="#FFC31818" Foreground="#FF6B2222"/>
+                        <ScrollBar Background="#FFC31818" 
+                                   BorderBrush="#FFC31818" 
+                                   Foreground="#FF6B2222"/>
                     </StackPanel>
                 </Viewbox>
             </StackPanel>

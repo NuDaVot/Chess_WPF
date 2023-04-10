@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Chess2
 {
     /// <summary>
-    /// Логика взаимодействия для Leaderboard.xaml
+    /// Логика взаимодействия для AdminPage.xaml
     /// </summary>
-    public partial class Leaderboard : Window
+    public partial class AdminPage : Window
     {
-        public Leaderboard()
+        public AdminPage()
         {
             InitializeComponent();
         }
-
     }
 }

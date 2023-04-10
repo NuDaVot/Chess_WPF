@@ -36,20 +36,22 @@
                                     Height="100"
                                     Width="780">
                                 <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center">
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
                                     <TextBlock Style="{StaticResource TextBlockStyle}"
-                                           Text="Место"
-                                           FontSize="32"
-                                           Foreground="White" Margin="0,0,130,0"/>
+                                               Text="Место"
+                                               FontSize="32"
+                                               Foreground="White" 
+                                               Margin="0,0,130,0"/>
                                     <TextBlock Style="{StaticResource TextBlockStyle}"
-                                           Text="Никнейм пользователя"
-                                           FontSize="32"
-                                           Foreground="White" Margin="0,0,105,0"/>
+                                               Text="Никнейм пользователя"
+                                               FontSize="32"
+                                               Foreground="White" 
+                                               Margin="0,0,105,0"/>
                                     <TextBlock Style="{StaticResource TextBlockStyle}"
-                                           Text="Рейтинг"
-                                           FontSize="32"
-                                           Foreground="White"/>
+                                               Text="Рейтинг"
+                                               FontSize="32"
+                                               Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
@@ -58,21 +60,22 @@
                                     Height="100"
                                     Width="780">
                                 <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center">
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
                                     <Image Source="Resources/Pictures/ГалкаБелый.png"
-                                           Margin="0,0,230,0"
+                                           Margin="0,0,235,0"
                                            Height="70"
                                            Width="70"/>
                                     <TextBlock Style="{StaticResource TextBlockStyle}"
-                                           Text="Faker"
-                                           FontSize="32"
-                                           Foreground="White" Margin="0,0,230,0"
+                                               Text="Faker"
+                                               FontSize="32"
+                                               Foreground="White" 
+                                               Margin="0,0,235,0"
                                                VerticalAlignment="Center"/>
                                     <TextBlock Style="{StaticResource TextBlockStyle}"
-                                           Text="2684"
-                                           FontSize="32"
-                                           Foreground="White"
+                                               Text="2684"
+                                               FontSize="32"
+                                               Foreground="White"
                                                VerticalAlignment="Center"/>
                                 </StackPanel>
                             </Button>
