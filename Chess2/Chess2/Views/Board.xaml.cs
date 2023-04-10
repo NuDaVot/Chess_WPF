@@ -25,11 +25,16 @@ namespace Chess2.Views
             InitializeComponent();
             for (int i = 0; i < 8; i++)
             {
-                for(int j = 0; j < 8; j++)
+                for (int j = 0; j < 8; j++)
                 {
                     Border myBorder = new Border();
                     myBorder.SetBinding(Grid.RowProperty, $"location_cells_row[{i}]");
                     myBorder.SetBinding(Grid.ColumnProperty, $"location_cells_column[{j}]");
+                    myBorder.BorderThickness = new Thickness(3);
+                    myBorder.BorderBrush = Brushes.SlateBlue;
+                    //myBorder.SetBinding(, $"location_cells_column[{j}]");
+                    //myBorder.MouseDown +=  new MouseButtonEventHandler(Border_MouseDown);
+
                     if ((i + j) % 2 == 0)
                     {
                         myBorder.Style = (Style)myBorder.FindResource("transparent_border");
@@ -38,7 +43,7 @@ namespace Chess2.Views
                     {
                         myBorder.Style = (Style)myBorder.FindResource("red_border");
                     }
-                    
+
                     fild_borders.Children.Add(myBorder);
                     Grid.SetZIndex(myBorder, 2);
 
@@ -64,7 +69,63 @@ namespace Chess2.Views
                     fild_borders.Children.Add(grid);
                 }
             }
-            
+
+
         }
+        private void ButtonCreatedByCode_Click(object sender, RoutedEventArgs e)
+        {
+            string sourceName = ((FrameworkElement)e.Source).Name;
+            string senderName = ((FrameworkElement)sender).Name;
+
+            Debug.WriteLine($"Routed event handler attached to {senderName}, " +
+                $"triggered by the Click routed event raised by {sourceName}.");
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ((Border)sender).Background = Brushes.Gray;
+        }
+        //private void lbl1_MouseDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    Image lbl = (Image)sender;
+        //    DragDrop.DoDragDrop(lbl, lbl.Source, DragDropEffects.Move);
+        //}
+
+        //private void txtTarget_Drop(object sender, DragEventArgs e)
+        //{
+        //    //MessageBox.Show(((string)e.Data.GetData(DataFormats.Text)).ToString());
+        //  ((Image)sender).Source = (ImageSource)e.Data.GetData(DataFormats.UnicodeText);
+        //}
+        //public static Image global_sender;
+        //private void Image_Drop(object sender, DragEventArgs e)
+        //{
+        //    //((Image) sender).Source = e.Source as ImageSource;
+
+        //    //Image image = e.Source as Image;
+
+        //    //((Image)sender).Source = image.Source;
+
+        //    ((Image)sender).Source = global_sender.Source;
+        //}
+
+        //private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    // sender – объект, на котором произошло данное событие.
+        //    Image lbl = sender as Image;
+        //    global_sender = lbl;
+        //    // Создаем источник.
+        //    // Копируем содержимое метки Drop.
+        //    // 1 параметр: Элемент управления, который будет источником.
+        //    // 2 параметр: Данные, которые будут перемещаться.
+        //    // 3 параметр: Эффект при переносе.
+        //    DragDrop.DoDragDrop(lbl, lbl.Source, DragDropEffects.Move);
+
+        //}
+
+        //private void Image_DragEnter(object sender, DragEventArgs e)
+        //{
+        //    e.Effects = DragDropEffects.Copy;
+        //}
     }
+    
 }

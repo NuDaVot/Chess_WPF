@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Chess2.Data;
+namespace Chess2;
 
 public partial class DbA96cdbChessContext : DbContext
 {
@@ -21,7 +21,7 @@ public partial class DbA96cdbChessContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySql("server=mysql8003.site4now.net;user=a96cdb_chess;password=xmSMBMn7Dq.A32W;database=db_a96cdb_chess", ServerVersion.Parse("8.0.32-mysql"));
+        => optionsBuilder.UseMySql("server=mysql8003.site4now.net;user=a96cdb_chess;password=xmSMBMn7Dq.A32W;database=db_a96cdb_chess", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.32-mysql"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -54,6 +54,9 @@ public partial class DbA96cdbChessContext : DbContext
             entity.Property(e => e.Duration)
                 .HasColumnType("time")
                 .HasColumnName("duration");
+            entity.Property(e => e.Mode)
+                .HasComment("0 - класический\\n1 - на время ")
+                .HasColumnName("mode");
             entity.Property(e => e.Notation)
                 .HasColumnType("text")
                 .HasColumnName("notation");
@@ -98,7 +101,7 @@ public partial class DbA96cdbChessContext : DbContext
                 .HasColumnName("password");
             entity.Property(e => e.Rating).HasColumnName("rating");
             entity.Property(e => e.Role)
-                .HasComment("0 - игрок \n1 - админ ")
+                .HasComment("1 - игрок \\n0 - админ ")
                 .HasColumnName("role");
             entity.Property(e => e.Status)
                 .HasComment("1 - играет \n0 - забанен")

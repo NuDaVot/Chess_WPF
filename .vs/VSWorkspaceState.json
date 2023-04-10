@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Chess2",
+    "\\Chess2\\Chess2",
+    "\\Chess2\\Chess2\\Views"
   ],
-  "SelectedNode": "\\Chess2.sln",
+  "SelectedNode": "\\Chess2\\Chess2\\Views\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

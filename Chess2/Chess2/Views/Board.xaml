@@ -16,8 +16,10 @@
         Background="#FFFFF0"
         BorderThickness="3"
         BorderBrush="#696868"
-        CornerRadius="3"
-        >
+        CornerRadius="3">
+      
+            
+        
         <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition Height="42*"/>
@@ -223,6 +225,7 @@
                 Grid.ColumnSpan="8"
                 Grid.RowSpan="8"
                 Padding="6">
+                
                 <Grid
                     Margin="6"
                     x:Name="fild_borders">
@@ -248,10 +251,63 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <Image 
+                    <!--<Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>-->
+                    <!--<ScrollViewer Grid.RowSpan="2">
+                        <StackPanel CanVerticallyScroll="True">
+                            <Image Source="/Resources/Pictures/Authorization.png" Width="280" Height="121" Margin="0,10,0,10" MouseDown="Image_MouseDown" Stretch="UniformToFill"/>
+                            <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="121" Margin="0,10,0,10"  Stretch="UniformToFill"/>
+                            <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="121" Margin="0,10,0,10" Drop="Image_Drop" MouseDown="Image_MouseDown" Stretch="UniformToFill"/>
+                            <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="121" Margin="0,10,0,10" Drop="Image_Drop" MouseDown="Image_MouseDown" Stretch="UniformToFill"/>
+                            <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="121" Margin="0,10,0,10" Drop="Image_Drop" MouseDown="Image_MouseDown" Stretch="UniformToFill"/>
+                            <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="121" Margin="0,10,0,10" Drop="Image_Drop" MouseDown="Image_MouseDown" Stretch="UniformToFill"/>
+                        </StackPanel>                                                                               
+                    </ScrollViewer>
+                    <Canvas Grid.Column="1" Margin="0,0,0,0" >
+                        <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="120" Drop="Image_Drop" AllowDrop="True" Stretch="UniformToFill" MouseDown="Image_MouseDown" Canvas.Left="156" Canvas.Top="51"/>
+                        <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="120" Drop="Image_Drop" AllowDrop="True" Stretch="UniformToFill" Canvas.Left="436" Canvas.Top="51"/>
+                        <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="120" Drop="Image_Drop" AllowDrop="True" Stretch="UniformToFill" Canvas.Left="156" Canvas.Top="170"/>
+                        <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="120" Drop="Image_Drop" AllowDrop="True" Stretch="UniformToFill" Canvas.Left="436" Canvas.Top="170"/>
+                        <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="120" Drop="Image_Drop" AllowDrop="True" Stretch="UniformToFill" Canvas.Left="156" Canvas.Top="288"/>
+                        <Image Source="/Resources/Pictures/Orel.png" Width="280" Height="120" Drop="Image_Drop" AllowDrop="True" Stretch="UniformToFill" Canvas.Left="436" Canvas.Top="288"/>
+                    </Canvas>-->
+
+                    <!--<Image 
                         Grid.Column="1"
+                        MouseDown="lbl1_MouseDown"
                         Source="/Resources/Pictures/Icon.png"
+                        AllowDrop="True"
+                        Drop="txtTarget_Drop"
                         Panel.ZIndex="4"/>
+
+                    <Image 
+                        Grid.Column="4"
+                        MouseDown="lbl1_MouseDown"
+                        AllowDrop="True"
+                        Drop="txtTarget_Drop"
+                        Panel.ZIndex="4"
+                        Source="/Resources/Pictures/Orel.png"/>-->
+                    <!--<Canvas>
+                        <TextBlock Canvas.Top="100" Canvas.Left="30"   MouseDown="lbl1_MouseDown">Всем пока (</TextBlock>
+                        <TextBlock  Canvas.Top="40" Canvas.Left="30"   MouseDown="lbl1_MouseDown">Всем привет!</TextBlock>
+
+
+
+                        <Border Canvas.Top="75" Canvas.Left="250" BorderBrush="Black" BorderThickness="2">
+                            <TextBlock MinWidth="100" MinHeight="30" FontSize="16" 
+                        AllowDrop="True" Drop="txtTarget_Drop"
+                               MouseDown="lbl1_MouseDown">Fdf</TextBlock>
+
+                        </Border>
+
+                        <Border Canvas.Top="275" Canvas.Left="250" BorderBrush="Black" BorderThickness="2">
+                            <TextBox MinWidth="100" MinHeight="30" FontSize="16" 
+                        AllowDrop="True" Drop="txtTarget_Drop"></TextBox>
+
+                        </Border>
+                    </Canvas>-->
 
                     <!--#region Delete-->
                     
@@ -454,10 +510,10 @@
             </Border>
             <!--#endregion-->
 
+           
 
-            
-            
+
         </Grid>
+        
     </Border>
-    
 </Page>

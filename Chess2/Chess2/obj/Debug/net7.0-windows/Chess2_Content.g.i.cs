@@ -13,6 +13,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-light.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/background.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/authorization.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/orel.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%93%d0%b0%d0%bb%d0%ba%d0%b0.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%9a%d1%80%d0%b5%d0%ba%d1%81%d1%82%d0%b8%d0%ba%d0%9a%d1%80%d" +
