@@ -21,10 +21,11 @@
                            Style="{StaticResource TextBlockStyle}"
                            FontSize="100"/>
                     <Button Height="63"
-                        Width="235"
-                        Style="{StaticResource ButtonStyleBlue}"
-                        Content="Отмена"
-                        FontSize="45" Margin="0,70,0,0"/>
+                            Width="235"
+                            Style="{StaticResource ButtonStyleBlue}"
+                            Content="Отмена"
+                            FontSize="45"
+                            Margin="0,70,0,0"/>
             </StackPanel>
         </Viewbox>
     </Grid>

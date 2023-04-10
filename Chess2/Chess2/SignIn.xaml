@@ -17,10 +17,12 @@
                  MaxHeight="525">
             <StackPanel HorizontalAlignment="Center" 
                         VerticalAlignment="Center">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Center">
                     <TextBlock Text="Войти"
                                Style="{StaticResource TextBlockStyle}"
-                               FontSize="100" Margin="0,0,20,0"/>
+                               FontSize="100"
+                               Margin="0,0,20,0"/>
                     <Image Source="Resources/Pictures/Авторизация.png"/>
                 </StackPanel>
                 <TextBox Height="55"

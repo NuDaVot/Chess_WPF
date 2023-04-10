@@ -22,13 +22,14 @@
                 <StackPanel Grid.Row="0"
                             Orientation="Vertical"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Top" Margin="0,50,0,0">
+                            VerticalAlignment="Top" 
+                            Margin="0,50,0,0">
                     <TextBlock Style="{StaticResource TextBlockStyle}"
-                           Text="Выбор цвета"
-                           FontSize="96"
-                           FontWeight="SemiBold"
-                           Height="120"
-                           Width="750"/>
+                               Text="Выбор цвета"
+                               FontSize="96"
+                               FontWeight="SemiBold"
+                               Height="120"
+                               Width="750"/>
                     <TextBlock Style="{StaticResource TextBlockStyle}"
                                Text="Выберите цвет" 
                                FontSize="70" 
@@ -78,7 +79,10 @@
                                             Width="204"
                                             FontSize="40">
                                         <Button.Effect>
-                                            <DropShadowEffect Color="#FF9E9E9E" Direction="270" ShadowDepth="7" BlurRadius="0" />
+                                            <DropShadowEffect Color="#FF9E9E9E" 
+                                                              Direction="270" 
+                                                              ShadowDepth="7"
+                                                              BlurRadius="0" />
                                         </Button.Effect>
                                     </Button>
                                 </StackPanel>
@@ -105,7 +109,8 @@
                                             HorizontalAlignment="Center">
                                     <Image Source="Resources/Pictures/БелыйМелкий.png"
                                            Height="120"
-                                           Width="120" Margin="0,40,0,0"/>
+                                           Width="120"
+                                           Margin="0,40,0,0"/>
                                 </StackPanel>
                                 <StackPanel Grid.Row="1"
                                             VerticalAlignment="Center"
@@ -118,7 +123,10 @@
                                             Background="White" 
                                             Foreground="Black">
                                         <Button.Effect>
-                                            <DropShadowEffect Color="#FFEFEFEF" Direction="270" ShadowDepth="7" BlurRadius="0" />
+                                            <DropShadowEffect Color="#FFEFEFEF" 
+                                                              Direction="270"
+                                                              ShadowDepth="7"
+                                                              BlurRadius="0" />
                                         </Button.Effect>
                                     </Button>
                                 </StackPanel>

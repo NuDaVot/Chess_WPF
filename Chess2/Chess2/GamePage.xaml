@@ -97,12 +97,14 @@
                         Content="Surrender"
                         FontSize="30"
                         Width="182"
-                        Height="45" Margin="0,25,30,0"/>
+                        Height="45"
+                        Margin="0,25,30,0"/>
                 <Button Style="{StaticResource ButtonStyle}"
                         Content="Offer"
                         FontSize="30"
                         Width="182"
-                        Height="45" Margin="0,25,30,0"/>
+                        Height="45"
+                        Margin="0,25,30,0"/>
             </StackPanel>
         </Viewbox>
         <Viewbox Grid.Row="0"

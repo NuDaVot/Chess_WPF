@@ -57,10 +57,10 @@
                                Height="82"
                                Width="82"/>
                         <TextBlock Style="{StaticResource TextBlockStyle}"
-                               Text="10"
-                               Foreground="#FFCC2326"
-                               Margin="5,15,30,20"
-                               FontSize="50"/>
+                                   Text="10"
+                                   Foreground="#FFCC2326"
+                                   Margin="5,15,30,20"
+                                   FontSize="50"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Column="3"
@@ -71,10 +71,10 @@
                                Height="82"
                                Width="82"/>
                         <TextBlock Style="{StaticResource TextBlockStyle}"
-                               Text="10"
-                               Foreground="#FFCC2326"
-                               Margin="5,15,30,20"
-                               FontSize="50"/>
+                                   Text="10"
+                                   Foreground="#FFCC2326"
+                                   Margin="5,15,30,20"
+                                   FontSize="50"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Column="4"
@@ -85,10 +85,10 @@
                                Height="82"
                                Width="82"/>
                         <TextBlock Style="{StaticResource TextBlockStyle}"
-                               Text="10"
-                               Foreground="#FFCC2326"
-                               Margin="5,15,30,20"
-                               FontSize="50"/>
+                                   Text="10"
+                                   Foreground="#FFCC2326"
+                                   Margin="5,15,30,20"
+                                   FontSize="50"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
