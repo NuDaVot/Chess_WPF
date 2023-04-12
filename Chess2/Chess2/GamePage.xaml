@@ -30,12 +30,10 @@
                        Width="40"/>
                 <TextBlock Height="40"
                            Width="320"
-                           Style="{StaticResource TextBlockStyle}"
-                           FontSize="28"
+                           Style="{StaticResource TextBlockGreyStyle}"
                            Text="Opponent(1999)"
                            TextAlignment="Left"
-                           Margin="30,0,0,0"
-                           Foreground="#FF696868"/>
+                           Margin="30,0,0,0"/>
                 <Border BorderBrush="White"
                         BorderThickness="1"
                         CornerRadius="10"
@@ -64,12 +62,10 @@
                        Width="40"/>
                 <TextBlock Height="40"
                            Width="320"
-                           Style="{StaticResource TextBlockStyle}"
-                           FontSize="28"
+                           Style="{StaticResource TextBlockGreyStyle}"
                            Text="Ya(1999)"
                            TextAlignment="Left"
-                           Margin="30,0,0,0"
-                           Foreground="#FF696868"/>
+                           Margin="30,0,0,0"/>
                 <Border BorderBrush="Black"
                         BorderThickness="1"
                         CornerRadius="10"
@@ -92,7 +88,8 @@
                  HorizontalAlignment="Left">
             <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center">
+                        VerticalAlignment="Center" 
+                        Margin="70,0,0,0">
                 <Button Style="{StaticResource ButtonStyle}"
                         Content="Surrender"
                         FontSize="30"
@@ -115,19 +112,134 @@
                         HorizontalAlignment="Right">
                 <Button Style="{StaticResource ButtonStyleBlackOpponent}"
                         Height="40"
-                        Width="40" Margin="0,20,20,0">
+                        Width="40" 
+                        Margin="0,20,20,0">
                     <Button.Background>
                         <ImageBrush ImageSource="Resources/Pictures/Поиск.png"/>
                     </Button.Background>
                 </Button>
             </StackPanel>
         </Viewbox>
-        <smtx:XamlDisplay Grid.Column="2"
-                          Grid.RowSpan="4">
-            <materialDesign:DrawerHost Name="DrawerHost"
-                                       Background="Black">
-                
-            </materialDesign:DrawerHost>
-        </smtx:XamlDisplay>
+        <Viewbox Grid.Column="2"
+                 Grid.RowSpan="4">
+            <smtx:XamlDisplay>
+                <materialDesign:DrawerHost Name="DrawerHost"
+                                           Background="Black">
+                    <materialDesign:DrawerHost.Style>
+                        <Style TargetType="materialDesign:DrawerHost" BasedOn="{StaticResource {x:Type materialDesign:DrawerHost}}">
+                            <Setter Property="Background" Value="#EBECD0"/>
+                        </Style>
+                    </materialDesign:DrawerHost.Style>
+                    <Viewbox>
+                        <Border CornerRadius="50,0,50,0"
+                                Background="#EBECD0"
+                                Height="1080"
+                                Width="455" 
+                                Margin="30,0,-25,0">
+                            <Grid Background="#EBECD0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.2*"/>
+                                    <RowDefinition Height="0.4*"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.Row="0"
+                                            Orientation="Horizontal"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center">
+                                    <TextBlock Grid.Row="0"
+                                               Style="{StaticResource TextBlockStyle}"
+                                               Text="Opponent(1790)"
+                                               FontSize="30" 
+                                               Margin="100,0,70,0"/>
+                                    <Button Style="{StaticResource ButtonStyle}"
+                                            Height="40"
+                                            Width="40" >
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="Resources/Pictures/Поиск.png"/>
+                                        </Button.Background>
+                                    </Button>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1"
+                                            Orientation="Vertical">
+                                    <TextBlock Grid.Row="0"
+                                               Style="{StaticResource TextBlockGreyStyle}"
+                                               Text="Матчей сыграно"  
+                                               HorizontalAlignment="Left"
+                                               Margin="50,0,0,15"/>
+                                    <TextBlock Grid.Row="0"
+                                               Style="{StaticResource TextBlockGreyStyle}"
+                                               Text="Матчей выграно"
+                                               HorizontalAlignment="Left"
+                                               Margin="50,0,0,15"/>
+                                    <TextBlock Grid.Row="0"
+                                               Style="{StaticResource TextBlockGreyStyle}"
+                                               Text="Последние матчи"
+                                               HorizontalAlignment="Left"
+                                               Margin="50,0,0,15"/>
+                                    <TextBlock Grid.Row="0"
+                                               Style="{StaticResource TextBlockGreyStyle}"
+                                               Text="Ничьих"
+                                               HorizontalAlignment="Left"
+                                               Margin="50,0,0,15"/>
+                                </StackPanel>
+                                <ListView Grid.Row="2"
+                                          HorizontalAlignment="Center">
+                                    <ListViewItem>
+                                        <Button Style="{StaticResource ButtonStyle}">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <Image Grid.Column="0"
+                                                       Source="Resources/Pictures/БыстрыйРежим.png"
+                                                       Height="42"
+                                                       Width="42"
+                                                       Margin="25,15,25,15"/>
+                                                <StackPanel Grid.Column="1"
+                                                            Orientation="Vertical"
+                                                            HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                            Margin="0,0,0,0">
+                                                    <StackPanel Orientation="Horizontal"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center">
+                                                        <Image Source="Resources/Pictures/БелыйМелкий.png" 
+                                                               Height="20"
+                                                               Width="20"
+                                                               Margin="0,0,7,10"/>
+                                                        <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                                   Text="Оппонент 1(1999)"
+                                                                   FontSize="15"/>
+                                                    </StackPanel>
+                                                    <StackPanel Orientation="Horizontal"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center">
+                                                        <Image Source="Resources/Pictures/ЧерныйМелкий.png" 
+                                                               Height="20"
+                                                               Width="20"
+                                                               Margin="0,0,7,0"/>
+                                                        <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                                   Text="Оппонент 1(1999)"
+                                                                   FontSize="15"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                                <Image Grid.Column="2"
+                                                       Source="Resources/Pictures/ГалкаБелый.png"
+                                                       Height="40"
+                                                       Width="40"
+                                                       Margin="70,0,30,0"/>
+                                            </Grid>
+                                        </Button>
+                                    </ListViewItem>
+                                </ListView>
+                            </Grid>
+                        </Border>
+                    </Viewbox>
+                </materialDesign:DrawerHost>
+            </smtx:XamlDisplay>
+        </Viewbox>
     </Grid>
 </Window>
