@@ -12,9 +12,10 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Menu}">
                             <Border Background="{TemplateBinding Background}" 
-                                    CornerRadius="60, 0, 0, 60" BorderThickness="1">
+                                    CornerRadius="60, 0, 0, 60" 
+                                    BorderThickness="1">
                                 <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
@@ -27,7 +28,6 @@
                 <Setter Property="Background" Value="#C31818"/>
                 <Setter Property="FontSize" Value="72"/>
                 <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
-                <!--<Setter Property="FontWeight" Value="Medium"/>-->
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="Button.Effect">
                     <Setter.Value>
@@ -79,7 +79,6 @@
                 <Setter Property="Background" Value="#40A1A7"/>
                 <Setter Property="FontSize" Value="72"/>
                 <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
-                <!--<Setter Property="FontWeight" Value="Medium"/>-->
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="Button.Effect">
                     <Setter.Value>
@@ -116,6 +115,18 @@
             <Style x:Key="TextBlockStyle1" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="100"/>
                 <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="TextBlockGreyStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="#696868"/>
+                <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
+                <Setter Property="FontSize" Value="28"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="TextBlockGreyZGStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="#FF8A8A8A"/>
+                <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
+                <Setter Property="FontSize" Value="70"/>
                 <Setter Property="TextAlignment" Value="Center"/>
             </Style>
             <ResourceDictionary.MergedDictionaries>
