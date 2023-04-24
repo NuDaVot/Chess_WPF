@@ -12,6 +12,16 @@
         <vm:MenuViewModel/>
     </Page.DataContext>
     <Grid>
+        <Button HorizontalAlignment="Right" 
+                VerticalAlignment="Top" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"
+                Command="{Binding ProfileCommand, IsAsync=True}"
+                Margin="10">
+            <Button.Background>
+                <ImageBrush ImageSource="{Binding ProfileIcon}"/>
+            </Button.Background>
+        </Button>
         <Viewbox Stretch="Uniform" 
                  MaxWidth="550"
                  MaxHeight="550">
@@ -21,17 +31,20 @@
                     <TextBlock Text="Chess"
                                Style="{StaticResource TextBlockStyle}"
                                Margin="100,0,0,0"/>
-                    <Image Source="/Resources/Pictures/Icon.png" Margin="10,0,0,0"/>
+                    <Image Source="{Binding Icon}" 
+                           Margin="10,0,0,0"
+                           Width="100"
+                           Height="100"/>
                 </StackPanel>
                 <Button Margin="0, 26" 
                         Height="120" 
-                        Width="530"
+                        Width="530" 
                         Style="{StaticResource ButtonStyle}" 
                         Command="{Binding SearchCommand, IsAsync=True}"
                         Content="Начать игру"/>
-                <Button Margin="0, 26" 
+                <Button Margin="0, 26"
                         Height="120" 
-                        Width="530"
+                        Width="530" 
                         Style="{StaticResource ButtonStyle}"
                         Command="{Binding LeaderboardCommand, IsAsync=True}"
                         Content="Таблица лидеров"/>

@@ -6,6 +6,9 @@ namespace Chess2.Model
     class MenuModel : BindableBase
 	{
 		MainWindowModel _mainWindow;
+		public string Icon = "/Resources/Pictures/Icon.png";
+		public string ProfileIcon = "/Resources/Pictures/ProfileIcon.png";
+
 		public MenuModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;
@@ -22,6 +25,10 @@ namespace Chess2.Model
 		{
 			_mainWindow.Navipage("Leaderboard.xaml");
 			LeaderboardModel.MenuAOrMenu = false;
+		}
+		public void IsProfile()
+		{
+			_mainWindow.Navipage("Profile.xaml");
 		}
 	}
 }

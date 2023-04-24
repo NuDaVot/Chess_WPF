@@ -3,6 +3,7 @@
     public class SignUpViewModel : BindableBase
     {
 		readonly SignUpModel _model = new SignUpModel();
+		public string Registr => _model.Registr;
 
 		public SignUpViewModel()
         {
@@ -18,7 +19,6 @@
 		}
 		public DelegateCommand<string> RegistrCommand { get; }
 		public DelegateCommand<string> CanselCommand { get; }
-		//public DelegateCommand RegistrCommand => new(() => _pageService.ChangePage(new Menu()));
-		//public DelegateCommand CanselCommand => new(() => _pageService.ChangePage(new MenuA()));
+		
 	}
 }

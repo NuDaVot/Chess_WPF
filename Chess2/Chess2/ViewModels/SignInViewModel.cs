@@ -3,6 +3,7 @@
     public class SignInViewModel : BindableBase
     {
 		readonly SignInModel _model = new SignInModel();
+		public string Authorization => _model.Authorization;
 
 		public SignInViewModel()
 		{
@@ -19,7 +20,6 @@
 		}
 		public DelegateCommand<string> AuthorizationCommand { get; }
 		public DelegateCommand<string> CanselCommand { get; }
-		//public DelegateCommand AuthorizationCommand => new(() => _pageService.ChangePage(new Menu()));
-		//      public DelegateCommand CanselCommand => new(() => _pageService.ChangePage(new MenuA()));
+		
 	}
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2x3egA+fSHgG81rLwgPiEfCQx3SiWizP90jpxGqSf3NPoZnVLEV+jOZWLErCqeAvu50sr2DXJ1IsawWQ2YQKuw==",
+  "dgSpecHash": "9E9YWxfQRGg0VrQE3B8AgUzbqzudVO/O7HrL2FTMj6z6BNP+0ohdkod7CMA0bkpCaZOh4rEf57UjtrWNruze6Q==",
   "success": true,
   "projectFilePath": "D:\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\79991\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\devexpressmvvm\\22.1.3\\devexpressmvvm.22.1.3.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
@@ -39,6 +40,8 @@
     "C:\\Users\\79991\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\pomelo.entityframeworkcore.mysql.json.microsoft\\7.0.0\\pomelo.entityframeworkcore.mysql.json.microsoft.7.0.0.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512",
+    "C:\\Users\\79991\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
+    "C:\\Users\\79991\\.nuget\\packages\\showmethexaml.avalonedit\\2.0.0\\showmethexaml.avalonedit.2.0.0.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\79991\\.nuget\\packages\\system.text.json\\7.0.1\\system.text.json.7.0.1.nupkg.sha512"

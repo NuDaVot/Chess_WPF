@@ -93,6 +93,14 @@
               "target": "Package",
               "version": "[4.1.0, )"
             },
+            "ShowMeTheXAML": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "ShowMeTheXAML.AvalonEdit": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "iTextSharp": {
               "target": "Package",
               "version": "[5.5.13.3, )"
