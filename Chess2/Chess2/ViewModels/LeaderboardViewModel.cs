@@ -4,10 +4,23 @@ namespace Chess2.ViewModels
 {
     public class LeaderboardViewModel : BindableBase
     {
-        private readonly PageService _pageService;
-        public LeaderboardViewModel(PageService pageService)
+		readonly LeaderboardModel _model = new LeaderboardModel();
+		public string Jackdaw => _model.Jackdaw;
+
+		public LeaderboardViewModel()
         {
-            _pageService = pageService;
-        }
-    }
+			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+			CancelCommand = new DelegateCommand<string>(str =>
+			{
+				_model.IsCancel();
+			});
+			//White = new DelegateCommand<string>(str =>
+			//{
+			//	_model.IsWhite();
+			//});
+		}
+		public DelegateCommand<string> CancelCommand { get; }
+		public DelegateCommand<string> SignUpCommand { get; }
+	}
+
 }

@@ -1,37 +1,23 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\nudan\\Source\\Repos\\NuDaVot\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj": {}
+    "D:\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nudan\\Source\\Repos\\NuDaVot\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj": {
+    "D:\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nudan\\Source\\Repos\\NuDaVot\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
+        "projectUniqueName": "D:\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
         "projectName": "Chess2",
-        "projectPath": "C:\\Users\\nudan\\Source\\Repos\\NuDaVot\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
-        "packagesPath": "C:\\Users\\nudan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nudan\\Source\\Repos\\NuDaVot\\Chess_WPF\\Chess2\\Chess2\\obj\\",
-=======
-    "D:\\3 курс 2\\GidHab\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj": {}
-  },
-  "projects": {
-    "D:\\3 курс 2\\GidHab\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\3 курс 2\\GidHab\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
-        "projectName": "Chess2",
-        "projectPath": "D:\\3 курс 2\\GidHab\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
-        "packagesPath": "C:\\Users\\nudan\\.nuget\\packages\\",
-        "outputPath": "D:\\3 курс 2\\GidHab\\Chess_WPF\\Chess2\\Chess2\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "D:\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
+        "packagesPath": "C:\\Users\\79991\\.nuget\\packages\\",
+        "outputPath": "D:\\Chess_WPF\\Chess2\\Chess2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nudan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\79991\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -107,6 +93,14 @@
               "target": "Package",
               "version": "[4.1.0, )"
             },
+            "ShowMeTheXAML": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "ShowMeTheXAML.AvalonEdit": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "iTextSharp": {
               "target": "Package",
               "version": "[5.5.13.3, )"
@@ -131,7 +125,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

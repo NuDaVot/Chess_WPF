@@ -1,0 +1,137 @@
+﻿<Page x:Class="Chess2.Views.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chess2.Views"
+      xmlns:vm="clr-namespace:Chess2.ViewModels"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GamePage">
+    <Page.DataContext>
+        <vm:GamePageViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0"
+                 Grid.Column="1"
+                 Stretch="Uniform">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left">
+                <Image Source="{Binding ProfileIcon}"
+                       Height="40"
+                       Width="40"/>
+                <TextBlock Height="40"
+                           Width="320"
+                           Style="{StaticResource TextBlockStyle}"
+                           FontSize="28"
+                           Text="Opponent(1999)"
+                           TextAlignment="Left"
+                           Margin="30,0,0,0"
+                           Foreground="#FF696868"/>
+                <Border BorderBrush="Black"
+                        BorderThickness="1"
+                        CornerRadius="10"
+                        Padding="4"
+                        Background="Black"
+                        Height="40"
+                        Width="240">
+                    <TextBlock Text="10:00"
+                               Style="{StaticResource TextBlockStyle}" 
+                               Background="Black" 
+                               Foreground="White"
+                               FontSize="23"
+                               Margin="70,0,70,0" 
+                               FontWeight="SemiBold"/>
+                </Border>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="2"
+                 Grid.Column="1"
+                 Stretch="Uniform">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left">
+                <Image Source="{Binding ProfileIcon}"
+                       Height="40"
+                       Width="40"/>
+                <TextBlock Height="40"
+                           Width="320"
+                           Style="{StaticResource TextBlockStyle}"
+                           FontSize="28"
+                           Text="Ya(1999)"
+                           TextAlignment="Left"
+                           Margin="30,0,0,0"
+                           Foreground="#FF696868"/>
+                <Border BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="10"
+                        Padding="4"
+                        Background="White"
+                        Height="40"
+                        Width="240">
+                    <TextBlock Text="10:00"
+                               Style="{StaticResource TextBlockStyle}" 
+                               Background="White" 
+                               Foreground="#FF696868"
+                               FontSize="23"
+                               Margin="70,0,70,0" 
+                               FontWeight="SemiBold"/>
+                </Border>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="0"
+                 Grid.Column="0"
+                 HorizontalAlignment="Left">
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center">
+                <Button Style="{StaticResource ButtonStyle}"
+                        Content="Surrender"
+                        FontSize="30"
+                        Width="182"
+                        Height="45" Margin="0,25,30,0"/>
+                <Button Style="{StaticResource ButtonStyle}"
+                        Content="Offer"
+                        FontSize="30"
+                        Width="182"
+                        Height="45" Margin="0,25,30,0"/>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="0"
+                 Grid.Column="2"
+                 HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                <Button Style="{StaticResource ButtonStyleBlackOpponent}"
+                        Height="40"
+                        Width="40" 
+                        Margin="0,20,20,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="{Binding Search}"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+        <smtx:XamlDisplay Grid.Column="2"
+                          Grid.RowSpan="4">
+            <materialDesign:DrawerHost Name="DrawerHost"
+                                       Background="Black">
+
+            </materialDesign:DrawerHost>
+        </smtx:XamlDisplay>
+    </Grid>
+</Page>

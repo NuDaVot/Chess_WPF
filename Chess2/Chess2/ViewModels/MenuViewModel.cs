@@ -2,14 +2,35 @@
 {
     public class MenuViewModel : BindableBase
     {
-		private readonly PageService _pageService;
-		public MenuViewModel(PageService pageService)
-		{
-			_pageService = pageService;
-		}
-		public DelegateCommand SearchCommand => new(() => _pageService.ChangePage(new Search()));
-        public DelegateCommand ExitCommand => new(() => _pageService.ChangePage(new MenuA()));
-        public DelegateCommand LeaderboardCommand => new(() => _pageService.ChangePage(new Leaderboard()));
+		readonly MenuModel _model = new MenuModel();
+		public string Icon => _model.Icon;
+		public string ProfileIcon => _model.ProfileIcon;
 
-    }
+
+		public MenuViewModel()
+		{
+			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+			SearchCommand = new DelegateCommand<string>(str =>
+			{
+				_model.IsSearch();
+			});
+			ExitCommand = new DelegateCommand<string>(str =>
+			{
+				_model.IsExit();
+			});
+			LeaderboardCommand = new DelegateCommand<string>(str =>
+			{
+				_model.IsLeaderboard();
+			});
+			ProfileCommand = new DelegateCommand<string>(str =>
+			{
+				_model.IsProfile();
+			});
+		}
+		public DelegateCommand<string> SearchCommand { get; }
+		public DelegateCommand<string> ExitCommand { get; }
+		public DelegateCommand<string> LeaderboardCommand { get; }
+		public DelegateCommand<string> ProfileCommand { get; }
+
+	}
 }

@@ -4,10 +4,13 @@ namespace Chess2.ViewModels
 {
     public class HeadsOrTailsViewModel : BindableBase
     {
-        private readonly PageService _pageService;
-        public HeadsOrTailsViewModel(PageService pageService)
+		readonly HeadsOrTailsModel _model = new HeadsOrTailsModel();
+		public string Orel => _model.Orel;
+		public string Reshka => _model.Reshka;
+		public HeadsOrTailsViewModel()
         {
-            _pageService = pageService;
-        }
-    }
+			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+
+		}
+	}
 }
