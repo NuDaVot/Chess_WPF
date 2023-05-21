@@ -13,5 +13,6 @@
 		}
 		public DelegateCommand<string> CancelCommand { get; }
 
+		//public DelegateCommand CancelCommand => new(() => _pageService.ChangePage(new Menu()));
 	}
 }

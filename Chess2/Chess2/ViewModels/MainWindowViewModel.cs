@@ -4,7 +4,6 @@
     {
 		static public MainWindowModel _metod = new MainWindowModel();
 		public string Background => _metod.Background;
-
 		public MainWindowViewModel()
 		{
 			_metod.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);

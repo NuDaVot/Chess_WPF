@@ -3,9 +3,6 @@
     public class MenuViewModel : BindableBase
     {
 		readonly MenuModel _model = new MenuModel();
-		public string Icon => _model.Icon;
-		public string ProfileIcon => _model.ProfileIcon;
-
 
 		public MenuViewModel()
 		{
@@ -22,15 +19,13 @@
 			{
 				_model.IsLeaderboard();
 			});
-			ProfileCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsProfile();
-			});
 		}
 		public DelegateCommand<string> SearchCommand { get; }
 		public DelegateCommand<string> ExitCommand { get; }
 		public DelegateCommand<string> LeaderboardCommand { get; }
-		public DelegateCommand<string> ProfileCommand { get; }
+		//public DelegateCommand SearchCommand => new(() => _pageService.ChangePage(new Search()));
+		//      public DelegateCommand ExitCommand => new(() => _pageService.ChangePage(new MenuA()));
+		//      public DelegateCommand LeaderboardCommand => new(() => _pageService.ChangePage(new Leaderboard()));
 
 	}
 }

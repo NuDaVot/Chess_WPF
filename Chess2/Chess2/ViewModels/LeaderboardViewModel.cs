@@ -5,7 +5,6 @@ namespace Chess2.ViewModels
     public class LeaderboardViewModel : BindableBase
     {
 		readonly LeaderboardModel _model = new LeaderboardModel();
-		public string Jackdaw => _model.Jackdaw;
 
 		public LeaderboardViewModel()
         {
