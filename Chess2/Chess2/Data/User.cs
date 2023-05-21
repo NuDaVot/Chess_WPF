@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Chess2.Data;
+namespace Chess2;
 
 public partial class User
 {
@@ -22,8 +22,7 @@ public partial class User
     public bool Status { get; set; }
 
     /// <summary>
-    /// 0 - игрок 
-    /// 1 - админ 
+    /// 1 - игрок \n0 - админ 
     /// </summary>
     public bool Role { get; set; }
 

@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 FD:\Chess_WPF\Chess2\Chess2\App.xaml;;
 FD:\Chess_WPF\Chess2\Chess2\Views\AdminPanel.xaml;;
 FD:\Chess_WPF\Chess2\Chess2\Views\ChooseColor.xaml;;
@@ -14,4 +15,19 @@ FD:\Chess_WPF\Chess2\Chess2\Views\ProfileSet.xaml;;
 FD:\Chess_WPF\Chess2\Chess2\Views\Search.xaml;;
 FD:\Chess_WPF\Chess2\Chess2\Views\SignIn.xaml;;
 FD:\Chess_WPF\Chess2\Chess2\Views\SignUp.xaml;;
+=======
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\App.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\Board.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\ChooseColor.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\HeadsOrTails.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\Leaderboard.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\MainWindow.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\Menu.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\MenuA.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\Profile.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\ProfileSet.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\Search.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\SignIn.xaml;;
+FC:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\Views\SignUp.xaml;;
+>>>>>>> origin/Shamil
 
