@@ -3,8 +3,6 @@
     class SignInModel : BindableBase
 	{
 		MainWindowModel _mainWindow;
-		public string Authorization = "/Resources/Pictures/Authorization.png";
-
 		public SignInModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;

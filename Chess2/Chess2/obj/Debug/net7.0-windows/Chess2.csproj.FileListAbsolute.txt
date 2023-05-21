@@ -257,17 +257,6 @@ D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Chess2.csproj.Fody.RuntimeCo
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Chess2.csproj.CopyComplete
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Chess2.genruntimeconfig.cache
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\ref\Chess2.dll
-<<<<<<< HEAD
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\AdminPanel.g.cs
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ModeVariation.g.cs
-D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\ICSharpCode.AvalonEdit.dll
-D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\ShowMeTheXAML.dll
-D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\ShowMeTheXAML.AvalonEdit.dll
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\GamePage.g.cs
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\AdminPanel.baml
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\GamePage.baml
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ModeVariation.baml
-=======
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Fonts\Oswald-Bold.ttf
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Fonts\Oswald-ExtraLight.ttf
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Fonts\Oswald-Light.ttf
@@ -376,4 +365,3 @@ C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-win
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\QW.png
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\RB.png
 C:\Users\nudan\Source\Repos\NuDaVot\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Figures\RW.png
->>>>>>> origin/Shamil
