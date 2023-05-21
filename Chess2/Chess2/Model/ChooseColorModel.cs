@@ -4,10 +4,7 @@ namespace Chess2.Model
 {
     class ChooseColorModel : BindableBase
 	{
-		MainWindowModel _mainWindow;
-		public string RedRect = "/Resources/Pictures/RedRect.png";
-		public string BlackRect = "/Resources/Pictures/BlackRect.png";
-		public string WhileRect = "/Resources/Pictures/WhileRect.png";
+		MainWindowModel _mainWindow; 
 		public ChooseColorModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;

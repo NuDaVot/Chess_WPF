@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Chess2.Data;
+namespace Chess2;
 
 public partial class Party
 {
@@ -16,6 +16,11 @@ public partial class Party
     /// iD черного игрока 
     /// </summary>
     public int BlackUser { get; set; }
+
+    /// <summary>
+    /// 0 - класический\n1 - на время 
+    /// </summary>
+    public bool? Mode { get; set; }
 
     /// <summary>
     /// 0 - белый проиграл 
