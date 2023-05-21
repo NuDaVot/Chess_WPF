@@ -22,7 +22,7 @@
                     <TextBlock Text="Регистрация" 
                                Style="{StaticResource TextBlockStyle}"
                                FontSize="85"/>
-                    <Image Source="\Resources/Pictures/Registr.png"/>
+                    <Image Source="{Binding Registr}"/>
                 </StackPanel>
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Логин"

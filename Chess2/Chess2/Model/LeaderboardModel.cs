@@ -5,6 +5,7 @@ namespace Chess2.Model
 	{
 		MainWindowModel _mainWindow;
 		public static bool MenuAOrMenu;
+		public string Jackdaw = "/Resources/Pictures/Jackdaw.png";
 		public LeaderboardModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;

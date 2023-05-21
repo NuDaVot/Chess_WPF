@@ -3,6 +3,8 @@
     class MenuAModel : BindableBase
 	{
 		MainWindowModel _mainWindow;
+		public string Icon = "/Resources/Pictures/Icon.png";
+
 		public MenuAModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;

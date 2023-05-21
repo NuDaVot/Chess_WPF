@@ -22,14 +22,14 @@
                     <TextBlock Text="Войти"
                                Style="{StaticResource TextBlockStyle}"
                                FontSize="100" Margin="0,0,20,0"/>
-                    <Image Source="/Resources/Pictures/authorization.png"/>
+                    <Image Source="{Binding Authorization}"/>
                 </StackPanel>
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Логин"
                          FontSize="30"
                          FontFamily="Resources\Fonts\#Oswald" 
                          Margin="0,50,0,10"
-                         BorderBrush="#C31818"/>
+                         BorderBrush="#C31818" />
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Пароль"
                          FontSize="30"
