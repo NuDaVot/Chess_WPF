@@ -21,15 +21,12 @@
                     <TextBlock Text="Chess" 
                                Margin="100,0,0,0"
                                Style="{StaticResource TextBlockStyle}"/>
-                    <Image Source="{Binding Icon}" 
-                           Margin="10,0,0,0"
-                           Height="100"
-                           Width="100"/>
+                    <Image Source="\Resources\Pictures\Icon.png" Margin="10,0,0,0"/>
                 </StackPanel>
                 <Button Margin="0, 26" 
                         Height="120" 
                         Width="530"
-                        Style="{StaticResource ButtonStyle}"
+                        Style="{StaticResource ButtonStyle}" 
                         Command="{Binding SignInCommand, IsAsync=True}"
                         Content="Авторизация"/>
                 <Button Margin="0, 26" 
@@ -43,7 +40,7 @@
                         Width="530" 
                         Style="{StaticResource ButtonStyle}"
                         Command="{Binding LeaderboardCommand, IsAsync=True}"
-                        Content="Таблица лидеров"/>
+                        Content="Таблица лидеров"  />
             </StackPanel>
         </Viewbox>
     </Grid>

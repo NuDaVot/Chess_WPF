@@ -8,12 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Figures\BB.png" />
+    <None Remove="Resources\Figures\BW.png" />
+    <None Remove="Resources\Figures\KB.png" />
+    <None Remove="Resources\Figures\KW.png" />
+    <None Remove="Resources\Figures\NB.png" />
+    <None Remove="Resources\Figures\NW.png" />
+    <None Remove="Resources\Figures\PB.png" />
+    <None Remove="Resources\Figures\PW.png" />
+    <None Remove="Resources\Figures\QB.png" />
+    <None Remove="Resources\Figures\QW.png" />
+    <None Remove="Resources\Figures\RB.png" />
+    <None Remove="Resources\Figures\RW.png" />
     <None Remove="Resources\Fonts\Oswald-Bold.ttf" />
     <None Remove="Resources\Fonts\Oswald-ExtraLight.ttf" />
     <None Remove="Resources\Fonts\Oswald-Light.ttf" />
     <None Remove="Resources\Pictures\Authorization.png" />
     <None Remove="Resources\Pictures\Background.png" />
     <None Remove="Resources\Pictures\Icon.png" />
+    <None Remove="Resources\Pictures\Orel.png" />
     <None Remove="Resources\Pictures\Registr.png" />
     <None Remove="Resources\Pictures\Галка.png" />
     <None Remove="Resources\Pictures\КрекстикКрасный.png" />
@@ -24,6 +37,42 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\Figures\BB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\BW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\KB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\KW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\NB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\NW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\PB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\PW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\QB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\QW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\RB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Figures\RW.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Fonts\Oswald-Bold.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -37,6 +86,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\Authorization.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\Orel.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\Галка.png">
@@ -84,8 +136,6 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Json.Microsoft" Version="7.0.0" />
     <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
-    <PackageReference Include="ShowMeTheXAML" Version="2.0.0" />
-    <PackageReference Include="ShowMeTheXAML.AvalonEdit" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

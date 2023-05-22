@@ -8,11 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/bb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/bw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/kb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/kw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/nb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/nw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/pb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/pw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/qb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/qw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/rb.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/rw.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-bold.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-extralight.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fonts/oswald-light.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/background.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/authorization.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/orel.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%93%d0%b0%d0%bb%d0%ba%d0%b0.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%9a%d1%80%d0%b5%d0%ba%d1%81%d1%82%d0%b8%d0%ba%d0%9a%d1%80%d" +

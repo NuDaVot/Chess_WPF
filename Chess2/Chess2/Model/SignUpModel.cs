@@ -1,10 +1,12 @@
-﻿namespace Chess2.Model
+﻿
+
+using Chess2.ViewModels;
+
+namespace Chess2.Model
 {
     class SignUpModel : BindableBase
     {
 		MainWindowModel _mainWindow;
-		public string Registr = "/Resources/Pictures/Registr.png";
-
 		public SignUpModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;
