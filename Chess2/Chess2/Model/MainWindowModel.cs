@@ -12,7 +12,8 @@
 		public void Navipage(string vlue)
 		{
 			NamePage = vlue;
-			RaisePropertiesChanged("NamePage");
+            RaisePropertiesChanged("Background");
+            RaisePropertiesChanged("NamePage");
 		}
 	}
 }

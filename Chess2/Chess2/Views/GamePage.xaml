@@ -13,16 +13,16 @@
     <Page.DataContext>
         <vm:GamePageViewModel/>
     </Page.DataContext>
-    <Grid>
+    <Grid Background="#FFFFF0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="560*"/>
+            <ColumnDefinition Width="800*"/>
+            <ColumnDefinition Width="560*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="6.5*"/>
-            <RowDefinition/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="400*"/>
+            <RowDefinition Height="53*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0"
                  Grid.Column="1"

@@ -12,7 +12,9 @@ namespace Chess2.Model
 		public MenuModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;
-		}
+			_mainWindow.Background = "";
+
+        }
 		public void IsSearch()
 		{
 			_mainWindow.Navipage("GamePage.xaml");

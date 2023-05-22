@@ -30,7 +30,7 @@ namespace Chess2.Views
                     Border myBorder = new Border();
                     myBorder.SetBinding(Grid.RowProperty, $"location_cells_row[{i}]");
                     myBorder.SetBinding(Grid.ColumnProperty, $"location_cells_column[{j}]");
-                    myBorder.BorderThickness = new Thickness(3);
+                    //myBorder.BorderThickness = new Thickness(3);
                     //myBorder.BorderBrush = Brushes.SlateBlue;
                     //myBorder.SetBinding(, $"location_cells_column[{j}]");
                     //myBorder.MouseDown +=  new MouseButtonEventHandler(Border_MouseDown);

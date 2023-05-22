@@ -12,7 +12,7 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
 
-    <Frame NavigationUIVisibility="Hidden" Source="{Binding NamePage}">
+    <Frame NavigationUIVisibility="Hidden" Source="{Binding NamePage}" >
         <Frame.Background>
             <ImageBrush ImageSource="{Binding Background}"/>
         </Frame.Background>
