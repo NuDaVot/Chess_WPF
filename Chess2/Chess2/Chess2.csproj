@@ -25,15 +25,35 @@
     <None Remove="Resources\Fonts\Oswald-Light.ttf" />
     <None Remove="Resources\Pictures\Authorization.png" />
     <None Remove="Resources\Pictures\Background.png" />
+    <None Remove="Resources\Pictures\BlackRect.png" />
+    <None Remove="Resources\Pictures\ChessBoard.png" />
+    <None Remove="Resources\Pictures\ChessBoardEmpty.png" />
+    <None Remove="Resources\Pictures\ChessIcon.png" />
+    <None Remove="Resources\Pictures\ChessIconWhite.png" />
+    <None Remove="Resources\Pictures\Cross.png" />
+    <None Remove="Resources\Pictures\CrossRed.png" />
+    <None Remove="Resources\Pictures\FastMode.png" />
+    <None Remove="Resources\Pictures\FirstPlace.png" />
+    <None Remove="Resources\Pictures\FivePlace.png" />
+    <None Remove="Resources\Pictures\FourPlace.png" />
     <None Remove="Resources\Pictures\Icon.png" />
+    <None Remove="Resources\Pictures\Jackdaw.png" />
+    <None Remove="Resources\Pictures\JackdawGreen.png" />
+    <None Remove="Resources\Pictures\JackdawRed.png" />
+    <None Remove="Resources\Pictures\Order.png" />
     <None Remove="Resources\Pictures\Orel.png" />
+    <None Remove="Resources\Pictures\Percent.png" />
+    <None Remove="Resources\Pictures\PercentRed.png" />
+    <None Remove="Resources\Pictures\ProfileIcon.png" />
+    <None Remove="Resources\Pictures\RedRect.png" />
     <None Remove="Resources\Pictures\Registr.png" />
-    <None Remove="Resources\Pictures\Галка.png" />
-    <None Remove="Resources\Pictures\КрекстикКрасный.png" />
-    <None Remove="Resources\Pictures\Крестик.png" />
-    <None Remove="Resources\Pictures\Порядок.png" />
-    <None Remove="Resources\Pictures\Процент.png" />
-    <None Remove="Resources\Pictures\Шахматная доска.png" />
+    <None Remove="Resources\Pictures\Reshka.png" />
+    <None Remove="Resources\Pictures\Search.png" />
+    <None Remove="Resources\Pictures\SecondPlace.png" />
+    <None Remove="Resources\Pictures\ThirdPlace.png" />
+    <None Remove="Resources\Pictures\WhileRect.png" />
+    <None Remove="Resources\Pictures\Белый.png" />
+    <None Remove="Resources\Pictures\Черный.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -88,31 +108,91 @@
     <Content Include="Resources\Pictures\Authorization.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Pictures\BlackRect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\ChessBoardEmpty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\ChessIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\ChessIconWhite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\FastMode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\FirstPlace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\FivePlace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\FourPlace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\JackdawGreen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\JackdawRed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Pictures\Orel.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\Галка.png">
+    <Content Include="Resources\Pictures\PercentRed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\ProfileIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\RedRect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\Reshka.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\Search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\SecondPlace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\ThirdPlace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\WhileRect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\Белый.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\Jackdaw.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\Icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\КрекстикКрасный.png">
+    <Content Include="Resources\Pictures\CrossRed.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\Крестик.png">
+    <Content Include="Resources\Pictures\Cross.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\Порядок.png">
+    <Content Include="Resources\Pictures\Order.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\Процент.png">
+    <Content Include="Resources\Pictures\Percent.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\Registr.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\Шахматная доска.png">
+    <Content Include="Resources\Pictures\Черный.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\ChessBoard.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -136,6 +216,8 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Json.Microsoft" Version="7.0.0" />
     <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+    <PackageReference Include="ShowMeTheXAML" Version="2.0.0" />
+    <PackageReference Include="ShowMeTheXAML.AvalonEdit" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

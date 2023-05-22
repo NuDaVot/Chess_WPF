@@ -11,50 +11,63 @@
     <Page.DataContext>
         <vm:HeadsOrTailsViewModel/>
     </Page.DataContext>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="1" 
-              Grid.Column="1">
+    <Viewbox Stretch="Uniform"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center" 
+             Margin="0,50,0,50">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0">
-                <TextBlock Style="{StaticResource TextBlockStyle}"
-                           Text="Выберите сторону" FontSize="100" FontWeight="SemiBold"/>
-            </StackPanel>
-            <StackPanel Grid.Row="1"
-                        Orientation="Horizontal">
-                <Image Source="Resources/Pictures/Orel.png" Margin="0,70,85,0"/>
-                <Image Source="Resources/Pictures/Решка.png" Margin="85,70,0,0"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal"
-                        Grid.Row="2"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
-                <Button Margin="0,81,135,0"
-                        Height="63"
-                        Width="300"
-                        Style="{StaticResource ButtonStyle}"
-                        FontSize="45"
-                        Content="Орел"/>
-                <Button Margin="135,81,0,0"
-                        Height="63"
-                        Width="300"
-                        Style="{StaticResource ButtonStyleBlue}"
-                        Content="Решка"
-                        FontSize="45"/>
-            </StackPanel>
+            <Grid Grid.Row="1" 
+                  Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <TextBlock Style="{StaticResource TextBlockStyle}"
+                               Text="Жеребьевка" 
+                               FontSize="100"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Style="{StaticResource TextBlockStyle}"
+                               Text="Выберите сторону" 
+                               FontSize="50" 
+                               Foreground="#FF8A8A8A"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Orientation="Horizontal">
+                    <Image Source="{Binding Orel}"
+                           Margin="0,70,85,0"/>
+                    <Image Source="{Binding Reshka}"
+                           Margin="85,70,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Grid.Row="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Button Margin="0,81,135,0"
+                            Height="63"
+                            Width="300"
+                            Style="{StaticResource ButtonStyle}"
+                            FontSize="45"
+                            Content="Орел"/>
+                    <Button Margin="135,81,0,0"
+                            Height="63"
+                            Width="300"
+                            Style="{StaticResource ButtonStyleBlue}"
+                            Content="Решка"
+                            FontSize="45"/>
+                </StackPanel>
+            </Grid>
         </Grid>
-    </Grid>
+    </Viewbox>
 </Page>

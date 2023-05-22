@@ -10,129 +10,277 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Profile" Background="#FFFFF0">
     <Page.DataContext>
-        <vm:ProfileSetViewModel/>
+        <vm:ProfileViewModel/>
     </Page.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Viewbox Stretch="Uniform" 
-                 MaxWidth="1920"
-                 MaxHeight="1080"
+        <Viewbox Stretch="Uniform"
                  Grid.Row="0">
-            <StackPanel Orientation="Horizontal"
-                        VerticalAlignment="Top"
-                        Grid.Row="0" 
-                        Margin="0,20,0,0">
-                <TextBlock Style="{StaticResource TextBlockStyle}"
-                           Text="Faker(2684)" 
-                           FontSize="100" 
-                           Margin="50,0,0,0"/>
-                <Button Style="{StaticResource ButtonStyle}"
-                        Margin="525,0,0,0">
-                    <Grid>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Resources/Pictures/Порядок.png" 
-                                   Margin="50,0,0,0"/>
-                            <TextBlock Text="50"
-                                       Style="{StaticResource TextBlockStyle}"
-                                       FontSize="50"
-                                       TextAlignment="Center" 
-                                       Margin="20,40,20,0"/>
-                            <Image Source="Resources/Pictures/Галка.png" 
-                                   Margin="10,0,0,0"/>
-                            <TextBlock Text="20"
-                                       Style="{StaticResource TextBlockStyle}"
-                                       FontSize="50"
-                                       TextAlignment="Center" 
-                                       Margin="20,40,20,0"/>
-                            <Image Source="Resources/Pictures/Крестик.png"/>
-                            <TextBlock Text="25"
-                                       Style="{StaticResource TextBlockStyle}"
-                                       FontSize="50"
-                                       TextAlignment="Center" 
-                                       Margin="20,40,20,0"/>
-                            <Image Source="Resources/Pictures/Процент.png"/>
-                            <TextBlock Text="10"
-                                       Style="{StaticResource TextBlockStyle}"
-                                       FontSize="50"
-                                       TextAlignment="Center" 
-                                       Margin="20,40,40,0"/>
-                        </StackPanel>
-                    </Grid>
-                </Button>
-            </StackPanel>
-        </Viewbox>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <ListView Grid.Column="1">
-
-                
-                
-                
-            </ListView>
-            <Grid Grid.Column="0">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Background="#EBECD0" Margin="0,20,0,50">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="0" 
-                                Orientation="Horizontal"
-                                HorizontalAlignment="Center" 
-                                Margin="0,15,0,0">
-                        <Image Source="Resources/Pictures/КрекстикКрасный.png" Margin="0,0,10,0"/>
-                        <TextBlock Text="10:00"
-                                       Style="{StaticResource TextBlockStyle}" 
-                                       Background="White" 
-                                       Foreground="#FF696868"
-                                       FontSize="45"
-                                       Width="250"/>
-                        <Image Source="Resources/Pictures/КрекстикКрасный.png" Margin="10,0,0,0"/>
+                <StackPanel Grid.Column="0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Faker(2684)"
+                               Style="{StaticResource TextBlockStyle}"
+                               Height="130"
+                               MinWidth="450"
+                               FontSize="80"
+                               TextAlignment="Left"
+                               Margin="0,0,50,0"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1"
+                            Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="50">
+                        <Image Source="{Binding ChessIcon}"
+                               Margin="0,0,0,0"
+                               Height="82"
+                               Width="82"/>
+                        <TextBlock Style="{StaticResource TextBlockStyle}"
+                               Text="10"
+                               Foreground="#FFCC2326"
+                               Margin="15,15,30,20"
+                               FontSize="50"/>
                     </StackPanel>
-                    <StackPanel Grid.Row="1"
-                                Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                Margin="0,15,0,0">
-                        <Button Content="Faker(2684)"
-                                Background="Black"
-                                Width="130" Margin="0,0,11,0"/>
-                        <Button Content="FisserGR(2467)"
-                                Background="White"
-                                Foreground="Black"
-                                Width="130" Margin="11,0,0,0"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2"
+                            Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="50">
+                        <Image Source="{Binding JackdawRed}"
+                               Height="82"
+                               Width="82"/>
+                        <TextBlock Style="{StaticResource TextBlockStyle}"
+                                   Text="10"
+                                   Foreground="#FFCC2326"
+                                   Margin="5,15,30,20"
+                                   FontSize="50"/>
                     </StackPanel>
-                    <ListView Grid.Row="2">
-                        
-                    </ListView>
-                </Grid>
-                <Grid Grid.Column="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Image Source="Resources/Pictures/Шахматная доска.png"
-                           Grid.Row="0"
-                           Margin="20"/>
-                    <StackPanel Grid.Row="1" Margin="30,200,30,0" >
-                        <Button Style="{StaticResource ButtonStyle}"
-                                Content="Отчет профиля" Margin="0,0,0,30"
-                                FontSize="40"/>
-                        <Button Style="{StaticResource ButtonStyleBlue}"
-                                Content="Назад"
-                                FontSize="40"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3"
+                            Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="50">
+                        <Image Source="{Binding CrossRed}"
+                               Height="82"
+                               Width="82"/>
+                        <TextBlock Style="{StaticResource TextBlockStyle}"
+                                   Text="10"
+                                   Foreground="#FFCC2326"
+                                   Margin="5,15,30,20"
+                                   FontSize="50"/>
                     </StackPanel>
-                </Grid>
+                </StackPanel>
+                <StackPanel Grid.Column="4"
+                            Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="50">
+                        <Image Source="{Binding PercentRed}"
+                               Height="82"
+                               Width="82"/>
+                        <TextBlock Style="{StaticResource TextBlockStyle}"
+                                   Text="10"
+                                   Foreground="#FFCC2326"
+                                   Margin="5,15,30,20"
+                                   FontSize="50"/>
+                    </StackPanel>
+                </StackPanel>
             </Grid>
+        </Viewbox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3.3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <Image Source="{Binding ChessBoard}"
+                           Margin="35"
+                           Height="555"
+                           Width="555"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Orientation="Vertical"
+                            VerticalAlignment="Center">
+                    <Button Style="{StaticResource ButtonStyle}"
+                            Content="Отчет профиля"
+                            FontSize="40"
+                            Margin="35,0,35,30"/>
+                    <Button Style="{StaticResource ButtonStyleBlue}"
+                            Content="Назад"
+                            FontSize="40"
+                            Margin="35,0,35,0"/>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Column="1">
+                <Border Background="#EBECD0"
+                        CornerRadius="10"
+                        Margin="35">
+                    <Grid>
+                        <Viewbox Stretch="Uniform">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.Row="0"
+                                            Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Image Source="{Binding JackdawGreen}"
+                                           Margin="40,10,20,0"
+                                           Height="40"
+                                           Width="40"/>
+                                    <Border BorderBrush="Black"
+                                            BorderThickness="1"
+                                            CornerRadius="10"
+                                            Padding="4"
+                                            Background="White"
+                                            Margin="0,10,0,0"
+                                            Height="40"
+                                            Width="240">
+                                        <TextBlock Text="10:00"
+                                                   Style="{StaticResource TextBlockStyle}" 
+                                                   Background="White" 
+                                                   Foreground="#FF696868"
+                                                   FontSize="23"
+                                                   Margin="70,0,70,0" 
+                                                   FontWeight="SemiBold"/>
+                                    </Border>
+                                    <Image Source="{Binding CrossRed}"
+                                           Margin="20,10,40,0"
+                                           Height="40"
+                                           Width="40"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1"
+                                            Orientation="Horizontal"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center">
+                                    <Button Content="Faker(2684)"
+                                            Width="180"
+                                            Height="40"
+                                            Margin="0,20,0,0"
+                                            Style="{StaticResource ButtonStyleBlackOpponent}"/>
+                                    <Button Content="FisserGR(2467)"
+                                            Width="180"
+                                            Height="40"
+                                            Margin="20,20,0,0"
+                                            Style="{StaticResource ButtonStyleBlackOpponent}"
+                                            Background="White"
+                                            Foreground="Black"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="2"
+                                            Orientation="Horizontal"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center">
+                                    <ListView>
+                                    </ListView>
+                                    <ScrollBar Foreground="#C1C1AA"
+                                               Background="#FF696868"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="3"
+                                            Orientation="Horizontal"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Bottom">
+                                    <TextBlock Style="{StaticResource TextBlockStyle}"
+                                               Text="Ход 20"
+                                               FontSize="20"
+                                               Foreground="#FF696868"/>
+                                </StackPanel>
+                            </Grid>
+                        </Viewbox>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <Viewbox Grid.Column="2">
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                Margin="20">
+                        <ListView>
+                            <ListViewItem>
+                                <Button Style="{StaticResource ButtonStyle}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="0"
+                                               Source="{Binding FastMode}"
+                                               Height="42"
+                                               Width="42"
+                                               Margin="35,15,50,15"/>
+                                        <StackPanel Grid.Column="1"
+                                                    Orientation="Vertical"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Margin="0,0,0,0">
+                                            <StackPanel Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center">
+                                                <Image Source="{Binding WhiteRect}" 
+                                                       Height="20"
+                                                       Width="20"
+                                                       Margin="0,0,7,10"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="Оппонент 1(1999)"
+                                                           FontSize="15"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center">
+                                                <Image Source="{Binding BlackRect}" 
+                                                       Height="20"
+                                                       Width="20"
+                                                       Margin="0,0,7,0"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="Оппонент 1(1999)"
+                                                           FontSize="15"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <Image Grid.Column="2"
+                                               Source="{Binding Jackdaw}"
+                                               Height="40"
+                                               Width="40"
+                                               Margin="33,0,53,0"/>
+                                        <StackPanel HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Grid.Column="3">
+                                            <TextBlock Grid.Column="3"
+                                                       Text="12.03.2023 14:59"
+                                                       Style="{StaticResource TextBlockStyle}"
+                                                       FontSize="20"
+                                                       Margin="0,0,35,0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Button>
+                            </ListViewItem>
+                        </ListView>
+                        <ScrollBar Background="#FFC31818" 
+                                   BorderBrush="#FFC31818" 
+                                   Foreground="#FF6B2222"/>
+                    </StackPanel>
+                </Viewbox>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

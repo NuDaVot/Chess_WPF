@@ -7,7 +7,7 @@
       xmlns:vm="clr-namespace:Chess2.ViewModels"  
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MenuA" MinHeight="550" MinWidth="700"  Icon="/Resources/Pictures/Icon.png">
+      Title="Chess" MinHeight="550" MinWidth="700" Icon="/Resources/Pictures/Icon.png">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>

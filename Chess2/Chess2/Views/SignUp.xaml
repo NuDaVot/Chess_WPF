@@ -12,7 +12,7 @@
     <Page.DataContext>
         <vm:SignUpViewModel/>
     </Page.DataContext>
-    <Grid d:Background="red">
+    <Grid>
         <Viewbox Stretch="Uniform" 
                  MaxWidth="500"
                  MaxHeight="525">
@@ -22,7 +22,7 @@
                     <TextBlock Text="Регистрация" 
                                Style="{StaticResource TextBlockStyle}"
                                FontSize="85"/>
-                    <Image Source="\Resources/Pictures/Registr.png"/>
+                    <Image Source="{Binding Registr}"/>
                 </StackPanel>
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Логин"
