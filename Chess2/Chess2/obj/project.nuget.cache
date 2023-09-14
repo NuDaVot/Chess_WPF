@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G+tgK5orMH9UhyNFJwiUR8ITciDd7nUtH4Fg22QCfMIcDheNfxij9Ez6OU7xZvNmKy3zPTp666e0Bi4CknljFw==",
+  "dgSpecHash": "KuGDLVH8zsfr3+1rs81GU7IeLoYrz2Izz30meEIHSVWDmkDFZ4F8gMgyQEbK42TSPF2Wla6AdQVpqqcOj61IMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nudan\\Source\\Repos\\NuDaVot\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
+  "projectFilePath": "C:\\Users\\nudan\\source\\repos\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nudan\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\nudan\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",

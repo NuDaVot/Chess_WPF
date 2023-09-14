@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Chess2;
+namespace Chess2.Data;
 
 public partial class Party
 {
@@ -34,7 +34,14 @@ public partial class Party
 
     public DateTime? Date { get; set; }
 
+    /// <summary>
+    /// 1 - играет \\n0 - забанен
+    /// </summary>
+    public sbyte? Status { get; set; }
+
     public virtual User BlackUserNavigation { get; set; } = null!;
+
+    public virtual ICollection<Report> Reports { get; } = new List<Report>();
 
     public virtual User WhiteUserNavigation { get; set; } = null!;
 }

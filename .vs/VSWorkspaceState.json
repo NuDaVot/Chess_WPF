@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Chess2",
+    "\\Chess2\\Chess2",
+    "\\Chess2\\Chess2\\Data",
+    "\\Chess2\\Chess2\\Views"
   ],
+  "SelectedNode": "\\Chess2\\Chess2\\Data",
   "PreviewInSolutionExplorer": false
 }
