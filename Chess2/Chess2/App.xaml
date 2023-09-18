@@ -107,6 +107,19 @@
                 <Setter Property="FontSize" Value="100"/>
                 <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
             </Style>
+            <Style x:Key="pwsTextBox"
+                   TargetType="{x:Type TextBox}"
+                   BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+                <Setter Property="Foreground"
+                        Value="Black"/>
+                <Setter Property="FontFamily"
+                        Value="Resources\Fonts\#Oswald"/>
+                <Setter Property="BorderBrush"
+                        Value="#C31818"/>
+                <Setter Property="FontSize" 
+                        Value="30" />
+
+            </Style>
             <Style x:Key="TextBlockStyle1" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="100"/>
                 <Setter Property="FontFamily" Value="Resources\Fonts\#Oswald"/>
@@ -124,6 +137,32 @@
             <Style x:Key="turquoise_ellipse" TargetType="Ellipse">
                 <Setter Property="Fill" Value="#40A1A7"/>
             </Style>
+            <Style x:Key="pwsPasswordBox"
+                   TargetType="{x:Type PasswordBox}"
+                   BasedOn="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}">
+                <Setter Property="FontFamily"
+                        Value="Resources\Fonts\#Oswald"/>
+                <Setter Property="MaxLength"
+                        Value="20"/>
+                <Setter Property="FontSize"
+                        Value="30"/>
+                <Setter Property="BorderBrush"
+                        Value="#C31818"/>
+            </Style>
+            <Style x:Key="pwsTextBlockError"
+                   TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground"
+                        Value="#75151e"/>
+                <Setter Property="HorizontalAlignment"
+                        Value="Left"/>
+                <Setter Property="FontSize" 
+                        Value="25" />
+                <Setter Property="Margin"
+                        Value="0 2 0 0"/>
+                <Setter Property="FontFamily"
+                        Value="Resources\Fonts\#Oswald"/>
+            </Style>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />

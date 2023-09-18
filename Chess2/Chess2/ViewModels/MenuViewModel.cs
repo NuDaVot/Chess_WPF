@@ -10,27 +10,11 @@
 		public MenuViewModel()
 		{
 			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
-			SearchCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsSearch();
-			});
-			ExitCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsExit();
-			});
-			LeaderboardCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsLeaderboard();
-			});
-			ProfileCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsProfile();
-			});
 		}
-		public DelegateCommand<string> SearchCommand { get; }
-		public DelegateCommand<string> ExitCommand { get; }
-		public DelegateCommand<string> LeaderboardCommand { get; }
-		public DelegateCommand<string> ProfileCommand { get; }
+		public DelegateCommand SearchCommand => new(() => _model.IsSearch());
+        public DelegateCommand ExitCommand => new(() => _model.IsExit());
+        public DelegateCommand LeaderboardCommand => new(() => _model.IsLeaderboard());
+        public DelegateCommand ProfileCommand => new(() => _model.IsProfile());
 
 	}
 }

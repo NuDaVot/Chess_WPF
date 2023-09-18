@@ -13,17 +13,17 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
-    public int? Rating { get; set; }
+    public int? Rating { get; set; } = 0;
 
     /// <summary>
     /// 1 - играет \n0 - забанен
     /// </summary>
-    public bool? Status { get; set; }
+    public bool? Status { get; set; } = true;
 
     /// <summary>
     /// 1 - игрок \n0 - админ 
     /// </summary>
-    public bool Role { get; set; }
+    public bool Role { get; set; } = true;
 
     public virtual ICollection<Party> PartyBlackUserNavigations { get; } = new List<Party>();
 
