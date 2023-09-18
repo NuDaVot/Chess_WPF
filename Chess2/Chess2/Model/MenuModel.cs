@@ -12,8 +12,6 @@ namespace Chess2.Model
 		public MenuModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;
-			_mainWindow.Background = "";
-
         }
 		public void IsSearch()
 		{
@@ -32,5 +30,5 @@ namespace Chess2.Model
 		{
 			_mainWindow.Navipage("Profile.xaml");
 		}
-	}
+    }
 }

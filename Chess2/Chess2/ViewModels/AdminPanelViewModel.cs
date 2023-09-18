@@ -1,6 +1,6 @@
 ﻿namespace Chess2.ViewModels
 {
-    class AdminPanelViewModel : BindableBase
+    public class AdminPanelViewModel : BindableBase
 	{
 		readonly AdminPanelModel _model = new AdminPanelModel();
 		public string Jackdaw => _model.Jackdaw;

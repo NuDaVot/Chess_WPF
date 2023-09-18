@@ -24,30 +24,36 @@
                                FontSize="85"/>
                     <Image Source="{Binding Registr}"/>
                 </StackPanel>
-                <TextBox Height="55"
+                <TextBox Style="{StaticResource pwsTextBox}"
                          materialDesign:HintAssist.Hint="Логин"
-                         FontSize="30"
-                         FontFamily="Resources\Fonts\#Oswald" 
-                         Margin="0,50,0,10"
-                         BorderBrush="#C31818"/>
-                <TextBox Height="55"
+                         MaxLength="100"
+                         Text="{Binding UserLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock 
+                       Text="{Binding ErrorMessageLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
+                       Style="{StaticResource pwsTextBlockError}"/>
+                <TextBox Style="{StaticResource pwsTextBox}"
+                         MaxLength="45"
                          materialDesign:HintAssist.Hint="Ник"
-                         FontSize="30"
-                         FontFamily="Resources\Fonts\#Oswald" 
-                         Margin="0,0,0,10"
-                         BorderBrush="#C31818"/>
-                <TextBox Height="55"
+                         Text="{Binding UserNick, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock 
+                       Text="{Binding ErrorMessageNick, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
+                       Style="{StaticResource pwsTextBlockError}"/>
+                <PasswordBox MaxLength="64"
                          materialDesign:HintAssist.Hint="Пароль"
-                         FontSize="30"
-                         FontFamily="Resources\Fonts\#Oswald"
-                         Margin="0,0,0,10"
-                         BorderBrush="#C31818"/>
-                <TextBox Height="55"
-                         materialDesign:HintAssist.Hint="Проверка"
-                         FontSize="30"
-                         FontFamily="Resources\Fonts\#Oswald"
-                         Margin="0,0,0,10"
-                         BorderBrush="#C31818"/>
+                         materialDesign:TextFieldAssist.CharacterCounterVisibility="Visible"
+                         Style="{StaticResource pwsPasswordBox}"
+                         materialDesign:PasswordBoxAssist.Password="{Binding UserPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock 
+                       Text="{Binding ErrorMessagePassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
+                       Style="{StaticResource pwsTextBlockError}"/>
+                <PasswordBox MaxLength="64"
+                         materialDesign:HintAssist.Hint="Повторите пароль"
+                         materialDesign:TextFieldAssist.CharacterCounterVisibility="Visible"
+                         materialDesign:PasswordBoxAssist.Password="{Binding UserPassword1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource pwsPasswordBox}"/>
+                <TextBlock 
+                       Text="{Binding ErrorMessageAllField, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
+                       Style="{StaticResource pwsTextBlockError}"/>
                 <StackPanel Orientation="Horizontal">
                     <Button Margin="0,30,0,0"
                             Height="63"

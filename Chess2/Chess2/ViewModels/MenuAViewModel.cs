@@ -8,22 +8,10 @@
 		public MenuAViewModel()
 		{
 			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
-			SignInCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsSignIn();
-			});
-			SignUpCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsSignUp();
-			});
-			LeaderboardCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsLeaderboard();
-			});
 		}
-		public DelegateCommand<string> SignInCommand { get; }
-		public DelegateCommand<string> SignUpCommand { get; }
-		public DelegateCommand<string> LeaderboardCommand { get; }
+		public DelegateCommand SignInCommand => new(() => _model.IsSignIn());
+        public DelegateCommand SignUpCommand => new(() => _model.IsSignUp());
+        public DelegateCommand LeaderboardCommand => new(() => _model.IsLeaderboard());
 
-	}
+    }
 }
