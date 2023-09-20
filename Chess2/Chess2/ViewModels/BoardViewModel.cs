@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +9,14 @@ namespace Chess2.ViewModels
 {
     class BoardViewModel : BindableBase
     {
-        public int[] location_cells_row =>( new int[] {0, 1, 2, 3, 4, 5, 6, 7});
-        public int[] location_cells_column =>( new int[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+        public int[] location_cells_row1 =>( new int[] {0, 1, 2, 3, 4, 5, 6, 7});
+        public int[] location_cells_column1 =>( new int[] { 0, 1, 2, 3, 4, 5, 6, 7 });
 
-        public int[] location_cells_row1 => (new int[] { 7, 6, 5, 4 ,3 ,2 ,1 ,0});
-        public int[] location_cells_column1 => (new int[] { 7, 6, 5, 4 ,3 , 2 ,1 });
+        public int[] location_cells_row => (new int[] { 7, 6, 5, 4 ,3 ,2 ,1 ,0});
+        public int[] location_cells_column => (new int[] { 7, 6, 5, 4 ,3 , 2 ,1 });
 
-        public int[] location_number_letters0 => (new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
-        public int[] location_number_letters => (new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
+        public int[] location_number_letters => (new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        public int[] location_number_letters0 => (new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
 
         public string[][] visibility_ellipses => (new string[][]
         {
@@ -28,6 +29,39 @@ namespace Chess2.ViewModels
             new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
             new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
         });//Visible
+        //private string CollorCell(int x, int y)
+        //{
+        //    return 
+        //}
+
+        public BoardViewModel()
+        {
+            _addList = new ObservableCollection<Cell>();
+           
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    AddList.Add(new Cell(i, j, "red_border"/*CollorCell(i, j)*/));
+                }
+            }     
+        }
+        private ObservableCollection<Cell> _addList { get; set; }
+        public ObservableCollection<Cell> AddList
+        {
+            get { return _addList; }
+            set { _addList = value; RaisePropertiesChanged("AddList"); }
+        }
+        private Cell pastObj;
+        public DelegateCommand<object> ChangePage => new DelegateCommand<object>(obj =>
+        {
+            Cell cell = (Cell)obj;
+            cell.borderStyle = (Style)Application.Current.FindResource("transparent_border");
+            if (pastObj != null && pastObj != cell) { pastObj.borderStyle = (Style)Application.Current.FindResource("red_border"); }
+            pastObj = cell;
+            
+        });
+
 
     }
 }

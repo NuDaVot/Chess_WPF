@@ -17,9 +17,6 @@
         BorderThickness="3"
         BorderBrush="#696868"
         CornerRadius="3">
-      
-            
-        
         <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition Height="42*"/>
@@ -225,10 +222,61 @@
                 Grid.ColumnSpan="8"
                 Grid.RowSpan="8"
                 Padding="6">
-                
-                <Grid
+                <ItemsControl ItemsSource="{Binding AddList , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Grid.Row"
+                                    Value="{Binding x}"/>
+                            <Setter Property="Grid.Column"
+                                    Value="{Binding y}"/>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate >
+                            <Border
+                                Style="{Binding borderStyle}">
+                                <Border.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding DataContext.ChangePage, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}"/>
+                                </Border.InputBindings>
+
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+                <!--#region Inner frame-->
+                <!--<Grid--><!--
                     Margin="6"
-                    x:Name="fild_borders">
+                    x:Name="fild_borders"
+                    >
                     
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -250,9 +298,9 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Image Source="\Resources\Figures\BB.png" ></Image>
+                   
 
-                    <!--<Grid.ColumnDefinitions>
+                    --><!--<Grid.ColumnDefinitions>
                         <ColumnDefinition Width="300"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>-->
@@ -504,15 +552,12 @@
                         Style="{StaticResource red_border}">
                     </Border>-->
                     
-                    <!--#endregion-->
+                    <!--#endregion--><!--
 
 
-                </Grid>
+                </Grid>-->
             </Border>
             <!--#endregion-->
-
-           
-
 
         </Grid>
         
