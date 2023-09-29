@@ -12,7 +12,7 @@
         <vm:BannedViewModel/>
     </Page.DataContext>
     <Grid>
-        <StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Аккаунт заблокирован" 
                                Style="{StaticResource TextBlockStyle}"
                                FontSize="93"
