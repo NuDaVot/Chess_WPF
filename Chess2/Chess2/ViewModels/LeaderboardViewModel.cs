@@ -1,36 +1,31 @@
-﻿namespace Chess2.ViewModels
+﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+
+namespace Chess2.ViewModels
 {
     public class LeaderboardViewModel : BindableBase
     {
-		readonly LeaderboardModel _model = new LeaderboardModel(0, "",0);
+		readonly LeaderboardModel _model = new LeaderboardModel(0, "",0, Visibility.Visible,0);
 		public string Ramka => _model.Ramka;
         public string King => _model.King;
         public string Nick { get; set; }
         public Visibility BV { get; set; } = Visibility.Visible;
+        public Visibility SVV { get; set; } = Visibility.Visible;
+
         public string Search
         {
             get { return GetValue<string>(); }
             set { SetValue(value, changedCallback: SearchPlayer); }
         }
         public int? Rating { get; set; }
-        public int place { get; set; } = 1;
-        public int place2 { get; set; } = 1;
+        public int place { get; set; } = 2;
 
 
         public static ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
-        public static ObservableCollection<LeaderboardModel> Players2 { get; set; } = new ObservableCollection<LeaderboardModel>();
 
 
         public LeaderboardViewModel()
         {
             _model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
-            var players = _model.GetAllUser().OrderByDescending(player => player.Rating);
-
-            foreach (var i in players)
-            {
-                Players2.Add(new LeaderboardModel(place2++, i.Nick, i.Rating));
-
-            }
             SearchPlayer();
         }
         public void SearchPlayer()
@@ -42,41 +37,57 @@
             var nick = _model.GetAllUser();
             if (!string.IsNullOrWhiteSpace(Search))
             {
-                Players.Clear();
-                nick = nick.Where(p => p.Nick.ToString().ToLower().Contains(Search.ToLower())).ToList();
-
-                foreach (var i in Players2)
+                nick = nick.Where(p => p.Nick.Contains(Search)).ToList();
+                foreach (var i in Players)
                 {
-                    if (!i.Nick.Contains(personWithMaxAge.Nick))
+                    foreach (var j in nick)
                     {
-                        BV = Visibility.Collapsed;
-                        if (nick.Any(p => p.Nick == i.Nick))
-                            Players.Add(new LeaderboardModel(i.Place, i.Nick, i.Rating));
-
-                    }
-                    else
-                    {
-                       
-                        Players.Clear();
-                        BV = Visibility.Visible;
-                        //Players.Add(new LeaderboardModel(i.Place, i.Nick, i.Rating));
-
+                        if (j != personWithMaxAge)
+                        {
+                            BV = Visibility.Collapsed;
+                            if (i.Nick.Contains(j.Nick) || i.Nick == j.Nick) // equals
+                            {
+                                i.Visibility = Visibility.Visible;
+                            }
+                            else
+                            {
+                                i.Visibility = Visibility.Collapsed;
+                            }
+                        }
+                        else BV = Visibility.Visible;
                     }
                 }
+
+                //bool allCollapsed = Players.All(item => item.Visibility == Visibility.Collapsed);
+
+                //if (nick.Count == 0 && allCollapsed)
+                //    SVV = Visibility.Collapsed;
+                //else SVV = Visibility.Visible;
+
+
             }
             else
             {
-                Players.Clear();
-                BV = Visibility.Visible;
-                place = 0;
-                foreach (var i in players)
+                if(Players.Count == 0) 
                 {
-                    place++;
-                    if (i != personWithMaxAge)
-                        Players.Add(new LeaderboardModel(place, i.Nick, i.Rating));
+                    foreach (var i in players)
+                    {
+                        if (i != personWithMaxAge)
+                            Players.Add(new LeaderboardModel(place++, i.Nick, i.Rating, Visibility.Visible, i.Iduser));
+                    }
                 }
+                else
+                {
+                    BV = Visibility.Visible;
+                    foreach (var i in Players)
+                    {
+                        i.Visibility = Visibility.Visible;  
+                    }
+                }
+                
             }
-           
+            
+
         }
         public DelegateCommand CancelCommand => new(() => _model.IsCancel());
         public DelegateCommand SignUpCommand { get; set; }
