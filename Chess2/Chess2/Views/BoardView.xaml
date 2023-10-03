@@ -1,0 +1,284 @@
+﻿<Page x:Class="Chess2.Views.BoardView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chess2.Views"
+      mc:Ignorable="d" 
+      xmlns:vm="clr-namespace:Chess2.ViewModels"
+      d:DesignHeight="400" d:DesignWidth="400"
+      Title="BoardView"
+      >
+    <Page.Resources>
+        <BitmapImage x:Key="BB" UriSource="pack://siteoforigin:,,,/Resources/Figures/BB.png"/>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <vm:BoardViewModel/>
+    </Page.DataContext>
+    <Border
+        Background="#FFFFF0"
+        BorderThickness="3"
+        BorderBrush="#696868"
+        CornerRadius="3">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="99.5*"/>
+                <RowDefinition Height="42*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="42*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="99.5*"/>
+                <ColumnDefinition Width="42*"/>
+            </Grid.ColumnDefinitions>
+            <!--#region Number Grid-->
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[1]}"
+                >
+                <Label 
+                Margin="4"
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="8"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[2]}">
+                <Label 
+                Margin="4"
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="7"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[3]}">
+                <Label 
+                Margin="4"    
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="6"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[4]}">
+                <Label
+                Margin="4"    
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="5"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[5]}">
+                <Label 
+                Margin="4"    
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="4"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[6]}">
+                <Label 
+                Margin="4"    
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="3"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[7]}">
+                <Label 
+                Margin="4"    
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="2"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Row="{Binding Path=location_number_letters[8]}">
+                <Label
+                Margin="4"   
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="1"/>
+            </Viewbox>
+
+            <!--#endregion-->
+
+            <!--#region Letters Grid-->
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[1]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="a"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[2]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="b"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[3]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="c"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[4]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="d"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[5]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="e"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[6]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="f"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[7]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="g"/>
+            </Viewbox>
+            <Viewbox
+                Grid.Column="{Binding Path=location_number_letters[8]}"
+                Grid.Row="9">
+                <Label 
+                Foreground="#C31818"
+                FontFamily="Resources/#Rajdhani"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="h"/>
+            </Viewbox>
+
+            <!--#endregion-->
+
+            <!--#region Inner frame-->
+            <Border
+                Background="#EBECD0"
+                BorderThickness="2"
+                BorderBrush="#696868"
+                CornerRadius="5"
+                Grid.Column="1"
+                Grid.Row="1"
+                Grid.ColumnSpan="8"
+                Grid.RowSpan="8"
+                Padding="6">
+                <ItemsControl ItemsSource="{Binding AddList , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Grid.Row"
+                                    Value="{Binding x}"/>
+                            <Setter Property="Grid.Column"
+                                    Value="{Binding y}"/>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate >
+                            <Border
+                                Style="{Binding borderStyle}">
+                                <Border.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding DataContext.ChangePage, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}"/>
+                                </Border.InputBindings>
+                                <Image Source="{Binding image, Converter={StaticResource ImageResourceConverter}}"/>
+
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+
+            </Border>
+        </Grid>
+    </Border>
+</Page>
