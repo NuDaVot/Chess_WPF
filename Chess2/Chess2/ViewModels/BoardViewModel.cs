@@ -9,40 +9,24 @@ namespace Chess2.ViewModels
 {
     class BoardViewModel : BindableBase
     {
-        public int[] location_cells_row1 =>( new int[] {0, 1, 2, 3, 4, 5, 6, 7});
-        public int[] location_cells_column1 =>( new int[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-
-        public int[] location_cells_row => (new int[] { 7, 6, 5, 4 ,3 ,2 ,1 ,0});
-        public int[] location_cells_column => (new int[] { 7, 6, 5, 4 ,3 , 2 ,1 });
-
+        //Белые
         public int[] location_number_letters => (new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        //Черный
         public int[] location_number_letters0 => (new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
 
-        public string[][] visibility_ellipses => (new string[][]
-        {
-            new string[]{ "Hidden", "Visible", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
-            new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
-            new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
-            new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Visible", "Hidden" },
-            new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
-            new string[]{ "Hidden", "Hidden", "Visible", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
-            new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
-            new string[]{ "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden", "Hidden" },
-        });//Visible
-        //private string CollorCell(int x, int y)
-        //{
-        //    return 
-        //}
 
         public BoardViewModel()
         {
             _addList = new ObservableCollection<Cell>();
            
-            for (int i = 0; i < 8; i++)
+            for (int x = 0; x < 8; x++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int y = 0; y < 8; y++)
                 {
-                    AddList.Add(new Cell(i, j, "red_border"/*CollorCell(i, j)*/));
+                    if ((x + y) % 2 != 0)
+                        AddList.Add(new Cell(x, y, "red_border", "BB"));
+                    else
+                        AddList.Add(new Cell(x, y, "transparent_border", "RW"));
                 }
             }     
         }
@@ -56,8 +40,21 @@ namespace Chess2.ViewModels
         public DelegateCommand<object> ChangePage => new DelegateCommand<object>(obj =>
         {
             Cell cell = (Cell)obj;
-            cell.borderStyle = (Style)Application.Current.FindResource("transparent_border");
-            if (pastObj != null && pastObj != cell) { pastObj.borderStyle = (Style)Application.Current.FindResource("red_border"); }
+            //Белые 
+            Debug.WriteLine($"Координаты в матрице: {cell.x}, {cell.y}");
+            Debug.WriteLine($"Координаты на доске:{location_number_letters0[cell.x] - 2}, {cell.y}");
+            Debug.WriteLine($"__________________");
+            ////Черный
+            //Debug.WriteLine($"Координаты в матрице: {cell.x}, {cell.y}");
+            //Debug.WriteLine($"Координаты на доске:{cell.x}, {location_number_letters[cell.y]-2}");
+            //Debug.WriteLine($"__________________");
+            cell.borderStyle = (Style)Application.Current.FindResource("select_border");
+            if (pastObj != null && pastObj != cell) {
+                if ((pastObj.x + pastObj.y) % 2 != 0)
+                    pastObj.borderStyle = (Style)Application.Current.FindResource("red_border"); 
+                else
+                    pastObj.borderStyle = (Style)Application.Current.FindResource("transparent_border");
+            }
             pastObj = cell;
             
         });

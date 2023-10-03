@@ -14,8 +14,6 @@ namespace Chess2.Model
     public class Cell : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
-
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -63,22 +61,35 @@ namespace Chess2.Model
                 }
             }
         }
-        public object Clone()
+        
+        private string _image;
+        public string image
         {
-            return new Cell(_x, _y, _borderStyle);
+            get { return _image; }
+            set
+            {
+                if (_image != value)
+                {
+                    _image = value;
+                    OnPropertyChanged(nameof(image)); // Уведомление о изменении свойства image
+                }
+            }
         }
 
-        public Cell(int x, int y, string borderStyle)
+
+        public Cell(int x, int y, string borderStyle, string image = null)
         {
             this.x = x;
             this.y = y;
             this.borderStyle = (Style)Application.Current.FindResource(borderStyle);
+            this.image = image;
         }
-        public Cell(int x, int y, Style borderStyle)
+        public Cell(int x, int y, Style borderStyle, string image = null)
         {
             this.x = x;
             this.y = y;
             this.borderStyle = borderStyle;
+            this.image = image;
         }
     }
 

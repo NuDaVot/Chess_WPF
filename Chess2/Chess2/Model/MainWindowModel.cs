@@ -2,7 +2,7 @@
 {
     class MainWindowModel : BindableBase
 	{
-		private string _namePage = "Board.xaml";
+		private string _namePage = "BoardView.xaml";
 		public string NamePage;
 		public string Background = "Resources/Pictures/Background.png";
 		public MainWindowModel()

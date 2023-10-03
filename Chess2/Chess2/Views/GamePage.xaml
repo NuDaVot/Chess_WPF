@@ -133,6 +133,6 @@
 
             </materialDesign:DrawerHost>
         </smtx:XamlDisplay>
-        <Frame Grid.Row="1" Grid.Column="1" Source="Board.xaml"></Frame>
+        <Frame Grid.Row="1" Grid.Column="1" Source="BoardView.xaml"></Frame>
     </Grid>
 </Page>
