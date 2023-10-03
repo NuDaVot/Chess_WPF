@@ -7,7 +7,24 @@
     <Application.Resources>
 
         <ResourceDictionary>
+            <Color x:Key="pwsPrimaryColor">#ffffff</Color>
+            <Color x:Key="pwsSecondaryColor">#76e383</Color>
+            <Color x:Key="pwsAccentedColor">#40A1A7</Color>
+
+            <SolidColorBrush x:Key="pwsPrimaryBg" Color="{StaticResource pwsPrimaryColor}"/>
+            <SolidColorBrush x:Key="pwsSecondaryBg" Color="{StaticResource pwsSecondaryColor}"/>
+            <SolidColorBrush x:Key="pwsAccentedBg" Color="{StaticResource pwsAccentedColor}"/>
+
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource pwsSecondaryColor}"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource Primary200Foreground}"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource pwsAccentedColor}"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource Primary500Foreground}"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource pwsSecondaryColor}"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource Primary700Foreground}"/>
+            
+
             <converterts:ImageResourceConverter x:Key="ImageResourceConverter"/>
+
             <Style x:Key="MenuStyle" TargetType="Menu">
                 <Setter Property="Background" Value="#EBECD0"/>
                 <Setter Property="Template">
@@ -176,7 +193,98 @@
                 <Setter Property="FontFamily"
                         Value="Resources\Fonts\#Oswald"/>
             </Style>
+            <Style x:Key="BlueBord" TargetType="Border" BasedOn="{StaticResource MaterialDesignToolBarMainPanelBorderStyle}">
+                <Setter Property="Background" Value="#40A1A7" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Height" Value="100" />
+                <Setter Property="Width" Value="780" />
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="#40A1A7" Direction="270" ShadowDepth="7" BlurRadius="0" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+            <Style x:Key="RedBord" TargetType="Border" BasedOn="{StaticResource BlueBord}">
+                <Setter Property="Background" Value="#C31818" />
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="#FFCC2326" Direction="270" ShadowDepth="7" BlurRadius="0" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
+
+            <Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
+                <Setter Property="SnapsToDevicePixels" Value="True"/>
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="IsTabStop" Value="false"/>
+                <Setter Property="Focusable" Value="false"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Thumb}">
+                            <Border CornerRadius="4" 
+                                    Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="0"  />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <ControlTemplate x:Key="VerticalScrollBar" TargetType="{x:Type ScrollBar}">
+                <Grid>
+                    <Border CornerRadius="5" 
+                            Background="#696868"/> <!-- тут Background - полоса-->
+                    <Track Name="PART_Track" IsDirectionReversed="true" Margin="0,9,0,9">
+                        <Track.Thumb>
+                            <Thumb Style="{StaticResource ScrollBarThumb}" 
+                                   Background="#C31818" Height="37" Width="30" Margin="-20,-10,-20,-10"/> 
+                        </Track.Thumb>
+                    </Track>
+                </Grid>
+            </ControlTemplate>
+            
+            <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+                <Setter Property="SnapsToDevicePixels" Value="True"/>
+                <Setter Property="OverridesDefaultStyle" Value="true"/>
+                <Style.Triggers>
+                    <Trigger Property="Orientation" Value="Vertical">
+                        <Setter Property="Width" Value="22"/>
+                        <Setter Property="Height" Value="Auto"/>
+                        <Setter Property="Template" Value="{StaticResource VerticalScrollBar}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="FavsScrollViewer" TargetType="{x:Type ScrollViewer}">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Height" Value="227" />
+                <Setter Property="Margin" Value="40,20,0,0" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ScrollContentPresenter Grid.Column="0"/>
+                                <ScrollBar Name="PART_VerticalScrollBar" Grid.Column="1"
+                                           Value="{TemplateBinding VerticalOffset}" 
+                                           Maximum="{TemplateBinding ScrollableHeight}" 
+                                           Margin="40,0,0,0"
+                                           ViewportSize="{TemplateBinding ViewportHeight}" 
+                                           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />

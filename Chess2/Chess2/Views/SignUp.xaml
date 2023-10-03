@@ -32,7 +32,7 @@
                        Text="{Binding ErrorMessageLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
                        Style="{StaticResource pwsTextBlockError}"/>
                 <TextBox Style="{StaticResource pwsTextBox}"
-                         MaxLength="45"
+                         MaxLength="12"
                          materialDesign:HintAssist.Hint="Ник"
                          Text="{Binding UserNick, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock 

@@ -40,11 +40,13 @@
     <None Remove="Resources\Pictures\Jackdaw.png" />
     <None Remove="Resources\Pictures\JackdawGreen.png" />
     <None Remove="Resources\Pictures\JackdawRed.png" />
+    <None Remove="Resources\Pictures\King.png" />
     <None Remove="Resources\Pictures\Order.png" />
     <None Remove="Resources\Pictures\Orel.png" />
     <None Remove="Resources\Pictures\Percent.png" />
     <None Remove="Resources\Pictures\PercentRed.png" />
     <None Remove="Resources\Pictures\ProfileIcon.png" />
+    <None Remove="Resources\Pictures\Ramka.png" />
     <None Remove="Resources\Pictures\RedRect.png" />
     <None Remove="Resources\Pictures\Registr.png" />
     <None Remove="Resources\Pictures\Reshka.png" />
@@ -138,6 +140,9 @@
     <Content Include="Resources\Pictures\JackdawRed.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Pictures\King.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Pictures\Orel.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -145,6 +150,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\ProfileIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\Ramka.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\RedRect.png">
