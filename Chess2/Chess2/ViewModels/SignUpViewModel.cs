@@ -30,11 +30,11 @@ namespace Chess2.ViewModels
             users1 = users;
             _model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
 		}
-        public DelegateCommand RegistrCommand => new(() =>
+        public AsyncCommand RegistrCommand => new(async() =>
         {
             string salt = BCrypt.Net.BCrypt.GenerateSalt(12);
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(UserPassword, salt);
-            _model.AddNewUser(UserNick, UserLogin, hashedPassword);
+            await _model.AddNewUser(UserNick, UserLogin, hashedPassword);
             _model.IsRegistr();
             UserSetting.Default.Rating = 0;
             UserSetting.Default.Nick = UserNick;
@@ -46,23 +46,37 @@ namespace Chess2.ViewModels
                 || string.IsNullOrWhiteSpace(UserLogin)
                 || string.IsNullOrWhiteSpace(UserPassword)
                 || string.IsNullOrWhiteSpace(UserPassword1))
+            {
+
                 ErrorMessageAllField = "*Все поля обязательны для заполнения";
+                return false;
+            }
             else if (users1.Any(i => i.Login == UserLogin))
+            {
                 ErrorMessageLogin = "Логин занят";
-            else if(users1.Any(i => i.Nick == UserNick))
+				return false;
+			}
+			else if (users1.Any(i => i.Nick == UserNick))
+            {
                 ErrorMessageNick = "Никнейм занят";
-            else if(UserPassword != UserPassword1)
+				return false;
+
+			}
+			else if (UserPassword != UserPassword1)
+            {
                 ErrorMessagePassword = "Пароли не совпадают";
-            else
+				return false;
+			}
+			else
             {
                 ErrorMessageLogin = string.Empty;
                 ErrorMessagePassword = string.Empty;
                 ErrorMessageNick = string.Empty;
                 ErrorMessageAllField = string.Empty;
-            }
-            return ErrorMessageAllField == string.Empty;
-
-        });
+				return true;
+			}
+			
+		});
 
         public DelegateCommand CanselCommand => new(() => _model.IsCansel());
     }

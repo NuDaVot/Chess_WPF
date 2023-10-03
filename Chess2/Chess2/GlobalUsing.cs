@@ -7,6 +7,7 @@ global using Microsoft.Extensions.DependencyInjection;
 global using Chess2.Data;
 global using Chess2.Model;
 global using Chess2.Properties;
+global using System.Collections.ObjectModel;
 global using Chess2.Views;
 global using Chess2.ViewModels;
 global using System;
