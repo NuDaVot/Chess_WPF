@@ -879,14 +879,13 @@ D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\ShowMeTheXAML.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\ShowMeTheXAML.AvalonEdit.dll
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\AdminPanel.g.cs
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Banned.g.cs
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Board.g.cs
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\GamePage.g.cs
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ModeVariation.g.cs
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\AdminPanel.baml
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Banned.baml
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Board.baml
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\GamePage.baml
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ModeVariation.baml
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
-
+D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
+D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
