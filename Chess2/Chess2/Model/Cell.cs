@@ -62,34 +62,55 @@ namespace Chess2.Model
             }
         }
         
-        private string _image;
-        public string image
+        private Figure? _figure;
+        public Figure? figure
         {
-            get { return _image; }
+            get { return _figure; }
             set
             {
-                if (_image != value)
+                hintEllipse = Visibility.Hidden;
+                if (_figure != value)
                 {
-                    _image = value;
-                    OnPropertyChanged(nameof(image)); // Уведомление о изменении свойства image
+                    _figure = value;
+                    OnPropertyChanged(nameof(figure)); // Уведомление о изменении свойства figure
+                }
+            }
+        }
+        private Visibility _hintEllipse;
+        public Visibility hintEllipse
+        {
+            get { return _hintEllipse; }
+            set
+            {
+                if (value != _hintEllipse)
+                {
+                    _hintEllipse = value;
+                    OnPropertyChanged(nameof(hintEllipse));
                 }
             }
         }
 
-
-        public Cell(int x, int y, string borderStyle, string image = null)
+        public Cell(int x, int y, string borderStyle, Visibility hintEllipse, Figure figure = null)
         {
             this.x = x;
             this.y = y;
             this.borderStyle = (Style)Application.Current.FindResource(borderStyle);
-            this.image = image;
+            if (figure == null)
+                this.hintEllipse = hintEllipse;
+            else
+                this.hintEllipse = Visibility.Hidden;
+            this.figure = figure;
         }
-        public Cell(int x, int y, Style borderStyle, string image = null)
+        public Cell(int x, int y, Style borderStyle, Visibility hintEllipse, Figure figure = null)
         {
             this.x = x;
             this.y = y;
             this.borderStyle = borderStyle;
-            this.image = image;
+            if (figure == null)
+                this.hintEllipse = hintEllipse;
+            else
+                this.hintEllipse = Visibility.Hidden;
+            this.figure = figure;
         }
     }
 
