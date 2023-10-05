@@ -20,7 +20,7 @@ namespace Chess2.ViewModels
         public int place { get; set; } = 2;
 
 
-        public static ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
+        public ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
 
 
         public LeaderboardViewModel()
