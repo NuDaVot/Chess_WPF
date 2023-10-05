@@ -820,11 +820,9 @@ C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\ShowMeTheXAML.dll
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\ShowMeTheXAML.AvalonEdit.dll
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\AdminPanel.g.cs
-C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Board.g.cs
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\GamePage.g.cs
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ModeVariation.g.cs
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\AdminPanel.baml
-C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Board.baml
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\GamePage.baml
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\ModeVariation.baml
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Chess2.dll.config
@@ -889,3 +887,5 @@ D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
