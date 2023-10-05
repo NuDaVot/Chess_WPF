@@ -17,7 +17,7 @@ namespace Chess2.ViewModels
         }
         public int? Rating { get; set; }
         public int place { get; set; } = 2;
-        public static ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
+        public ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
         public LeaderboardViewModel()
         {
             _model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
