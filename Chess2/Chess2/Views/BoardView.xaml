@@ -9,9 +9,6 @@
       d:DesignHeight="400" d:DesignWidth="400"
       Title="BoardView"
       >
-    <Page.Resources>
-        <BitmapImage x:Key="BB" UriSource="pack://siteoforigin:,,,/Resources/Figures/BB.png"/>
-    </Page.Resources>
 
     <Page.DataContext>
         <vm:BoardViewModel/>
@@ -257,9 +254,9 @@
                     <ItemsControl.ItemContainerStyle>
                         <Style>
                             <Setter Property="Grid.Row"
-                                    Value="{Binding x}"/>
+                                    Value="{Binding Path=point.X}"/>
                             <Setter Property="Grid.Column"
-                                    Value="{Binding y}"/>
+                                    Value="{Binding Path=point.Y}"/>
                         </Style>
                     </ItemsControl.ItemContainerStyle>
 
@@ -270,7 +267,25 @@
                                 <Border.InputBindings>
                                     <MouseBinding MouseAction="LeftClick" Command="{Binding DataContext.ChangePage, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}"/>
                                 </Border.InputBindings>
-                                <Image Source="{Binding image, Converter={StaticResource ImageResourceConverter}}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Ellipse Style="{StaticResource turquoise_ellipse}" 
+                                             Visibility="{Binding hintEllipse}"
+                                             Grid.Column="1"
+                                             Grid.Row="1"/>
+                                    <Image Source="{Binding figure.image, Converter={StaticResource ImageResourceConverter}}"
+                                           Grid.ColumnSpan="3"
+                                           Grid.RowSpan="3"/>
+                                </Grid>
 
                             </Border>
                         </DataTemplate>

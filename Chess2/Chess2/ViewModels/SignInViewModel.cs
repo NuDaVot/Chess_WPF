@@ -5,8 +5,8 @@ namespace Chess2.ViewModels
     public class SignInViewModel : BindableBase
     {
 		readonly SignInModel _model = new SignInModel();
-        public string UserLogin { get; set; } = "Akim";
-        public string Password { get; set; } = "1234";
+        public string UserLogin { get; set; } = "user@gmail.com";
+        public string Password { get; set; } = "user";
         public string ErrorMessage { get; set; }
         public string ErrorMessageButton { get; set; }
         public string Authorization => _model.Authorization;
@@ -28,7 +28,7 @@ namespace Chess2.ViewModels
                         else if (UserSetting.Default.Role)
                             _model.IsAuthorization();
                         else
-                            _model.IsAdminPanel();
+                            _model.IsAuthorization();
                     });
                 }
                 else

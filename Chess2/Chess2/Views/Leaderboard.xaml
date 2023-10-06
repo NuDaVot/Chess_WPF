@@ -19,6 +19,8 @@
                            Style="{StaticResource TextBlockStyle}"
                            FontSize="93"
                            TextAlignment="Center"
+                           Height="130"
+                           Width="700" 
                            Margin="0,0,0,40"/>
             <StackPanel Orientation="Vertical"
                             HorizontalAlignment="Center"
@@ -157,7 +159,7 @@
                             Width="320"
                             Style="{StaticResource ButtonStyleBlue}"
                             Command="{Binding CancelCommand, IsAsync=True}"
-                            Content="Назад"
+                            Content="Отмена"
                             FontSize="45"/>
             </StackPanel>
         </StackPanel>
