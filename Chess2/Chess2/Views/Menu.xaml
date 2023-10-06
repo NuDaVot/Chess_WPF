@@ -1,0 +1,60 @@
+﻿<Page x:Class="Chess2.Views.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chess2.Views"
+      xmlns:vm="clr-namespace:Chess2.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"  
+      Title="Menu">
+    <Page.DataContext>
+        <vm:MenuViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Button HorizontalAlignment="Right" 
+                VerticalAlignment="Top" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"
+                Command="{Binding ProfileCommand, IsAsync=True}"
+                Margin="10">
+            <Button.Background>
+                <ImageBrush ImageSource="{Binding ProfileIcon}"/>
+            </Button.Background>
+        </Button>
+        <Viewbox Stretch="Uniform" 
+                 MaxWidth="550"
+                 MaxHeight="550">
+            <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Chess"
+                               Style="{StaticResource TextBlockStyle}"
+                               Margin="100,0,0,0"/>
+                    <Image Source="{Binding Icon}" 
+                           Margin="10,0,0,0"
+                           Width="100"
+                           Height="100"/>
+                </StackPanel>
+                <Button Margin="0, 26" 
+                        Height="120" 
+                        Width="530" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Command="{Binding SearchCommand, IsAsync=True}"
+                        Content="Начать игру"/>
+                <Button Margin="0, 26"
+                        Height="120" 
+                        Width="530" 
+                        Style="{StaticResource ButtonStyle}"
+                        Command="{Binding LeaderboardCommand, IsAsync=True}"
+                        Content="Таблица лидеров"/>
+                <Button Margin="0, 26" 
+                        Height="120" 
+                        Width="530" 
+                        Style="{StaticResource ButtonStyleBlue}"
+                        Command="{Binding ExitCommand, IsAsync=True}"
+                        Content="Выйти"/>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Page>
