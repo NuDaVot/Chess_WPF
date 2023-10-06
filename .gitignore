@@ -1,0 +1,9 @@
+# Игнорировать файлы конфигурации Visual Studio
+*.suo
+*.user
+*.sln.docstates
+*.userprefs
+
+# Игнорировать папку с временными файлами
+obj/
+bin/
