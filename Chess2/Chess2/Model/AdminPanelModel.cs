@@ -14,9 +14,9 @@
 		{
 			_mainWindow = MainWindowViewModel._metod;
 		}
-		public void IsBlack()
+		public void IsBack()
 		{
-			_mainWindow.Navipage("SIgnInPage.xaml");
+			_mainWindow.Navipage("SignIn.xaml");
 		}
 	}
 }

@@ -11,7 +11,6 @@
 
 using Chess2;
 using Chess2.Converters;
-using DevExpress.Xpf.DXBinding;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -21,7 +20,6 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -62,7 +60,7 @@ namespace Chess2 {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Chess2;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Chess2;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

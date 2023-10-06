@@ -10,7 +10,6 @@ namespace Chess2.ViewModels
         public string Nick { get; set; }
         public Visibility BV { get; set; } = Visibility.Visible;
         public Visibility SVV { get; set; } = Visibility.Visible;
-
         public string Search
         {
             get { return GetValue<string>(); }
@@ -18,11 +17,15 @@ namespace Chess2.ViewModels
         }
         public int? Rating { get; set; }
         public int place { get; set; } = 2;
+<<<<<<< HEAD
 
 
         public ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
 
 
+=======
+        public ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
+>>>>>>> origin/AdminPanel
         public LeaderboardViewModel()
         {
             _model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
@@ -55,8 +58,6 @@ namespace Chess2.ViewModels
 				if (nick.Count == 0 && allCollapsed)
 					SVV = Visibility.Collapsed;
 				else SVV = Visibility.Visible;
-
-
 			}
 			else
             {
@@ -85,7 +86,6 @@ namespace Chess2.ViewModels
 			{
 				return x.Nick == y.Nick;
 			}
-
 			public int GetHashCode(LeaderboardModel obj)
 			{
 				return obj.Nick.GetHashCode();
