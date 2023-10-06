@@ -1,5 +1,5 @@
 ﻿Chess2
-
+1.0.0.0
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\App.xaml
 161245520202
 481118003131
-57-110558289
+59-1598605499
 240-1444915279
 Views\AdminPanel.xaml;Views\Banned.xaml;Views\BoardView.xaml;Views\ChooseColor.xaml;Views\GamePage.xaml;Views\HeadsOrTails.xaml;Views\Leaderboard.xaml;Views\MainWindow.xaml;Views\Menu.xaml;Views\MenuA.xaml;Views\ModeVariation.xaml;Views\Profile.xaml;Views\ProfileSet.xaml;Views\Search.xaml;Views\SignIn.xaml;Views\SignUp.xaml;
 
