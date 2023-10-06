@@ -14,9 +14,12 @@
 		public AdminPanelViewModel()
 		{
 			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
-
+			Black = new DelegateCommand<string>(str =>
+			{
+				_model.IsBlack();
+			});
 		}
-        public DelegateCommand BackCommand => new(() => _model.IsBack());
+		public DelegateCommand<string> Black { get; }
 
-    }
+	}
 }
