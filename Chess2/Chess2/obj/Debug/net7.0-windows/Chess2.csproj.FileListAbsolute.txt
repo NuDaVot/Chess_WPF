@@ -887,16 +887,5 @@ D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
-<<<<<<< HEAD
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\King.png
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Chess2.dll.config
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\BCrypt.Net.dll
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Banned.g.cs
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\Banned.baml
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
-=======
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
->>>>>>> origin/AdminPanel
