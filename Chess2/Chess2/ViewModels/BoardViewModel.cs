@@ -9,16 +9,26 @@ namespace Chess2.ViewModels
 {
     class BoardViewModel : BindableBase
     {
-        readonly private Board board;
         //Белые
-        public int[] location_number_letters {  get; set; }
+        public int[] location_number_letters => (new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        //Черный
+        public int[] location_number_letters0 => (new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
 
 
         public BoardViewModel()
         {
-            board = new Board(true);
-            AddList = board.cells;
-            location_number_letters = board.location_number_letters;
+            _addList = new ObservableCollection<Cell>();
+           
+            for (int x = 0; x < 8; x++)
+            {
+                for (int y = 0; y < 8; y++)
+                {
+                    if ((x + y) % 2 != 0)
+                        AddList.Add(new Cell(x, y, "red_border", "BB"));
+                    else
+                        AddList.Add(new Cell(x, y, "transparent_border", "RW"));
+                }
+            }     
         }
         private ObservableCollection<Cell> _addList { get; set; }
         public ObservableCollection<Cell> AddList
@@ -30,17 +40,23 @@ namespace Chess2.ViewModels
         public DelegateCommand<object> ChangePage => new DelegateCommand<object>(obj =>
         {
             Cell cell = (Cell)obj;
-            board.testc(cell, pastObj);
+            //Белые 
+            Debug.WriteLine($"Координаты в матрице: {cell.x}, {cell.y}");
+            Debug.WriteLine($"Координаты на доске:{location_number_letters0[cell.x] - 2}, {cell.y}");
+            Debug.WriteLine($"__________________");
+            ////Черный
+            //Debug.WriteLine($"Координаты в матрице: {cell.x}, {cell.y}");
+            //Debug.WriteLine($"Координаты на доске:{cell.x}, {location_number_letters[cell.y]-2}");
+            //Debug.WriteLine($"__________________");
             cell.borderStyle = (Style)Application.Current.FindResource("select_border");
             if (pastObj != null && pastObj != cell) {
-                if ((pastObj.point.X + pastObj.point.Y) % 2 != 0)
+                if ((pastObj.x + pastObj.y) % 2 != 0)
                     pastObj.borderStyle = (Style)Application.Current.FindResource("red_border"); 
                 else
                     pastObj.borderStyle = (Style)Application.Current.FindResource("transparent_border");
             }
             pastObj = cell;
             
-
         });
 
 
