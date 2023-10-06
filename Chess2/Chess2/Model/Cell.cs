@@ -18,32 +18,16 @@ namespace Chess2.Model
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
-        private int _x;
-        public int x
+        private IntPoint _point;
+        public IntPoint point
         {
-            get { return _x; }
+            get { return _point; }
             set
             {
-                if (_x != value)
+                if (_point != value)
                 {
-                    _x = value;
-                    OnPropertyChanged(nameof(x)); // Уведомление о изменении свойства x
-                }
-            }
-        }
-
-        private int _y;
-        public int y
-        {
-            get { return _y; }
-            set
-            {
-                if (_y != value)
-                {
-                    _y = value;
-                    OnPropertyChanged(nameof(y)); // Уведомление о изменении свойства y
+                    _point = value;
+                    OnPropertyChanged(nameof(point)); // Уведомление о изменении свойства x
                 }
             }
         }
@@ -90,10 +74,10 @@ namespace Chess2.Model
             }
         }
 
-        public Cell(int x, int y, string borderStyle, Visibility hintEllipse, Figure figure = null)
+        public Cell(IntPoint point, string borderStyle, Visibility hintEllipse, Figure figure = null)
         {
-            this.x = x;
-            this.y = y;
+            
+            this.point = point;
             this.borderStyle = (Style)Application.Current.FindResource(borderStyle);
             if (figure == null)
                 this.hintEllipse = hintEllipse;
@@ -101,10 +85,9 @@ namespace Chess2.Model
                 this.hintEllipse = Visibility.Hidden;
             this.figure = figure;
         }
-        public Cell(int x, int y, Style borderStyle, Visibility hintEllipse, Figure figure = null)
+        public Cell(IntPoint point, Style borderStyle, Visibility hintEllipse, Figure figure = null)
         {
-            this.x = x;
-            this.y = y;
+            this.point = point;
             this.borderStyle = borderStyle;
             if (figure == null)
                 this.hintEllipse = hintEllipse;
@@ -112,6 +95,9 @@ namespace Chess2.Model
                 this.hintEllipse = Visibility.Hidden;
             this.figure = figure;
         }
+        public void ChangeVisibility(bool visible) 
+        {
+            this.hintEllipse = visible? Visibility.Visible : Visibility.Hidden;
+        }
     }
-
 }

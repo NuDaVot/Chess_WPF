@@ -12,8 +12,6 @@ namespace Chess2.ViewModels
         readonly private Board board;
         //Белые
         public int[] location_number_letters {  get; set; }
-        //Черный
-        public int[] revers_location_number_letters { get; set; }
 
 
         public BoardViewModel()
@@ -21,7 +19,6 @@ namespace Chess2.ViewModels
             board = new Board(true);
             AddList = board.cells;
             location_number_letters = board.location_number_letters;
-            revers_location_number_letters = board.revers_location_number_letters;
         }
         private ObservableCollection<Cell> _addList { get; set; }
         public ObservableCollection<Cell> AddList
@@ -33,15 +30,16 @@ namespace Chess2.ViewModels
         public DelegateCommand<object> ChangePage => new DelegateCommand<object>(obj =>
         {
             Cell cell = (Cell)obj;
+            board.testc(cell, pastObj);
             cell.borderStyle = (Style)Application.Current.FindResource("select_border");
             if (pastObj != null && pastObj != cell) {
-                if ((pastObj.x + pastObj.y) % 2 != 0)
+                if ((pastObj.point.X + pastObj.point.Y) % 2 != 0)
                     pastObj.borderStyle = (Style)Application.Current.FindResource("red_border"); 
                 else
                     pastObj.borderStyle = (Style)Application.Current.FindResource("transparent_border");
             }
             pastObj = cell;
-            board.testc(cell.x, cell.y);
+            
 
         });
 
