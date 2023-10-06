@@ -20,7 +20,7 @@ namespace Chess2.ViewModels
         public int place { get; set; } = 2;
 
 
-        public static ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
+        public ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
 
 
         public LeaderboardViewModel()
@@ -30,43 +30,35 @@ namespace Chess2.ViewModels
         }
         public void SearchPlayer()
         {
-            var personWithMaxAge = _model.GetAllUser().OrderByDescending(player => player.Rating).First();
-            Rating = personWithMaxAge.Rating;
-            Nick = personWithMaxAge.Nick;
-            var players = _model.GetAllUser().OrderByDescending(player => player.Rating);
-            var nick = _model.GetAllUser();
-            if (!string.IsNullOrWhiteSpace(Search))
-            {
-                nick = nick.Where(p => p.Nick.Contains(Search)).ToList();
-                foreach (var i in Players)
-                {
-                    foreach (var j in nick)
-                    {
-                        if (j != personWithMaxAge)
-                        {
-                            BV = Visibility.Collapsed;
-                            if (i.Nick.Contains(j.Nick) || i.Nick == j.Nick) // equals
-                            {
-                                i.Visibility = Visibility.Visible;
-                            }
-                            else
-                            {
-                                i.Visibility = Visibility.Collapsed;
-                            }
-                        }
-                        else BV = Visibility.Visible;
-                    }
-                }
-
-                //bool allCollapsed = Players.All(item => item.Visibility == Visibility.Collapsed);
-
-                //if (nick.Count == 0 && allCollapsed)
-                //    SVV = Visibility.Collapsed;
-                //else SVV = Visibility.Visible;
+			var personWithMaxAge = _model.GetAllUser().OrderByDescending(player => player.Rating).First();
+			Rating = personWithMaxAge.Rating;
+			Nick = personWithMaxAge.Nick;
+			var players = _model.GetAllUser().OrderByDescending(player => player.Rating);
+			var nick = _model.GetAllUser();
+			if (!string.IsNullOrWhiteSpace(Search))
+			{
+				nick = nick.Where(p => p.Nick.Contains(Search)).ToList();
+				var itemsToCollapse = Players.Except(
+							nick.Select(nick => new LeaderboardModel(0, "", 0, Visibility.Visible, 0) { Nick = nick.Nick }),
+							new MyItemComparer()
+						);
+				foreach (var pair in itemsToCollapse)
+				{
+					pair.Visibility = Visibility.Collapsed;
+				}
+				if (personWithMaxAge.Nick.Contains(Search)) BV = Visibility.Visible;
+				else BV = Visibility.Collapsed;
 
 
-            }
-            else
+				bool allCollapsed = Players.All(item => item.Visibility == Visibility.Collapsed);
+
+				if (nick.Count == 0 && allCollapsed)
+					SVV = Visibility.Collapsed;
+				else SVV = Visibility.Visible;
+
+
+			}
+			else
             {
                 if(Players.Count == 0) 
                 {
@@ -85,10 +77,20 @@ namespace Chess2.ViewModels
                     }
                 }
                 
-            }
-            
-
+            }          
         }
+        public class MyItemComparer : IEqualityComparer<LeaderboardModel>
+		{
+			public bool Equals(LeaderboardModel x, LeaderboardModel y)
+			{
+				return x.Nick == y.Nick;
+			}
+
+			public int GetHashCode(LeaderboardModel obj)
+			{
+				return obj.Nick.GetHashCode();
+			}
+		}
         public DelegateCommand CancelCommand => new(() => _model.IsCancel());
         public DelegateCommand SignUpCommand { get; set; }
 	}

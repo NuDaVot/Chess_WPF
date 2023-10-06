@@ -14,7 +14,7 @@
         public int Id { get; set; }
         public int? Rating { get; set; }
         public Visibility Visibility { get; set; }
-        public List<User> GetAllUser() => _historyChessContext.Users.ToList();
+        public List<User> GetAllUser() => _historyChessContext.Users.Where(i => i.Status == true).ToList();
 
         public LeaderboardModel(int place, string nick, int? rating, Visibility visibility, int id)
 		{
