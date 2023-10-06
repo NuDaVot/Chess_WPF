@@ -889,6 +889,11 @@ D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
+<<<<<<< HEAD
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.g.cs
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Views\BoardView.baml
+=======
+>>>>>>> main
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\King.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Ramka.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Chess2.dll.config

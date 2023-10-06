@@ -56,7 +56,7 @@ namespace Chess2.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Chess2;component/views/modevariation.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Chess2;V1.0.0.0;component/views/modevariation.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ModeVariation.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
