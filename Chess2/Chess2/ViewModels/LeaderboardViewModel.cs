@@ -17,12 +17,16 @@ namespace Chess2.ViewModels
         }
         public int? Rating { get; set; }
         public int place { get; set; } = 2;
+<<<<<<< HEAD
+        public ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
+=======
 
 
 
         public ObservableCollection<LeaderboardModel> Players { get; set; } = new ObservableCollection<LeaderboardModel>();
 
 
+>>>>>>> main
         public LeaderboardViewModel()
         {
             _model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
@@ -45,6 +49,14 @@ namespace Chess2.ViewModels
 				foreach (var pair in itemsToCollapse)
 				{
 					pair.Visibility = Visibility.Collapsed;
+				}
+				foreach (var item in Players)
+				{
+					if (nick.Any(item2 => item2.Nick == item.Nick))
+					{
+						// Если есть совпадение, устанавливаем Visibility в Visible
+						item.Visibility = Visibility.Visible;
+					}
 				}
 				if (personWithMaxAge.Nick.Contains(Search)) BV = Visibility.Visible;
 				else BV = Visibility.Collapsed;
@@ -69,13 +81,12 @@ namespace Chess2.ViewModels
                 else
                 {
                     BV = Visibility.Visible;
-                    foreach (var i in Players)
-                    {
-                        i.Visibility = Visibility.Visible;  
-                    }
-                }
-                
-            }          
+					SVV = Visibility.Visible;
+					Players.ForEach(item => item.Visibility = Visibility.Visible);
+
+				}
+
+			}          
         }
         public class MyItemComparer : IEqualityComparer<LeaderboardModel>
 		{
