@@ -18,16 +18,32 @@ namespace Chess2.Model
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private IntPoint _point;
-        public IntPoint point
+
+
+        private int _x;
+        public int x
         {
-            get { return _point; }
+            get { return _x; }
             set
             {
-                if (_point != value)
+                if (_x != value)
                 {
-                    _point = value;
-                    OnPropertyChanged(nameof(point)); // Уведомление о изменении свойства x
+                    _x = value;
+                    OnPropertyChanged(nameof(x)); // Уведомление о изменении свойства x
+                }
+            }
+        }
+
+        private int _y;
+        public int y
+        {
+            get { return _y; }
+            set
+            {
+                if (_y != value)
+                {
+                    _y = value;
+                    OnPropertyChanged(nameof(y)); // Уведомление о изменении свойства y
                 }
             }
         }
@@ -46,58 +62,35 @@ namespace Chess2.Model
             }
         }
         
-        private Figure? _figure;
-        public Figure? figure
+        private string _image;
+        public string image
         {
-            get { return _figure; }
+            get { return _image; }
             set
             {
-                hintEllipse = Visibility.Hidden;
-                if (_figure != value)
+                if (_image != value)
                 {
-                    _figure = value;
-                    OnPropertyChanged(nameof(figure)); // Уведомление о изменении свойства figure
-                }
-            }
-        }
-        private Visibility _hintEllipse;
-        public Visibility hintEllipse
-        {
-            get { return _hintEllipse; }
-            set
-            {
-                if (value != _hintEllipse)
-                {
-                    _hintEllipse = value;
-                    OnPropertyChanged(nameof(hintEllipse));
+                    _image = value;
+                    OnPropertyChanged(nameof(image)); // Уведомление о изменении свойства image
                 }
             }
         }
 
-        public Cell(IntPoint point, string borderStyle, Visibility hintEllipse, Figure figure = null)
+
+        public Cell(int x, int y, string borderStyle, string image = null)
         {
-            
-            this.point = point;
+            this.x = x;
+            this.y = y;
             this.borderStyle = (Style)Application.Current.FindResource(borderStyle);
-            if (figure == null)
-                this.hintEllipse = hintEllipse;
-            else
-                this.hintEllipse = Visibility.Hidden;
-            this.figure = figure;
+            this.image = image;
         }
-        public Cell(IntPoint point, Style borderStyle, Visibility hintEllipse, Figure figure = null)
+        public Cell(int x, int y, Style borderStyle, string image = null)
         {
-            this.point = point;
+            this.x = x;
+            this.y = y;
             this.borderStyle = borderStyle;
-            if (figure == null)
-                this.hintEllipse = hintEllipse;
-            else
-                this.hintEllipse = Visibility.Hidden;
-            this.figure = figure;
-        }
-        public void ChangeVisibility(bool visible) 
-        {
-            this.hintEllipse = visible? Visibility.Visible : Visibility.Hidden;
+            this.image = image;
         }
     }
+
 }

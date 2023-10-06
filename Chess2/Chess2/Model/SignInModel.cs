@@ -26,6 +26,10 @@ namespace Chess2.Model
         {
             _mainWindow.Navipage("Banned.xaml");
         }
+        public void IsAdminPanel()
+        {
+            _mainWindow.Navipage("AdminPanel.xaml");
+        }
         public async Task<bool> AuthorizationAsync(string username, string password)
         {
             var user = await _historyChessContext.Users.SingleOrDefaultAsync(u => u.Login == username);
