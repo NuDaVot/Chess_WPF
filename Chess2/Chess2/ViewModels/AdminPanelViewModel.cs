@@ -9,6 +9,7 @@
 		public string ChessBoard => _model.ChessBoard;
 		public string FirstPlace => _model.FirstPlace;
 		public string ChessIconWhite => _model.ChessIconWhite;
+		public ObservableCollection<AdminPanelViewModel> Players { get; set; } = new ObservableCollection<AdminPanelViewModel>();
 
 
 		public AdminPanelViewModel()
