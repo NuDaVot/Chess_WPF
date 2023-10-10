@@ -56,6 +56,12 @@
                         </Grid>
                     </StackPanel>
                 </Border>
+                <TextBlock Text="Игрок не найден" 
+                           Style="{StaticResource TextBlockStyle}"
+                           FontSize="43"
+                           TextAlignment="Center"
+                           Margin="0,91.5,0,91.5" 
+                           Visibility="{Binding TBV}"/>
                 <ScrollViewer Style="{StaticResource FavsScrollViewer}" Visibility="{Binding SVV}">
                     <StackPanel >
                         <Border Style="{StaticResource RedBord}" Visibility="{Binding BV}">
