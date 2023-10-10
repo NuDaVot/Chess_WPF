@@ -10,7 +10,9 @@ namespace Chess2.ViewModels
         public string Nick { get; set; }
         public Visibility BV { get; set; } = Visibility.Visible;
         public Visibility SVV { get; set; } = Visibility.Visible;
-        public string Search
+		public Visibility TBV { get; set; } = Visibility.Collapsed;
+
+		public string Search
         {
             get { return GetValue<string>(); }
             set { SetValue(value, changedCallback: SearchPlayer); }
@@ -57,8 +59,15 @@ namespace Chess2.ViewModels
 				bool allCollapsed = Players.All(item => item.Visibility == Visibility.Collapsed);
 
 				if (nick.Count == 0 && allCollapsed)
+				{
 					SVV = Visibility.Collapsed;
-				else SVV = Visibility.Visible;
+					TBV = Visibility.Visible;
+				}
+				else
+				{
+					SVV = Visibility.Visible;
+					TBV = Visibility.Collapsed;
+				}
 			}
 			else
             {
@@ -74,6 +83,7 @@ namespace Chess2.ViewModels
                 {
                     BV = Visibility.Visible;
 					SVV = Visibility.Visible;
+					TBV = Visibility.Collapsed;
 					Players.ForEach(item => item.Visibility = Visibility.Visible);
 
 				}
