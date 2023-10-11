@@ -243,7 +243,7 @@
                     <Track Name="PART_Track" IsDirectionReversed="true">
                         <Track.Thumb>
                             <Thumb Style="{StaticResource ScrollBarThumb}" 
-                                   Background="#C31818" Height="124" Width="30" Margin="-20,0,-20,0"/> 
+                                   Background="#C31818" Width="30" Margin="-20,0,-20,0"/> 
                         </Track.Thumb>
                     </Track>
                 </Grid>

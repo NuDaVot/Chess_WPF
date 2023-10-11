@@ -5,14 +5,13 @@ namespace Chess2.ViewModels
 {
     public class AdminPanelViewModel : BindableBase
 	{
-		readonly AdminPanelModel _model = new AdminPanelModel(0, "", 0, Visibility.Visible, 0);
+		readonly AdminPanelModel _model = new AdminPanelModel(0, "", 0, Visibility.Visible, 0, 0, 0, 0,0,"");
 		public string Jackdaw => _model.Jackdaw;
 		public string Percent => _model.Percent;
 		public string Cross => _model.Cross;
 		public string ChessBoard => _model.ChessBoard;
 		public string FirstPlace => _model.FirstPlace;
 		public string ChessIconWhite => _model.ChessIconWhite;
-        public Visibility BV { get; set; } = Visibility.Visible;
         public Visibility SVV { get; set; } = Visibility.Visible;
         public Visibility TBV { get; set; } = Visibility.Collapsed;
 
@@ -33,11 +32,12 @@ namespace Chess2.ViewModels
         {
             var players = _model.GetAllUser().OrderByDescending(player => player.Rating);
             var nick = _model.GetAllUser();
+            
             if (!string.IsNullOrWhiteSpace(Search))
             {
                 nick = nick.Where(p => p.Nick.Contains(Search)).ToList();
                 var itemsToCollapse = Players.Except(
-                            nick.Select(nick => new AdminPanelModel(0, "", 0, Visibility.Visible, 0) { Nick = nick.Nick }),
+                            nick.Select(nick => new AdminPanelModel(0, "", 0, Visibility.Visible, 0,0,0,0,0,"") { Nick = nick.Nick }),
                             new MyItemComparer()
                         );
                 foreach (var pair in itemsToCollapse)
@@ -51,9 +51,6 @@ namespace Chess2.ViewModels
                         item.Visibility = Visibility.Visible;
                     }
                 }
-                //if (personWithMaxAge.Nick.Contains(Search)) BV = Visibility.Visible;
-                //else BV = Visibility.Collapsed;
-
 
                 bool allCollapsed = Players.All(item => item.Visibility == Visibility.Collapsed);
 
@@ -74,12 +71,31 @@ namespace Chess2.ViewModels
                 {
                     foreach (var i in players)
                     {
-                            Players.Add(new AdminPanelModel(place++, i.Nick, i.Rating, Visibility.Visible, i.Iduser));
+                        var party = _model.GetAllParty();
+                        party = party.Where(p => p.WhiteUser == i.Iduser || p.BlackUser == i.Iduser).ToList();
+                        int win = 0, lose = 0, draw = 0;
+                        foreach (var party1 in party)
+                        {
+                            if ((bool)party1.Result && party1.WhiteUser == i.Iduser)
+                            {
+                                win++;
+                            }
+                            else if (!(bool)party1.Result && party1.WhiteUser == i.Iduser)
+                                lose++;
+                            else if (!(bool)party1.Result && party1.BlackUser == i.Iduser)
+                                win++;
+                            else if ((bool)party1.Result && party1.BlackUser == i.Iduser)
+                                lose++;
+                            else draw++;
+                        }
+                        if((bool)i.Status)
+                            Players.Add(new AdminPanelModel(place++, i.Nick, i.Rating, Visibility.Visible, i.Iduser, party.Count, win,lose,draw,"Бан"));
+                        else Players.Add(new AdminPanelModel(place++, i.Nick, i.Rating, Visibility.Visible, i.Iduser, party.Count, win, lose, draw, "Разбан"));
                     }
+                    
                 }
                 else
                 {
-                    BV = Visibility.Visible;
                     SVV = Visibility.Visible;
                     TBV = Visibility.Collapsed;
                     Players.ForEach(item => item.Visibility = Visibility.Visible);
@@ -87,6 +103,7 @@ namespace Chess2.ViewModels
                 }
 
             }
+            
         }
         public class MyItemComparer : IEqualityComparer<AdminPanelModel>
         {
