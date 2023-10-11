@@ -18,12 +18,13 @@
             <TextBlock Text="Панель администратора" 
                        Style="{StaticResource TextBlockStyle}"
                        FontSize="93"
-                       TextAlignment="Center"/>
+                       TextAlignment="Center"
+                       Margin="0,0,0,40"/>
             <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Border Style="{StaticResource BlueBord}" 
-                        Width="Auto" 
+                        Width="1280" 
                         Margin="0,0,20,0">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
@@ -89,31 +90,35 @@
                         </Grid>
                     </StackPanel>
                 </Border>
-                <ScrollViewer Style="{StaticResource FavsScrollViewer}" Visibility="{Binding SVV}">
-                    <StackPanel >
-                        <ItemsControl ItemsSource="{Binding Players}" >
+                <ScrollViewer Style="{StaticResource FavsScrollViewer}"
+                              Visibility="{Binding SVV}">
+                    <StackPanel>
+                        <ItemsControl ItemsSource="{Binding Players}">
                             <ItemsControl.ItemTemplate >
                                 <DataTemplate >
-                                    <Border Style="{StaticResource RedBord}" Visibility="{Binding Visibility,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }" Margin="0,20,0,0">
+                                    <Border Style="{StaticResource RedBord}"
+                                            Visibility="{Binding Visibility,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }">
                                         <StackPanel Orientation="Horizontal"
                                                     HorizontalAlignment="Center"
                                                     VerticalAlignment="Center">
                                             <Grid>
                                                 <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="260"/>
-                                                    <ColumnDefinition Width="260"/>
-                                                    <ColumnDefinition Width="260"/>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="160"/>
                                                 </Grid.ColumnDefinitions>
-                                                <StackPanel Grid.Column="0">
-                                                    <Grid>
-                                                        <TextBlock Margin="0,0,0,0" 
-                                                                   Text="{Binding Place}" 
-                                                                   Foreground="White" 
-                                                                   HorizontalAlignment="Center" 
-                                                                   VerticalAlignment="Center" 
-                                                                   FontSize="40"/>
-                                                    </Grid>
-                                                </StackPanel>
+                                                <TextBlock 
+                                                           Text="{Binding Place}" 
+                                                           Foreground="White" 
+                                                           HorizontalAlignment="Center" 
+                                                           VerticalAlignment="Center" 
+                                                           FontSize="40"
+                                                           Grid.Column="0"/>
                                                 <TextBlock Style="{StaticResource TextBlockStyle}" 
                                                            Grid.Column="1"
                                                            Text="{Binding Nick}"
@@ -126,6 +131,38 @@
                                                            FontSize="32"
                                                            Foreground="White"
                                                            VerticalAlignment="Center"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="{Binding Rating}"
+                                                           Grid.Column="3"
+                                                           FontSize="32"
+                                                           Foreground="White"
+                                                           VerticalAlignment="Center"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="{Binding Rating}"
+                                                           Grid.Column="4"
+                                                           FontSize="32"
+                                                           Foreground="White"
+                                                           VerticalAlignment="Center"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="{Binding Rating}"
+                                                           Grid.Column="5"
+                                                           FontSize="32"
+                                                           Foreground="White"
+                                                           VerticalAlignment="Center"/>
+                                                <TextBlock Style="{StaticResource TextBlockStyle}"
+                                                           Text="{Binding Rating}"
+                                                           Grid.Column="6"
+                                                           FontSize="32"
+                                                           Foreground="White"
+                                                           VerticalAlignment="Center"/>
+                                                <Button 
+                                                        Grid.Column="7"
+                                                        Style="{StaticResource ButtonStyleBlue}"
+                                                        Command="{Binding BackCommand, IsAsync=True}"
+                                                        Content="Бан"
+                                                        FontSize="40"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"/>
                                             </Grid>
                                         </StackPanel>
                                     </Border>
@@ -133,9 +170,7 @@
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </StackPanel>
-
                 </ScrollViewer>
-
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
