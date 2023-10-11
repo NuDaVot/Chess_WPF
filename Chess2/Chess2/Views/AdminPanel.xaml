@@ -18,12 +18,13 @@
             <TextBlock Text="Панель администратора" 
                        Style="{StaticResource TextBlockStyle}"
                        FontSize="93"
-                       TextAlignment="Center"/>
+                       TextAlignment="Center"
+                       Margin="0,0,0,40"/>
             <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Border Style="{StaticResource BlueBord}" 
-                        Width="Auto" 
+                        Width="1280" 
                         Margin="0,0,20,0">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
@@ -89,15 +90,14 @@
                         </Grid>
                     </StackPanel>
                 </Border>
-                <ScrollViewer Style="{StaticResource FavsScrollViewer}" 
+                <ScrollViewer Style="{StaticResource FavsScrollViewer}"
                               Visibility="{Binding SVV}">
                     <StackPanel>
                         <ItemsControl ItemsSource="{Binding Players}">
                             <ItemsControl.ItemTemplate >
                                 <DataTemplate >
-                                    <Border Style="{StaticResource RedBord}" 
-                                            Visibility="{Binding Visibility,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }" 
-                                            Margin="0,20,0,0">
+                                    <Border Style="{StaticResource RedBord}"
+                                            Visibility="{Binding Visibility,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }">
                                         <StackPanel Orientation="Horizontal"
                                                     HorizontalAlignment="Center"
                                                     VerticalAlignment="Center">
@@ -112,7 +112,7 @@
                                                     <ColumnDefinition Width="160"/>
                                                     <ColumnDefinition Width="160"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBlock Margin="0,0,0,0" 
+                                                <TextBlock 
                                                            Text="{Binding Place}" 
                                                            Foreground="White" 
                                                            HorizontalAlignment="Center" 
@@ -155,12 +155,12 @@
                                                            FontSize="32"
                                                            Foreground="White"
                                                            VerticalAlignment="Center"/>
-                                                <Button Margin="0,0,0,0"
+                                                <Button 
                                                         Grid.Column="7"
                                                         Style="{StaticResource ButtonStyleBlue}"
                                                         Command="{Binding BackCommand, IsAsync=True}"
-                                                        Content="Отмена"
-                                                        FontSize="45"
+                                                        Content="Бан"
+                                                        FontSize="40"
                                                         HorizontalAlignment="Center"
                                                         VerticalAlignment="Center"/>
                                             </Grid>

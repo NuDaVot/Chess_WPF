@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace Chess2.Model
 {
-    class AdminPanelModel : BindableBase
+    public class AdminPanelModel : BindableBase
 	{
 		MainWindowModel _mainWindow;
 		HistoryChessContext _historyChessContext;
@@ -20,7 +20,7 @@ namespace Chess2.Model
 		public int Id { get; set; }
 		public int? Rating { get; set; }
 		public Visibility Visibility { get; set; }
-		public List<User> GetAllUser() => _historyChessContext.Users.Where(i => i.Status == true && i.Role == true).ToList();
+		public List<User> GetAllUser() => _historyChessContext.Users.Where(i => i.Role == true).ToList();
 
 		public AdminPanelModel(int place, string nick, int? rating, Visibility visibility, int id)
 		{

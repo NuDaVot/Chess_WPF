@@ -208,6 +208,8 @@
             </Style>
             
             <Style x:Key="RedBord" TargetType="Border" BasedOn="{StaticResource BlueBord}">
+                <Setter Property="Width" Value="Auto" />
+                <Setter Property="Margin" Value="0,10,0,10"/>
                 <Setter Property="Background" Value="#C31818" />
                 <Setter Property="Button.Effect">
                     <Setter.Value>
@@ -238,10 +240,10 @@
                 <Grid>
                     <Border CornerRadius="5" 
                             Background="#696868"/> <!-- тут Background - полоса-->
-                    <Track Name="PART_Track" IsDirectionReversed="true" Margin="0,9,0,9">
+                    <Track Name="PART_Track" IsDirectionReversed="true">
                         <Track.Thumb>
                             <Thumb Style="{StaticResource ScrollBarThumb}" 
-                                   Background="#C31818" Height="37" Width="30" Margin="-20,-10,-20,-10"/> 
+                                   Background="#C31818" Height="124" Width="30" Margin="-20,0,-20,0"/> 
                         </Track.Thumb>
                     </Track>
                 </Grid>
@@ -261,8 +263,8 @@
 
             <Style x:Key="FavsScrollViewer" TargetType="{x:Type ScrollViewer}">
                 <Setter Property="OverridesDefaultStyle" Value="True"/>
-                <Setter Property="Height" Value="227" />
-                <Setter Property="Margin" Value="40,20,0,0" />
+                <Setter Property="Height" Value="364" />
+                <Setter Property="Margin" Value="40,10,0,0" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type ScrollViewer}">
