@@ -2,6 +2,7 @@
 using System.Windows.Media;
 using System.Windows;
 using System.ComponentModel;
+using AutoMapper;
 
 namespace Chess2.Model
 {
@@ -9,42 +10,36 @@ namespace Chess2.Model
     {
 		MainWindowModel _mainWindow;
 		HistoryChessContext _historyChessContext;
+        private readonly IMapper _mapper;
 
-		public string Jackdaw = "/Resources/Pictures/Jackdaw.png";
+        public string Jackdaw = "/Resources/Pictures/Jackdaw.png";
 		public string Percent = "/Resources/Pictures/Percent.png";
 		public string Cross = "/Resources/Pictures/Cross.png";
 		public string ChessBoard = "/Resources/Pictures/ChessBoard.png";
 		public string FirstPlace = "/Resources/Pictures/FirstPlace.png";
 		public string ChessIconWhite = "/Resources/Pictures/ChessIconWhite.png";
-		public string Nick { get; set; }
-		public int Place { get; set; }
-		public int Id { get; set; }
-		public int? Rating { get; set; }
-        public int Partys { get; set; }
-        public int Wins { get; set; }
-        public int Losses { get; set; }
-        public int Draws { get; set; }
-        public string Ban { get; set; }
-        public Visibility Visibility { get; set; }
 		public List<User> GetAllUser() => _historyChessContext.Users.Where(i => i.Role == true).ToList();
+        public async Task SaveChangesAsync() => await _historyChessContext.SaveChangesAsync();
         public List<Party> GetAllParty() => _historyChessContext.Parties.ToList();
-
-
-        public AdminPanelModel(int place, string nick, int? rating, Visibility visibility, int id, int partys, int wins, int losses, int draws, string ban)
+        public async Task<List<DbUser>> GetUsers()
+        {
+            List<DbUser> dbProduct = new();
+            try
+            {
+                dbProduct = _mapper.Map<List<DbUser>>(await _historyChessContext.Users.Where(i => i.Role == true).ToListAsync());
+            }
+            catch { }
+            return dbProduct.OrderByDescending(player => player.Rating).ToList(); 
+        }
+        public AdminPanelModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;
 			_historyChessContext = new HistoryChessContext();
 
-			Place = place;
-			Nick = nick;
-			Rating = rating;
-			Visibility = visibility;
-			Id = id;
-			Partys = partys;
-			Wins = wins;
-			Losses = losses;
-			Draws = draws;
-			Ban = ban;
+            _mapper = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<User, DbUser>();
+            }).CreateMapper();
 
         }
 		public void IsBack()
