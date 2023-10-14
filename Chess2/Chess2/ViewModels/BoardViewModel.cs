@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chess2.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -10,13 +11,11 @@ namespace Chess2.ViewModels
     class BoardViewModel : BindableBase
     {
         readonly private Board board;
-        //Белые
         public int[] location_number_letters {  get; set; }
-
 
         public BoardViewModel()
         {
-            board = new Board(true);
+            board = new Board(false);
             AddList = board.cells;
             location_number_letters = board.location_number_letters;
         }
@@ -30,19 +29,8 @@ namespace Chess2.ViewModels
         public DelegateCommand<object> ChangePage => new DelegateCommand<object>(obj =>
         {
             Cell cell = (Cell)obj;
-            board.testc(cell, pastObj);
-            cell.borderStyle = (Style)Application.Current.FindResource("select_border");
-            if (pastObj != null && pastObj != cell) {
-                if ((pastObj.point.X + pastObj.point.Y) % 2 != 0)
-                    pastObj.borderStyle = (Style)Application.Current.FindResource("red_border"); 
-                else
-                    pastObj.borderStyle = (Style)Application.Current.FindResource("transparent_border");
-            }
-            pastObj = cell;
-            
-
+            pastObj = board.GetHints(cell, pastObj);
+            //pastObj = cell;
         });
-
-
     }
 }

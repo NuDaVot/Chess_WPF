@@ -52,7 +52,7 @@ namespace Chess2.Model
             get { return _figure; }
             set
             {
-                hintEllipse = Visibility.Hidden;
+                //hintEllipse = Visibility.Hidden;
                 if (_figure != value)
                 {
                     _figure = value;
@@ -95,9 +95,34 @@ namespace Chess2.Model
                 this.hintEllipse = Visibility.Hidden;
             this.figure = figure;
         }
+
+        public void RemuveStyle(string style)
+        {
+            this.borderStyle = (Style)Application.Current.FindResource(style);
+        }
         public void ChangeVisibility(bool visible) 
         {
-            this.hintEllipse = visible? Visibility.Visible : Visibility.Hidden;
+            if (this.figure == null)
+                this.hintEllipse = visible ? Visibility.Visible : Visibility.Hidden;
+            else if (visible)
+            {
+                if ((this.point.X + this.point.Y) % 2 != 0)
+                     RemuveStyle("red_border_with_figure");
+                else
+                    RemuveStyle("transparent_border_with_figure");
+            }
+            else if (this.borderStyle != (Style)Application.Current.FindResource("select_border"))
+            {
+                if ((this.point.X + this.point.Y) % 2 != 0)
+                    RemuveStyle("red_border");
+                else
+                    RemuveStyle("transparent_border");
+            }
+
+        }
+        public bool GitVisibility()
+        {
+            return this.hintEllipse == Visibility.Visible || this.borderStyle == (Style)Application.Current.FindResource("red_border_with_figure") || this.borderStyle == (Style)Application.Current.FindResource("transparent_border_with_figure");
         }
     }
 }

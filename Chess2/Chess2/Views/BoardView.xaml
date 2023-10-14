@@ -254,9 +254,9 @@
                     <ItemsControl.ItemContainerStyle>
                         <Style>
                             <Setter Property="Grid.Row"
-                                    Value="{Binding Path=point.X}"/>
-                            <Setter Property="Grid.Column"
                                     Value="{Binding Path=point.Y}"/>
+                            <Setter Property="Grid.Column"
+                                    Value="{Binding Path=point.X}"/>
                         </Style>
                     </ItemsControl.ItemContainerStyle>
 

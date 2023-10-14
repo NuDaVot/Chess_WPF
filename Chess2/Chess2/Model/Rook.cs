@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chess2.Model
 {
-    class Rook : Figure
+    class Rook : Figure //Ладья
     {
-        public Rook(string image) : base(image)
+        public Rook(string image, bool isWhite) : base(image, isWhite)
         {
             
             this.hints = new IntPoint[] { new (7, 0), new (6, 0), new (5, 0), new (4, 0), new (3, 0), new (2, 0), new (1, 0), //+x
