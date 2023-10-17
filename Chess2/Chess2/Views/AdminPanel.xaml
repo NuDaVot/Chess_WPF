@@ -86,7 +86,7 @@
                 <ScrollViewer Style="{StaticResource FavsScrollViewer}"
                               Visibility="{Binding SVV}">
                     <StackPanel>
-                        <ItemsControl ItemsSource="{Binding Players}">
+                        <ItemsControl ItemsSource="{Binding Players,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                             <ItemsControl.ItemTemplate >
                                 <DataTemplate >
                                     <Border Style="{StaticResource RedBord}"

@@ -1,14 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Chess2.Model
 {
-    public class DbUser : User
-    {
-        public int Place { get; set; }
+    public class DbUser : User, INotifyPropertyChanged
+	{
+		public event PropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		public int Place { get; set; }
         public Visibility Visibility { get; set; }
         public int Partys { get; set; }
         public int Wins { get; set; }

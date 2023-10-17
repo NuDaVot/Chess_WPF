@@ -429,3 +429,5 @@ D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Chess2.genruntimeconfig.cach
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\ref\Chess2.dll
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.dll
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

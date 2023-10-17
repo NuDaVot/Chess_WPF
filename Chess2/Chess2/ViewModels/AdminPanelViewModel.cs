@@ -1,11 +1,20 @@
 ﻿using Chess2.Data;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Media;
 
 namespace Chess2.ViewModels
 {
-    public class AdminPanelViewModel : BindableBase
+    public class AdminPanelViewModel : BindableBase, INotifyPropertyChanged
 	{
+		public event PropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
 		readonly AdminPanelModel _model = new AdminPanelModel();
 		public string Jackdaw => _model.Jackdaw;
 		public string Percent => _model.Percent;
@@ -21,9 +30,16 @@ namespace Chess2.ViewModels
             get { return GetValue<string>(); }
             set { SetValue(value, changedCallback: SearchPlayer); }
         }
-        public int place { get; set; } = 1;
-        public ObservableCollection<DbUser> Players { get; set; } 
-
+        private ObservableCollection<DbUser> players;
+		public ObservableCollection<DbUser> Players 
+        {
+			get { return players; }
+			set
+			{
+                players = value;
+				OnPropertyChanged(nameof(Players));
+			}
+		}
 		public AdminPanelViewModel()
 		{
 			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
@@ -33,7 +49,7 @@ namespace Chess2.ViewModels
         {
             var player = await _model.GetUsers();
             var nick = await _model.GetUsers();
-            
+
             if (!string.IsNullOrWhiteSpace(Search))
             {
                 nick = nick.Where(p => p.Nick.Contains(Search)).ToList();
@@ -62,49 +78,40 @@ namespace Chess2.ViewModels
             }
             else
             {
-                if (Players == null)
+                int place = 1;
+                Players = new ObservableCollection<DbUser>(player);
+                foreach (var i in Players)
                 {
-                    Players = new ObservableCollection<DbUser>(player);
-                    foreach (var i in Players)
+                    var party = _model.GetAllParty();
+                    party = party.Where(p => p.WhiteUser == i.Iduser || p.BlackUser == i.Iduser).ToList();
+                    int win = 0, lose = 0, draw = 0;
+                    foreach (var party1 in party)
                     {
-                        var party = _model.GetAllParty();
-                        party = party.Where(p => p.WhiteUser == i.Iduser || p.BlackUser == i.Iduser).ToList();
-                        int win = 0, lose = 0, draw = 0;
-                        foreach (var party1 in party)
-                        {
-                            if ((bool)party1.Result && party1.WhiteUser == i.Iduser)
-                            {
-                                win++;
-                            }
-                            else if (!(bool)party1.Result && party1.WhiteUser == i.Iduser)
-                                lose++;
-                            else if (!(bool)party1.Result && party1.BlackUser == i.Iduser)
-                                win++;
-                            else if ((bool)party1.Result && party1.BlackUser == i.Iduser)
-                                lose++;
-                            else draw++;
-                        }
-                        i.Place = place;
-                        place++;
-                        i.Visibility = Visibility.Visible;
-                        i.Partys = party.Count;
-                        i.Wins = win; i.Losses = lose; i.Draws = draw;
-                        if ((bool)i.Status)
-                            i.Ban = "Бан";
-                        else i.Ban = "Разбан";
-
+                        if ((bool)party1.Result && party1.WhiteUser == i.Iduser)
+                            win++;
+                        else if (!(bool)party1.Result && party1.WhiteUser == i.Iduser)
+                            lose++;
+                        else if (!(bool)party1.Result && party1.BlackUser == i.Iduser)
+                            win++;
+                        else if ((bool)party1.Result && party1.BlackUser == i.Iduser)
+                            lose++;
+                        else draw++;
                     }
-                }
-                else
-                {
+                    i.Place = place;
+                    place++;
+                    i.Visibility = Visibility.Visible;
+                    i.Partys = party.Count;
+                    i.Wins = win; i.Losses = lose; i.Draws = draw;
+                    if ((bool)i.Status)
+                        i.Ban = "Бан";
+                    else i.Ban = "Разбан";
                     SVV = Visibility.Visible;
                     TBV = Visibility.Collapsed;
-                    Players.ForEach(item => item.Visibility = Visibility.Visible);
                 }
-                
-            }
-            
+
+            }            
         }
+
         
         public class MyItemComparer : IEqualityComparer<DbUser>
         {
