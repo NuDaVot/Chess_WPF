@@ -5,16 +5,8 @@ using System.Windows.Media;
 
 namespace Chess2.ViewModels
 {
-    public class AdminPanelViewModel : BindableBase, INotifyPropertyChanged
+    public class AdminPanelViewModel : BindableBase
 	{
-		public event PropertyChangedEventHandler PropertyChanged;
-		protected virtual void OnPropertyChanged(string propertyName)
-		{
-			if (PropertyChanged != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
 		readonly AdminPanelModel _model = new AdminPanelModel();
 		public string Jackdaw => _model.Jackdaw;
 		public string Percent => _model.Percent;
@@ -30,16 +22,7 @@ namespace Chess2.ViewModels
             get { return GetValue<string>(); }
             set { SetValue(value, changedCallback: SearchPlayer); }
         }
-        private ObservableCollection<DbUser> players;
-		public ObservableCollection<DbUser> Players 
-        {
-			get { return players; }
-			set
-			{
-                players = value;
-				OnPropertyChanged(nameof(Players));
-			}
-		}
+		public ObservableCollection<DbUser> Players { get; set; }
 		public AdminPanelViewModel()
 		{
 			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);

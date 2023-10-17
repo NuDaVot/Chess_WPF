@@ -34,8 +34,15 @@ namespace Chess2.Model
 
                 // Обновляете статус в соответствии с новым значением
                 if ((bool)itemToUpdate.Status)
+                {
                     itemToUpdate.Status = false;
-                else itemToUpdate.Status = true;
+                    Ban = "Разбан";
+                }
+                else
+                {
+                    itemToUpdate.Status = true;
+                    Ban = "Бан";
+                }
                 // Сохраняете изменения в базе данных
                 await context.SaveChangesAsync();
             }
