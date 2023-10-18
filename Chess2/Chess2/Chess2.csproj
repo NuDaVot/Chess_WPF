@@ -26,10 +26,12 @@
     <None Remove="Resources\Pictures\Authorization.png" />
     <None Remove="Resources\Pictures\Background.png" />
     <None Remove="Resources\Pictures\BlackRect.png" />
+    <None Remove="Resources\Pictures\BR.png" />
     <None Remove="Resources\Pictures\ChessBoard.png" />
     <None Remove="Resources\Pictures\ChessBoardEmpty.png" />
     <None Remove="Resources\Pictures\ChessIcon.png" />
     <None Remove="Resources\Pictures\ChessIconWhite.png" />
+    <None Remove="Resources\Pictures\ClassicMode.png" />
     <None Remove="Resources\Pictures\Cross.png" />
     <None Remove="Resources\Pictures\CrossRed.png" />
     <None Remove="Resources\Pictures\FastMode.png" />
@@ -54,8 +56,15 @@
     <None Remove="Resources\Pictures\SecondPlace.png" />
     <None Remove="Resources\Pictures\ThirdPlace.png" />
     <None Remove="Resources\Pictures\WhileRect.png" />
+    <None Remove="Resources\Pictures\WR.png" />
     <None Remove="Resources\Pictures\Белый.png" />
     <None Remove="Resources\Pictures\Черный.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Pictures\BR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -122,6 +131,9 @@
     <Content Include="Resources\Pictures\ChessIconWhite.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Pictures\ClassicMode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Pictures\FastMode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -171,6 +183,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\WhileRect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pictures\WR.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Pictures\Белый.png">

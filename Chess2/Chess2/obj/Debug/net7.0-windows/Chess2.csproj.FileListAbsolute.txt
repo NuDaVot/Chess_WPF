@@ -431,3 +431,6 @@ C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\ClassicMode.png
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\WR.png
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\BR.png

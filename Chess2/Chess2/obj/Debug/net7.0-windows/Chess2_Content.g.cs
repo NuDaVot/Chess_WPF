@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/br.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/bb.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/bw.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/figures/kb.png")]
@@ -29,6 +30,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessboardempty.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessiconwhite.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/classicmode.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/fastmode.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/firstplace.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/fiveplace.png")]
@@ -46,6 +48,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/secondplace.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/thirdplace.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/whilerect.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/wr.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%91%d0%b5%d0%bb%d1%8b%d0%b9.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/jackdaw.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/icon.png")]
