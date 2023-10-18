@@ -2,10 +2,11 @@
 {
     class MainWindowModel : BindableBase
 	{
-		private string _namePage = "BoardView.xaml";
+		private string _namePage = "MenuA.xaml";
 		public string NamePage;
 		public string Background = "Resources/Pictures/Background.png";
-		public MainWindowModel()
+        public bool isWhite = false;
+        public MainWindowModel()
 		{
 			NamePage = _namePage;
 		}

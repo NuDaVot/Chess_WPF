@@ -74,7 +74,7 @@ namespace Chess2.Model
             }
         }
 
-        public Cell(IntPoint point, string borderStyle, Visibility hintEllipse, Figure figure = null)
+        public Cell(IntPoint point, string borderStyle, Visibility hintEllipse, Figure? figure = null)
         {
             
             this.point = point;
@@ -85,7 +85,7 @@ namespace Chess2.Model
                 this.hintEllipse = Visibility.Hidden;
             this.figure = figure;
         }
-        public Cell(IntPoint point, Style borderStyle, Visibility hintEllipse, Figure figure = null)
+        public Cell(IntPoint point, Style borderStyle, Visibility hintEllipse, Figure? figure = null)
         {
             this.point = point;
             this.borderStyle = borderStyle;
@@ -122,7 +122,9 @@ namespace Chess2.Model
         }
         public bool GitVisibility()
         {
-            return this.hintEllipse == Visibility.Visible || this.borderStyle == (Style)Application.Current.FindResource("red_border_with_figure") || this.borderStyle == (Style)Application.Current.FindResource("transparent_border_with_figure");
+            return this.hintEllipse == Visibility.Visible || 
+                this.borderStyle == (Style)Application.Current.FindResource("red_border_with_figure") || 
+                this.borderStyle == (Style)Application.Current.FindResource("transparent_border_with_figure");
         }
     }
 }

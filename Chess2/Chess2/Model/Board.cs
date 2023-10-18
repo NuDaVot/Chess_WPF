@@ -21,10 +21,27 @@ namespace Chess2.Model
         List<IntPoint> _hintFigure = new List<IntPoint>();
         List<IntPoint> _hintBoard = new List<IntPoint>();
         private int step = 0;
-        
+        List<Step> _steps = new List<Step>();
+
+        static string _strSteps = "1. c4 e6 2. e3 Nc6 3. Nc3 Bc5 4. Nf3 Nf6 " +
+                           "5. Be2 O-O 6. O-O b6 7. b3 a5 8. Bb2 Ba6 9. d3 Bb4 " +
+                           "10. a3 Be7 11. d4 b5 12. cxb5 Bxb5 13. Nxb5 Rb8 14. Nc3 Rxb3 " +
+                           "15. Qxb3 e5 16. dxe5 Ng4 17. Ng5 Ngxe5 18. Qc2 g6 19. Nge4 Bh4 " +
+                           "20. Nd5 Ne7 21. Bxe5 c6 22. Nxe7 Qxe7 23. Qc3 d5 24. Nd2 a4 " +
+                           "25. f3 f6 26. Bd4 Bg5 27. e4 h5 28. e5 h4 29. exf6 Bxf6 " +
+                           "30. Bxf6 Rxf6 31. g3 Qxe2 32. Qxf6 Qxd2 33. Qxg6 Kf8 34. Rad1 Qa5 " +
+                           "35. Qf5 Ke8 36. Rfe1 Kd8 37. Qf8 Kc7 38. Re7 Kd6 39. Ra7 Ke5 " +
+                           "40. Rxa5 c5 41. Rxc5 hxg3 42. Rcxd5 Ke6 43. Rd6 Ke5 44. Re1# ";
+        static string[] _strStepsSplit = _strSteps.Split();
+
+
 
         public Board(bool isWhite)
         {
+            for(int i = 0; i < _strStepsSplit.Length - 2; i = i + 3)
+            {
+                Debug.WriteLine($"{_strStepsSplit[i]} {_strStepsSplit[i+1]} {_strStepsSplit[i+2]}");
+            }
             #region Инициализируем фигуры для белых
             figureW[0, 0] = new Pawn("PW", true);
             figureW[1, 0] = new Pawn("PW", true);
@@ -66,9 +83,9 @@ namespace Chess2.Model
             #endregion
 
 
-            for (short x = 0; x < 8; x++)
+            for (int x = 0; x < 8; x++)
             {
-                for (short y = 0; y < 8; y++)
+                for (int y = 0; y < 8; y++)
                 {
                     if ((x + y) % 2 != 0)
                         _cells[x, y] = new Cell(new IntPoint(x, y), "red_border", Visibility.Hidden);
@@ -137,11 +154,14 @@ namespace Chess2.Model
             //_cells[5, 5].figure = figureW[1, 0];
             //figureW[1, 1].point = _cells[5, 5].point;
             this.isWhite = isWhite;
+
+
         }
 
         public Cell GetHints(Cell cell, Cell? pastCell = null)
         {
-            if (pastCell != null && pastCell.figure != null && ((cell.GitVisibility() && pastCell.figure.isWhite == TurnOrder()) || (pastCell.figure.isWhite == TurnOrder())))
+            
+            if (pastCell != null && pastCell.figure != null && cell.GitVisibility()/* && ((cell.GitVisibility() && pastCell.figure.isWhite == TurnOrder()) || (pastCell.figure.isWhite == TurnOrder()))*/)
             {
                 List<IntPoint> PastHint = pastCell.figure.GetHints();
                 foreach (IntPoint hint in PastHint)
@@ -167,7 +187,7 @@ namespace Chess2.Model
                 else
                     pastCell.RemuveStyle("transparent_border");
             }
-            
+
 
             if (pastCell != null && pastCell != cell && pastCell.figure != null)
             {
@@ -306,7 +326,7 @@ namespace Chess2.Model
                     }
                     else
                     {
-                        if (_cells[x + xR, y + yR].figure.isWhite != isWhite )
+                        if (_cells[x + xR, y + yR].figure.isWhite != isWhite)
                             ListHint.Add(new IntPoint(x + xR, y + yR));
                         break;
                     }
@@ -316,7 +336,7 @@ namespace Chess2.Model
         }
         private bool TurnOrder()
         {
-            return step % 2 == 0;
+            return !(step % 2 == 0) == isWhite;
         }
 
         //#region Debug
