@@ -25,7 +25,8 @@ namespace Chess2.Model
 		public string FastMode = "/Resources/Pictures/FastMode.png";
         public string ClassicMode = "/Resources/Pictures/ClassicMode.png";
         public string Percent = "/Resources/Pictures/Percent.png";
-        public List<DBParty> GetParty()
+		public string ProfileIcon = "/Resources/Pictures/ProfileIcon.png";
+		public List<DBParty> GetParty()
         {
             List<DBParty> dbProduct = new();
             try
@@ -40,7 +41,11 @@ namespace Chess2.Model
         {
             _mainWindow.Navipage("Menu.xaml");
         }
-        public ProfileModel()
+		public void IsProfile()
+		{
+			_mainWindow.Navipage("ProfileSet.xaml");
+		}
+		public ProfileModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;
             _historyChessContext = new HistoryChessContext();
@@ -51,36 +56,42 @@ namespace Chess2.Model
         }
         public async Task GetReport()
         {
-            PdfWriter writer = new($"Отчет.pdf");
+            PdfWriter writer = new("Отчет.pdf");
             PdfDocument pdf = new(writer);
             Document document = new(pdf);
 
             PdfFont comic = PdfFontFactory.CreateFont(@"C:\Windows\Fonts\TIMES.ttf", PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_NOT_EMBEDDED);
 
-            var content = new Paragraph($"Отчет по профилю")
-                .SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT)
+            var content = new Paragraph("Отчет по профилю")
+                .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 .SetFont(comic)
                 .SetFontSize(12);
 
             document.Add(content);
 
-            content = new Paragraph($"Дата: {DateOnly.FromDateTime(DateTime.Now).ToString("D")}")
+            content = new Paragraph("Дата: 66")
                 .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 .SetFont(comic)
                 .SetFontSize(16);
 
             document.Add(content);
-
-            content = new Paragraph() // напиши сюда данные для вывода
-                .SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT)
-                .SetFont(comic)
-                .SetFontSize(16);
-
-            document.Add(content);
-
             document.Close();
+			await Task.CompletedTask;
 
-            await Task.CompletedTask;
-        }
+
+			//content = new Paragraph($"Ник: {player}.\n" +
+			//    $"Рейтинг: {rating}.\n" +
+			//    $"Кол-во сыгранных игр:{party}.\n" +
+			//    $"Кол-во побед: {wins}.\n" +
+			//    $"Кол-во проигрышей: {lose}\n" +
+			//    $"Кол-во ничьи: {draws}")
+			//    .SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT)
+			//    .SetFont(comic)
+			//    .SetFontSize(16);
+
+			//document.Add(content);
+
+
+		}
     }
 }

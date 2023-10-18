@@ -125,10 +125,11 @@
                             VerticalAlignment="Center">
                     <Button Style="{StaticResource ButtonStyle}"
                             Content="Отчет профиля"
+                            Command="{Binding ReportCommand, IsAsync=True}"
                             FontSize="40"
                             Margin="35,0,35,30"/>
                     <Button Style="{StaticResource ButtonStyleBlue}"
-                            Command="{Binding BackCommand, AsyncState=True}"
+                            Command="{Binding BackCommand, IsAsync=True}"
                             Content="Назад"
                             FontSize="40"
                             Margin="35,0,35,0"/>
@@ -296,5 +297,15 @@
                 </ScrollViewer>
             </StackPanel>
         </Grid>
+        <Button HorizontalAlignment="Right" 
+                VerticalAlignment="Top" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"
+                Command="{Binding ProfileCommand, IsAsync=True}"
+                Margin="10">
+            <Button.Background>
+                <ImageBrush ImageSource="{Binding ProfileIcon}"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

@@ -18,7 +18,9 @@ namespace Chess2.ViewModels
 		public string WhiteRect => _model.WhiteRect;
 		public string FastMode => _model.FastMode;
         public string ClassicMode => _model.ClassicMode;
-        public string Variable1 { get; set; }
+		public string ProfileIcon => _model.ProfileIcon;
+
+		public string Variable1 { get; set; }
         public string Variable2 { get; set; }
         public int Partys { get; set; } = 0;
         public int Wins { get; set; } = 0;
@@ -58,7 +60,9 @@ namespace Chess2.ViewModels
             }
         }
         public DelegateCommand BackCommand => new (() => _model.IsBack());
-        public AsyncCommand ReportCommand => new(async() =>
+		public DelegateCommand ProfileCommand => new(() => _model.IsProfile());
+
+		public AsyncCommand ReportCommand => new(async() =>
         {
             await _model.GetReport();
         });
