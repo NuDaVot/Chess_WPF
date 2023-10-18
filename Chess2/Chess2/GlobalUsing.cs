@@ -25,3 +25,4 @@ global using System.Windows.Media.Imaging;
 global using Chess2.Converters;
 global using AutoMapper;
 
+

@@ -7,6 +7,7 @@ namespace Chess2.ViewModels
 		readonly ProfileModel _model = new ProfileModel();
 		public string CrossRed => _model.CrossRed;
         public string Cross => _model.Cross;
+        public string Percent => _model.Percent;
         public string ChessBoard => _model.ChessBoard;
 		public string ChessIcon => _model.ChessIcon;
 		public string JackdawRed => _model.JackdawRed;
@@ -33,7 +34,9 @@ namespace Chess2.ViewModels
             Parties.ForEach(data =>
             {
                 data.ModeImage = data.Mode == true ? ClassicMode : FastMode;
-                data.ResultImage = data.Result == true ? Jackdaw : Cross;
+                if (data.Result == 0) data.ResultImage = Jackdaw;
+                else if(data.Result == 1) data.ResultImage = Cross;
+                else data.ResultImage = Percent;
                 data.WhiteUserImage = WhiteRect;
                 data.BlackUserImage = BlackRect;
             });
@@ -43,19 +46,21 @@ namespace Chess2.ViewModels
             Partys = party.Count;
             foreach (var party1 in party)
             {
-                if ((bool)party1.Result && party1.WhiteUser == UserSetting.Default.IdUser)
+                if (party1.Result == 0 && party1.WhiteUser == UserSetting.Default.IdUser)
                     Wins++;
-                else if (!(bool)party1.Result && party1.WhiteUser == UserSetting.Default.IdUser)
+                else if (party1.Result == 1 && party1.WhiteUser == UserSetting.Default.IdUser)
                     Losses++;
-                else if (!(bool)party1.Result && party1.BlackUser == UserSetting.Default.IdUser)
+                else if (party1.Result == 1 && party1.BlackUser == UserSetting.Default.IdUser)
                     Wins++;
-                else if ((bool)party1.Result && party1.BlackUser == UserSetting.Default.IdUser)
+                else if (party1.Result == 0 && party1.BlackUser == UserSetting.Default.IdUser)
                     Losses++;
                 else Draws++;
             }
-
-
         }
         public DelegateCommand BackCommand => new (() => _model.IsBack());
-	}
+        public AsyncCommand ReportCommand => new(async() =>
+        {
+            await _model.GetReport();
+        });
+    }
 }

@@ -70,13 +70,13 @@ namespace Chess2.ViewModels
                     int win = 0, lose = 0, draw = 0;
                     foreach (var party1 in party)
                     {
-                        if ((bool)party1.Result && party1.WhiteUser == i.Iduser)
+                        if (party1.Result == 0&& party1.WhiteUser == i.Iduser)
                             win++;
-                        else if (!(bool)party1.Result && party1.WhiteUser == i.Iduser)
+                        else if (party1.Result == 1 && party1.WhiteUser == i.Iduser)
                             lose++;
-                        else if (!(bool)party1.Result && party1.BlackUser == i.Iduser)
+                        else if (party1.Result == 1 && party1.BlackUser == i.Iduser)
                             win++;
-                        else if ((bool)party1.Result && party1.BlackUser == i.Iduser)
+                        else if (party1.Result == 0 && party1.BlackUser == i.Iduser)
                             lose++;
                         else draw++;
                     }
