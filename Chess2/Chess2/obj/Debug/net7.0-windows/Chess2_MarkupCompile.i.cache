@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\
 Chess2
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\Chess_WPF\Chess2\Chess2\App.xaml
+C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\App.xaml
 161245520202
 51-1797161889
 66-2004253101
-254-434902256
+254-1617622467
 Views\AdminPanel.xaml;Views\Banned.xaml;Views\BoardView.xaml;Views\ChooseColor.xaml;Views\GamePage.xaml;Views\HeadsOrTails.xaml;Views\Leaderboard.xaml;Views\MainWindow.xaml;Views\Menu.xaml;Views\MenuA.xaml;Views\ModeVariation.xaml;Views\Profile.xaml;Views\ProfileSet.xaml;Views\Search.xaml;Views\SignIn.xaml;Views\SignUp.xaml;
 
 False

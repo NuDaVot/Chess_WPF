@@ -66,11 +66,12 @@
           }
         }
       },
-      "itext/8.0.1": {
+      "itext7/7.2.5": {
         "dependencies": {
           "Microsoft.DotNet.PlatformAbstractions": "1.1.0",
           "Microsoft.Extensions.DependencyModel": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
+          "Portable.BouncyCastle": "1.8.9",
           "System.Collections.NonGeneric": "4.3.0",
           "System.Diagnostics.Process": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
@@ -82,66 +83,57 @@
           "System.Threading.Thread": "4.3.0",
           "System.Threading.ThreadPool": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0",
-          "itext.commons": "8.0.1"
+          "itext7.commons": "7.2.5"
         },
         "runtime": {
           "lib/netstandard2.0/itext.barcodes.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
-          },
-          "lib/netstandard2.0/itext.bouncy-castle-connector.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.forms.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.io.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.kernel.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.layout.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.pdfa.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.sign.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.styledxmlparser.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           },
           "lib/netstandard2.0/itext.svg.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           }
         }
       },
-      "itext.commons/8.0.1": {
+      "itext7.commons/7.2.5": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "7.0.0",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/itext.commons.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.0"
+            "assemblyVersion": "7.2.5.0",
+            "fileVersion": "7.2.5.0"
           }
-        }
-      },
-      "itext7/8.0.1": {
-        "dependencies": {
-          "itext": "8.0.1"
         }
       },
       "MaterialDesignColors/2.1.2": {
@@ -515,6 +507,14 @@
           "lib/net7.0/Pomelo.EntityFrameworkCore.MySql.Json.Microsoft.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.0.0"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.9.0",
+            "fileVersion": "1.8.9.1"
           }
         }
       },
@@ -1369,26 +1369,19 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "itext/8.0.1": {
+    "itext7/7.2.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qr0dr6va+/ZAkA9FR95ofpoPO8/yvjs0J+8Zo03KJWuqX3bjO/hTUVNvqKVtDFZPlGYwDrtOAb3Irv1VgSmO3Q==",
-      "path": "itext/8.0.1",
-      "hashPath": "itext.8.0.1.nupkg.sha512"
+      "sha512": "sha512-S4R7fN3AqbIUJe3BKSRDP2byU+G/rnY8rX3muYuv6VEMQhswlEytjVBvJSloZ6lN24kgm6ZFDkPKdjqSaSEFsw==",
+      "path": "itext7/7.2.5",
+      "hashPath": "itext7.7.2.5.nupkg.sha512"
     },
-    "itext.commons/8.0.1": {
+    "itext7.commons/7.2.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v1lcTrZzD906fJ8owf81X3DIuMtf9uL8Jvf9TdI5xi7E0AuBR4YGxVKdAxXSzgczbquBabRhRtz2jlxbX5bzwQ==",
-      "path": "itext.commons/8.0.1",
-      "hashPath": "itext.commons.8.0.1.nupkg.sha512"
-    },
-    "itext7/8.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-g41tWb7Le4CT4hqkI1xVUBI/R95fyOp3hTZ0L1VkNRUfbrly0lPBIKWujXqk1BIHU8Jz9uaNfOiRyp9fTosEEw==",
-      "path": "itext7/8.0.1",
-      "hashPath": "itext7.8.0.1.nupkg.sha512"
+      "sha512": "sha512-SGOVNpmPgtrQrwRxnLPObxhp0dytIirRVJGJ6KqrEI2GKQuoINfHv5ymTpQm2odOkz+Iuxaptqv8vLwFXG2blg==",
+      "path": "itext7.commons/7.2.5",
+      "hashPath": "itext7.commons.7.2.5.nupkg.sha512"
     },
     "MaterialDesignColors/2.1.2": {
       "type": "package",
@@ -1641,6 +1634,13 @@
       "sha512": "sha512-L2zL9qPzSsSqJ27SsXBw7si+x0z9VdiK5ktAo4AiLVVnwtymvqQweTFPqysf/XiH3oihNFPWdDS8Kiyq3yPesA==",
       "path": "pomelo.entityframeworkcore.mysql.json.microsoft/7.0.0",
       "hashPath": "pomelo.entityframeworkcore.mysql.json.microsoft.7.0.0.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "path": "portable.bouncycastle/1.8.9",
+      "hashPath": "portable.bouncycastle.1.8.9.nupkg.sha512"
     },
     "PropertyChanged.Fody/4.1.0": {
       "type": "package",

@@ -98,12 +98,13 @@
           }
         }
       },
-      "itext/8.0.1": {
+      "itext7/7.2.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.DotNet.PlatformAbstractions": "1.1.0",
           "Microsoft.Extensions.DependencyModel": "1.1.0",
           "Microsoft.Extensions.Logging": "5.0.0",
+          "Portable.BouncyCastle": "1.8.9",
           "System.Collections.NonGeneric": "4.3.0",
           "System.Diagnostics.Process": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
@@ -115,13 +116,10 @@
           "System.Threading.Thread": "4.3.0",
           "System.Threading.ThreadPool": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0",
-          "itext.commons": "8.0.1"
+          "itext7.commons": "7.2.5"
         },
         "compile": {
           "lib/netstandard2.0/itext.barcodes.dll": {
-            "related": ".xml"
-          },
-          "lib/netstandard2.0/itext.bouncy-castle-connector.dll": {
             "related": ".xml"
           },
           "lib/netstandard2.0/itext.forms.dll": {
@@ -153,9 +151,6 @@
           "lib/netstandard2.0/itext.barcodes.dll": {
             "related": ".xml"
           },
-          "lib/netstandard2.0/itext.bouncy-castle-connector.dll": {
-            "related": ".xml"
-          },
           "lib/netstandard2.0/itext.forms.dll": {
             "related": ".xml"
           },
@@ -182,7 +177,7 @@
           }
         }
       },
-      "itext.commons/8.0.1": {
+      "itext7.commons/7.2.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging": "5.0.0",
@@ -197,12 +192,6 @@
           "lib/netstandard2.0/itext.commons.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "itext7/8.0.1": {
-        "type": "package",
-        "dependencies": {
-          "itext": "8.0.1"
         }
       },
       "MaterialDesignColors/2.1.2": {
@@ -824,6 +813,19 @@
         },
         "build": {
           "build/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.Json.Microsoft.targets": {}
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
         }
       },
       "PropertyChanged.Fody/4.1.0": {
@@ -1963,22 +1965,20 @@
         "logo.png"
       ]
     },
-    "itext/8.0.1": {
-      "sha512": "qr0dr6va+/ZAkA9FR95ofpoPO8/yvjs0J+8Zo03KJWuqX3bjO/hTUVNvqKVtDFZPlGYwDrtOAb3Irv1VgSmO3Q==",
+    "itext7/7.2.5": {
+      "sha512": "S4R7fN3AqbIUJe3BKSRDP2byU+G/rnY8rX3muYuv6VEMQhswlEytjVBvJSloZ6lN24kgm6ZFDkPKdjqSaSEFsw==",
       "type": "package",
-      "path": "itext/8.0.1",
+      "path": "itext7/7.2.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
         "LICENSE.md",
         "gnu-agpl-v3.0.md",
-        "itext.8.0.1.nupkg.sha512",
-        "itext.nuspec",
+        "itext7.7.2.5.nupkg.sha512",
+        "itext7.nuspec",
         "lib/net461/itext.barcodes.dll",
         "lib/net461/itext.barcodes.xml",
-        "lib/net461/itext.bouncy-castle-connector.dll",
-        "lib/net461/itext.bouncy-castle-connector.xml",
         "lib/net461/itext.forms.dll",
         "lib/net461/itext.forms.xml",
         "lib/net461/itext.io.dll",
@@ -1997,8 +1997,6 @@
         "lib/net461/itext.svg.xml",
         "lib/netstandard2.0/itext.barcodes.dll",
         "lib/netstandard2.0/itext.barcodes.xml",
-        "lib/netstandard2.0/itext.bouncy-castle-connector.dll",
-        "lib/netstandard2.0/itext.bouncy-castle-connector.xml",
         "lib/netstandard2.0/itext.forms.dll",
         "lib/netstandard2.0/itext.forms.xml",
         "lib/netstandard2.0/itext.io.dll",
@@ -2017,34 +2015,20 @@
         "lib/netstandard2.0/itext.svg.xml"
       ]
     },
-    "itext.commons/8.0.1": {
-      "sha512": "v1lcTrZzD906fJ8owf81X3DIuMtf9uL8Jvf9TdI5xi7E0AuBR4YGxVKdAxXSzgczbquBabRhRtz2jlxbX5bzwQ==",
+    "itext7.commons/7.2.5": {
+      "sha512": "SGOVNpmPgtrQrwRxnLPObxhp0dytIirRVJGJ6KqrEI2GKQuoINfHv5ymTpQm2odOkz+Iuxaptqv8vLwFXG2blg==",
       "type": "package",
-      "path": "itext.commons/8.0.1",
+      "path": "itext7.commons/7.2.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
-        "itext.commons.8.0.1.nupkg.sha512",
-        "itext.commons.nuspec",
+        "itext7.commons.7.2.5.nupkg.sha512",
+        "itext7.commons.nuspec",
         "lib/net461/itext.commons.dll",
         "lib/net461/itext.commons.xml",
         "lib/netstandard2.0/itext.commons.dll",
         "lib/netstandard2.0/itext.commons.xml"
-      ]
-    },
-    "itext7/8.0.1": {
-      "sha512": "g41tWb7Le4CT4hqkI1xVUBI/R95fyOp3hTZ0L1VkNRUfbrly0lPBIKWujXqk1BIHU8Jz9uaNfOiRyp9fTosEEw==",
-      "type": "package",
-      "path": "itext7/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ITSC-avatar.png",
-        "LICENSE.md",
-        "gnu-agpl-v3.0.md",
-        "itext7.8.0.1.nupkg.sha512",
-        "itext7.nuspec"
       ]
     },
     "MaterialDesignColors/2.1.2": {
@@ -3000,6 +2984,21 @@
         "lib/net7.0/Pomelo.EntityFrameworkCore.MySql.Json.Microsoft.xml",
         "pomelo.entityframeworkcore.mysql.json.microsoft.7.0.0.nupkg.sha512",
         "pomelo.entityframeworkcore.mysql.json.microsoft.nuspec"
+      ]
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "sha512": "wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.9.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
       ]
     },
     "PropertyChanged.Fody/4.1.0": {
@@ -5703,27 +5702,27 @@
       "PropertyChanged.Fody >= 4.1.0",
       "ShowMeTheXAML >= 2.0.0",
       "ShowMeTheXAML.AvalonEdit >= 2.0.0",
-      "itext7 >= 8.0.1"
+      "itext7 >= 7.2.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\79991\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
       "projectName": "Chess2",
-      "projectPath": "D:\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
-      "packagesPath": "C:\\Users\\79991\\.nuget\\packages\\",
-      "outputPath": "D:\\Chess_WPF\\Chess2\\Chess2\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Chess_WPF\\Chess2\\Chess2\\Chess2.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Chess_WPF\\Chess2\\Chess2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\79991\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5732,7 +5731,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5821,7 +5819,7 @@
           },
           "itext7": {
             "target": "Package",
-            "version": "[8.0.1, )"
+            "version": "[7.2.5, )"
           }
         },
         "imports": [
@@ -5843,7 +5841,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -54,9 +54,9 @@ namespace Chess2.Model
                 cfg.CreateMap<Party, DBParty>();
             }).CreateMapper();
         }
-        public async Task GetReport()
+        public async Task GetReport(string player, int rating, int party, int wins, int lose, int draws)
         {
-            PdfWriter writer = new("Отчет.pdf");
+            PdfWriter writer = new($"{player}.pdf");
             PdfDocument pdf = new(writer);
             Document document = new(pdf);
 
@@ -65,33 +65,34 @@ namespace Chess2.Model
             var content = new Paragraph("Отчет по профилю")
                 .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 .SetFont(comic)
-                .SetFontSize(12);
+                .SetFontSize(16);
 
             document.Add(content);
 
-            content = new Paragraph("Дата: 66")
+            content = new Paragraph($"Дата: {DateOnly.FromDateTime(DateTime.Now).ToString("D")}")
                 .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 .SetFont(comic)
                 .SetFontSize(16);
 
             document.Add(content);
+
+
+
+            content = new Paragraph($"Ник: {player}.\n" +
+                $"Рейтинг: {rating}.\n" +
+                $"Кол-во сыгранных игр:{party}.\n" +
+                $"Кол-во побед: {wins}.\n" +
+                $"Кол-во проигрышей: {lose}\n" +
+                $"Кол-во ничьи: {draws}")
+                .SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT)
+                .SetFont(comic)
+                .SetFontSize(16);
+
+            document.Add(content);
             document.Close();
-			await Task.CompletedTask;
+            await Task.CompletedTask;
 
 
-			//content = new Paragraph($"Ник: {player}.\n" +
-			//    $"Рейтинг: {rating}.\n" +
-			//    $"Кол-во сыгранных игр:{party}.\n" +
-			//    $"Кол-во побед: {wins}.\n" +
-			//    $"Кол-во проигрышей: {lose}\n" +
-			//    $"Кол-во ничьи: {draws}")
-			//    .SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT)
-			//    .SetFont(comic)
-			//    .SetFontSize(16);
-
-			//document.Add(content);
-
-
-		}
+        }
     }
 }
