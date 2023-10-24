@@ -46,7 +46,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/secondplace.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/thirdplace.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/whilerect.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%91%d0%b5%d0%bb%d1%8b%d0%b9.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/jackdaw.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/crossred.png")]
@@ -54,7 +53,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/order.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/percent.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/registr.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/%d0%a7%d0%b5%d1%80%d0%bd%d1%8b%d0%b9.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessboard.png")]
 
 

@@ -17,7 +17,8 @@ namespace Chess2.Model
 		{
 			_mainWindow.Navipage("Search.xaml");
 
-		}
+
+        }
 		public void IsExit()
 		{
 			_mainWindow.Navipage("MenuA.xaml");

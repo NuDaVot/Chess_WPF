@@ -58,7 +58,6 @@ C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Res
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\SecondPlace.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\ThirdPlace.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\WhileRect.png
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Белый.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Jackdaw.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Icon.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\CrossRed.png
@@ -66,7 +65,6 @@ C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Res
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Order.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Percent.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Registr.png
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Черный.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\ChessBoard.png
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Chess2.exe
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Chess2.dll.config
@@ -80,7 +78,6 @@ C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Bou
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\DevExpress.Mvvm.UI.dll
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\DevExpress.Mvvm.dll
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Humanizer.dll
-C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itextsharp.dll
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\MaterialDesignColors.dll
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
 C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.dll
@@ -427,3 +424,17 @@ D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\refint\Chess2.dll
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Chess2.pdb
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\Chess2.genruntimeconfig.cache
 D:\Chess_WPF\Chess2\Chess2\obj\Debug\net7.0-windows\ref\Chess2.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.barcodes.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.forms.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.io.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.kernel.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.layout.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.pdfa.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.sign.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.styledxmlparser.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.svg.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.commons.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\nudan\source\repos\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Newtonsoft.Json.dll

@@ -80,24 +80,17 @@
                                    Height="95"
                                    Width="95"
                                    Grid.Column="6"/>
-                            <TextBlock Style="{StaticResource TextBlockStyle}"
-                                       Text="Бан"
-                                       FontSize="32"
-                                       Foreground="White" 
-                                       Grid.Column="7"
-                                       HorizontalAlignment="Center" 
-                                       VerticalAlignment="Center"/>
                         </Grid>
                     </StackPanel>
                 </Border>
                 <ScrollViewer Style="{StaticResource FavsScrollViewer}"
                               Visibility="{Binding SVV}">
                     <StackPanel>
-                        <ItemsControl ItemsSource="{Binding Players}">
+                        <ItemsControl ItemsSource="{Binding Players,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                             <ItemsControl.ItemTemplate >
                                 <DataTemplate >
                                     <Border Style="{StaticResource RedBord}"
-                                            Visibility="{Binding Visibility,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }">
+                                            Visibility="{Binding Visibility,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                                         <StackPanel Orientation="Horizontal"
                                                     HorizontalAlignment="Center"
                                                     VerticalAlignment="Center">
@@ -132,35 +125,35 @@
                                                            Foreground="White"
                                                            VerticalAlignment="Center"/>
                                                 <TextBlock Style="{StaticResource TextBlockStyle}"
-                                                           Text="{Binding Rating}"
+                                                           Text="{Binding Partys}"
                                                            Grid.Column="3"
                                                            FontSize="32"
                                                            Foreground="White"
                                                            VerticalAlignment="Center"/>
                                                 <TextBlock Style="{StaticResource TextBlockStyle}"
-                                                           Text="{Binding Rating}"
+                                                           Text="{Binding Wins}"
                                                            Grid.Column="4"
                                                            FontSize="32"
                                                            Foreground="White"
                                                            VerticalAlignment="Center"/>
                                                 <TextBlock Style="{StaticResource TextBlockStyle}"
-                                                           Text="{Binding Rating}"
+                                                           Text="{Binding Losses}"
                                                            Grid.Column="5"
                                                            FontSize="32"
                                                            Foreground="White"
                                                            VerticalAlignment="Center"/>
                                                 <TextBlock Style="{StaticResource TextBlockStyle}"
-                                                           Text="{Binding Rating}"
+                                                           Text="{Binding Draws}"
                                                            Grid.Column="6"
                                                            FontSize="32"
                                                            Foreground="White"
                                                            VerticalAlignment="Center"/>
-                                                <Button 
-                                                        Grid.Column="7"
+                                                <Button Grid.Column="7"
                                                         Style="{StaticResource ButtonStyleBlue}"
-                                                        Command="{Binding BackCommand, IsAsync=True}"
-                                                        Content="Бан"
-                                                        FontSize="40"
+                                                        Command="{Binding BanCommand, IsAsync=True}"
+                                                        Content="{Binding Ban}"
+                                                        FontSize="32"
+                                                        Width="100"
                                                         HorizontalAlignment="Center"
                                                         VerticalAlignment="Center"/>
                                             </Grid>

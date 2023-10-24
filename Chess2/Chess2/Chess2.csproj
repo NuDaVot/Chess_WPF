@@ -54,8 +54,6 @@
     <None Remove="Resources\Pictures\SecondPlace.png" />
     <None Remove="Resources\Pictures\ThirdPlace.png" />
     <None Remove="Resources\Pictures\WhileRect.png" />
-    <None Remove="Resources\Pictures\Белый.png" />
-    <None Remove="Resources\Pictures\Черный.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -173,9 +171,6 @@
     <Content Include="Resources\Pictures\WhileRect.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\Белый.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Pictures\Jackdaw.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -197,18 +192,17 @@
     <Content Include="Resources\Pictures\Registr.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Pictures\Черный.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Pictures\ChessBoard.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="BCrypt.Net" Version="0.1.0" />
     <PackageReference Include="DevExpressMvvm" Version="22.1.3" />
-    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="itext7" Version="7.2.5" />
     <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">

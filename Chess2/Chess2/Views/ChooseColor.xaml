@@ -78,7 +78,8 @@
                                             Content="Черный"
                                             Height="64"
                                             Width="204"
-                                            FontSize="40">
+                                            FontSize="40"
+                                            Command="{Binding Black}">
                                         <Button.Effect>
                                             <DropShadowEffect Color="#FF9E9E9E" 
                                                               Direction="270" 
@@ -122,7 +123,8 @@
                                             Width="204"
                                             FontSize="40" 
                                             Background="White" 
-                                            Foreground="Black">
+                                            Foreground="Black"
+                                            Command="{Binding White}">
                                         <Button.Effect>
                                             <DropShadowEffect Color="#FFEFEFEF" 
                                                               Direction="270"

@@ -11,7 +11,13 @@ namespace Chess2.Model
 		}
 		public void IsCancel()
 		{
+
 			_mainWindow.Navipage("Menu.xaml");
 		}
-	}
+        public void IsChooseColor()
+        {
+            _mainWindow.Navipage("ChooseColor.xaml");
+        }
+
+    }
 }

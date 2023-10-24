@@ -240,9 +240,9 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Thumb}">
                             <Border CornerRadius="4" 
-                                    Background="{TemplateBinding Background}" 
-                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="0"  />
+                         Background="{TemplateBinding Background}" 
+                         BorderBrush="{TemplateBinding BorderBrush}"
+                         BorderThickness="0"  />
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
@@ -251,16 +251,17 @@
             <ControlTemplate x:Key="VerticalScrollBar" TargetType="{x:Type ScrollBar}">
                 <Grid>
                     <Border CornerRadius="5" 
-                            Background="#696868"/> <!-- тут Background - полоса-->
+                 Background="#696868"/>
+                    <!-- тут Background - полоса-->
                     <Track Name="PART_Track" IsDirectionReversed="true">
                         <Track.Thumb>
                             <Thumb Style="{StaticResource ScrollBarThumb}" 
-                                   Background="#C31818" Height="124" Width="30" Margin="-20,0,-20,0"/> 
+                        Background="#C31818" Width="30" Margin="-20,0,-20,0"/>
                         </Track.Thumb>
                     </Track>
                 </Grid>
             </ControlTemplate>
-            
+
             <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
                 <Setter Property="SnapsToDevicePixels" Value="True"/>
                 <Setter Property="OverridesDefaultStyle" Value="true"/>
@@ -287,18 +288,18 @@
                                 </Grid.ColumnDefinitions>
                                 <ScrollContentPresenter Grid.Column="0"/>
                                 <ScrollBar Name="PART_VerticalScrollBar" Grid.Column="1"
-                                           Value="{TemplateBinding VerticalOffset}" 
-                                           Maximum="{TemplateBinding ScrollableHeight}" 
-                                           Margin="40,0,0,0"
-                                           ViewportSize="{TemplateBinding ViewportHeight}" 
-                                           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                                Value="{TemplateBinding VerticalOffset}" 
+                                Maximum="{TemplateBinding ScrollableHeight}" 
+                                Margin="40,0,0,0"
+                                ViewportSize="{TemplateBinding ViewportHeight}" 
+                                Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
                             </Grid>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
 
-            
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />

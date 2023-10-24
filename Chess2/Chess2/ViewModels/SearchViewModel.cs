@@ -5,13 +5,19 @@
 		readonly SearchModel _model = new SearchModel();
 		public SearchViewModel()
         {
-			_model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
-			CancelCommand = new DelegateCommand<string>(str =>
-			{
-				_model.IsCancel();
-			});
-		}
-		public DelegateCommand<string> CancelCommand { get; }
+            _model.PropertyChanged += (s, e) => RaisePropertiesChanged(e.PropertyName);
+            Task.Run(() =>
+            {
+                System.Threading.Thread.Sleep(7000);
+                _model.IsChooseColor();
 
-	}
+            });
+
+        }
+		public DelegateCommand CancelCommand => new( () =>
+        {
+            _model.IsCancel();
+        });
+
+    }
 }

@@ -26,7 +26,7 @@ public partial class Party
     /// 0 - белый проиграл 
     /// 1 - белый выйграл 
     /// </summary>
-    public bool? Result { get; set; }
+    public int? Result { get; set; }
 
     public string? Notation { get; set; }
 

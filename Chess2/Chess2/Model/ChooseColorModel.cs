@@ -1,5 +1,7 @@
 ﻿
 
+using Chess2.Views;
+
 namespace Chess2.Model
 {
     class ChooseColorModel : BindableBase
@@ -14,11 +16,14 @@ namespace Chess2.Model
 		}
 		public void IsBlack()
 		{
-			_mainWindow.Navipage("SIgnInPage.xaml");
+			_mainWindow.isWhite = false;
+
+            _mainWindow.Navipage("GamePage.xaml");
 		}
 		public void IsWhite()
 		{
-			_mainWindow.Navipage("SIgnInPage.xaml");
+            _mainWindow.isWhite = true;
+            _mainWindow.Navipage("GamePage.xaml");
 		}
 
 	}
