@@ -15,7 +15,8 @@ namespace Chess2.Model
         }
 		public void IsSearch()
 		{
-			_mainWindow.Navipage("GamePage.xaml");
+			_mainWindow.Navipage("Search.xaml");
+
 		}
 		public void IsExit()
 		{
