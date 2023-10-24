@@ -40,13 +40,26 @@ namespace Chess2.Model
                 }
             }
         }
+        private bool _isWhite;
+        public bool isWhite
+        {
+            get { return _isWhite; }
+            set
+            {
+                if (_isWhite != value)
+                {
+                    _isWhite = value;
+                    OnPropertyChanged(nameof(isWhite)); // Уведомление о изменении свойства image
+                }
+            }
+        }
         protected IntPoint[] hints;
-        public List<IntPoint> GetHints()
+        public virtual List<IntPoint> GetHints()
         {
             List<IntPoint> ListHint = new ();
             foreach(IntPoint hint in hints)
             {
-                if ((this.point.X + hint.X) < 0 || (this.point.Y + hint.Y) < 0 || (this.point.X + hint.X) > 7 || (this.point.Y + hint.Y) > 7)
+                if (this.point.OutRange(hint))
                 {
                     continue;
                 }
@@ -54,9 +67,11 @@ namespace Chess2.Model
             }
             return ListHint;
         }
-        public Figure(string image)
+        public Figure(string image, bool isWhite)
         {
             this.image = image;
+            this.isWhite = isWhite;
         }
+
     }
 }

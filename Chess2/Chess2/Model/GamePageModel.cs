@@ -5,7 +5,9 @@
 		MainWindowModel _mainWindow;
 		public string ProfileIcon = "/Resources/Pictures/ProfileIcon.png";
 		public string Search = "/Resources/Pictures/Search.png";
-		public GamePageModel()
+		
+
+        public GamePageModel()
 		{
 			_mainWindow = MainWindowViewModel._metod;
 		}

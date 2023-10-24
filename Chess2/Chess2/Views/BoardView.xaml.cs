@@ -23,6 +23,8 @@ namespace Chess2.Views
         public BoardView()
         {
             InitializeComponent();
+            //var viewModel = new BoardViewModel(true); // Здесь передайте нужные параметры
+            //DataContext = viewModel;
         }
     }
     

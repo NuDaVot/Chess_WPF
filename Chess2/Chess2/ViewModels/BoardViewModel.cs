@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Chess2.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,14 +11,13 @@ namespace Chess2.ViewModels
 {
     class BoardViewModel : BindableBase
     {
+        MainWindowModel _mainWindow = MainWindowViewModel._metod;
         readonly private Board board;
-        //Белые
-        public int[] location_number_letters {  get; set; }
-
+        public int[] location_number_letters { get; set; }
 
         public BoardViewModel()
         {
-            board = new Board(true);
+            board = new Board(_mainWindow.isWhite);
             AddList = board.cells;
             location_number_letters = board.location_number_letters;
         }
@@ -27,22 +28,14 @@ namespace Chess2.ViewModels
             set { _addList = value; RaisePropertiesChanged("AddList"); }
         }
         private Cell pastObj;
-        public DelegateCommand<object> ChangePage => new DelegateCommand<object>(obj =>
+        public DelegateCommand<object> ChangePage => new DelegateCommand<object>(
+            ExecuteCommand);
+        private void ExecuteCommand(object obj)
         {
             Cell cell = (Cell)obj;
-            board.testc(cell, pastObj);
-            cell.borderStyle = (Style)Application.Current.FindResource("select_border");
-            if (pastObj != null && pastObj != cell) {
-                if ((pastObj.point.X + pastObj.point.Y) % 2 != 0)
-                    pastObj.borderStyle = (Style)Application.Current.FindResource("red_border"); 
-                else
-                    pastObj.borderStyle = (Style)Application.Current.FindResource("transparent_border");
-            }
-            pastObj = cell;
-            
-
-        });
-
+            pastObj = board.GetHints(cell, pastObj);
+            //pastObj = cell;
+        }
 
     }
 }
