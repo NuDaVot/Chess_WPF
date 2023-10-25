@@ -18,6 +18,9 @@ namespace Chess2.Model
         {
             _mainWindow.Navipage("ChooseColor.xaml");
         }
-
+		public string GetPage()
+		{
+			return _mainWindow.GetPage();
+        }
     }
 }

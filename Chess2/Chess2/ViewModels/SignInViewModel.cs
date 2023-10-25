@@ -5,7 +5,7 @@ namespace Chess2.ViewModels
     public class SignInViewModel : BindableBase
     {
 		readonly SignInModel _model = new SignInModel();
-        public string UserLogin { get; set; } = "Akim";
+        public string UserLogin { get; set; } = "Akim1";
         public string Password { get; set; } = "1234";
         public string ErrorMessage { get; set; }
         public string ErrorMessageButton { get; set; }
@@ -17,10 +17,11 @@ namespace Chess2.ViewModels
 		}
         public DelegateCommand AuthorizationCommand => new(() =>
         {
-            Task.Run(async () =>
+            if (_model.AuthorizationAsync(UserLogin, Password))
             {
-                if (await _model.AuthorizationAsync(UserLogin, Password))
+                Task.Run(async () =>
                 {
+
                     await Application.Current.Dispatcher.InvokeAsync(async () =>
                     {
                         if (!UserSetting.Default.Status)
@@ -30,10 +31,11 @@ namespace Chess2.ViewModels
                         else
                             _model.IsAdminPanel();
                     });
-                }
-                else
-                    ErrorMessageButton = "Неверный логин или пароль";
-            });
+
+                });
+            }
+            else
+                ErrorMessageButton = "Неверный логин или пароль";
         });
 
         public DelegateCommand CanselCommand => new(() => _model.IsCansel());

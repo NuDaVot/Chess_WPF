@@ -60,7 +60,7 @@ namespace Chess2.Model
             PdfDocument pdf = new(writer);
             Document document = new(pdf);
 
-            PdfFont comic = PdfFontFactory.CreateFont(@"C:\Windows\Fonts\TIMES.ttf", PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_NOT_EMBEDDED);
+            PdfFont comic = PdfFontFactory.CreateFont(@"Resources\Fonts\Oswald-Bold.ttf", PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_NOT_EMBEDDED);
 
             var content = new Paragraph("Отчет по профилю")
                 .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)

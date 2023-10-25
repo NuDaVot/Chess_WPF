@@ -30,12 +30,10 @@ namespace Chess2.Model
         {
             _mainWindow.Navipage("AdminPanel.xaml");
         }
-        public async Task<bool> AuthorizationAsync(string username, string password)
+        public  bool AuthorizationAsync(string username, string password)
         {
-            var user = await _historyChessContext.Users.SingleOrDefaultAsync(u => u.Login == username);
-            if (user == null)
-                return false;
-            if (VerifyPassword(password, user.Password))
+            var user = _historyChessContext.Users.SingleOrDefault(u => u.Login == username);
+            if(user != null && VerifyPassword(password, user.Password) & user.Login == username)
             {
                 UserSetting.Default.Rating = (int)user.Rating;
                 UserSetting.Default.Status = (bool)user.Status;

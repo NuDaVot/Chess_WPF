@@ -5,7 +5,6 @@
 		private string _namePage = "MenuA.xaml";
 		public string NamePage;
 		public string Background = "Resources/Pictures/Background.png";
-        public bool isWhite = false;
         public MainWindowModel()
 		{
 			NamePage = _namePage;
@@ -15,6 +14,10 @@
 			NamePage = vlue;
             RaisePropertiesChanged("Background");
             RaisePropertiesChanged("NamePage");
+		}
+		public string GetPage()
+		{
+			return NamePage;
 		}
 	}
 }

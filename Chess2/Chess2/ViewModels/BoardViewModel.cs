@@ -17,7 +17,7 @@ namespace Chess2.ViewModels
 
         public BoardViewModel()
         {
-            board = new Board(_mainWindow.isWhite);
+            board = new Board(ChooseCollor.Default.IsWhite);
             AddList = board.cells;
             location_number_letters = board.location_number_letters;
         }

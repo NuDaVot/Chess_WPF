@@ -16,13 +16,13 @@ namespace Chess2.Model
 		}
 		public void IsBlack()
 		{
-			_mainWindow.isWhite = false;
+			ChooseCollor.Default.IsWhite = false;
 
             _mainWindow.Navipage("GamePage.xaml");
 		}
 		public void IsWhite()
 		{
-            _mainWindow.isWhite = true;
+            ChooseCollor.Default.IsWhite = true;
             _mainWindow.Navipage("GamePage.xaml");
 		}
 

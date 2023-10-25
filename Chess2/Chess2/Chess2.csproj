@@ -224,6 +224,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Properties\ChooseCollor.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ChooseCollor.settings</DependentUpon>
+    </Compile>
     <Compile Update="Properties\UserSetting.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
@@ -232,6 +237,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Properties\ChooseCollor.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ChooseCollor.Designer.cs</LastGenOutput>
+    </None>
     <None Update="Properties\UserSetting.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>UserSetting.Designer.cs</LastGenOutput>

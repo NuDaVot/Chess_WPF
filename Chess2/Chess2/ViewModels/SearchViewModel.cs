@@ -9,8 +9,8 @@
             Task.Run(() =>
             {
                 System.Threading.Thread.Sleep(7000);
+                if(_model.GetPage().Equals("Search.xaml"))
                 _model.IsChooseColor();
-
             });
 
         }
