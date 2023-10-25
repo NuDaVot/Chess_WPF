@@ -51,7 +51,7 @@ namespace Chess2.ViewModels
                 ErrorMessageAllField = "*Все поля обязательны для заполнения";
                 return false;
             }
-            else if (users1.Any(i => i.Login == UserLogin))
+            else if (users1.Any(i => i.Login == UserLogin || i.Login.ToLower() == UserLogin.ToLower()))
             {
                 ErrorMessageLogin = "Логин занят";
 				return false;

@@ -1,4 +1,6 @@
 ﻿
+using System.Linq;
+
 namespace Chess2.Model
 {
     class SignInModel : BindableBase
@@ -32,8 +34,8 @@ namespace Chess2.Model
         }
         public  bool AuthorizationAsync(string username, string password)
         {
-            var user = _historyChessContext.Users.SingleOrDefault(u => u.Login == username);
-            if(user != null && VerifyPassword(password, user.Password) & user.Login == username)
+            var user = _historyChessContext.Users.SingleOrDefault(u => (u.Login.Equals(username)));
+            if(user != null && VerifyPassword(password, user.Password) && user.Login == username)
             {
                 UserSetting.Default.Rating = (int)user.Rating;
                 UserSetting.Default.Status = (bool)user.Status;
