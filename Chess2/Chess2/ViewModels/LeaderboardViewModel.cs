@@ -71,7 +71,7 @@ namespace Chess2.ViewModels
 			}
 			else
             {
-                if(Players.Count == 0) 
+                if(Players.Count == 0 ) 
                 {
                     foreach (var i in players)
                     {
@@ -79,6 +79,10 @@ namespace Chess2.ViewModels
                             Players.Add(new LeaderboardModel(place++, i.Nick, i.Rating, Visibility.Visible, i.Iduser));
                     }
                 }
+		if else(Player == null)
+  		{
+    			TBV = Visibility.Visible;
+		}
                 else
                 {
                     BV = Visibility.Visible;
