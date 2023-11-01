@@ -11,8 +11,10 @@ namespace Chess2.ViewModels
         public Visibility BV { get; set; } = Visibility.Visible;
         public Visibility SVV { get; set; } = Visibility.Visible;
 		public Visibility TBV { get; set; } = Visibility.Collapsed;
+        public string NotFind { get; set; } = "Игрок не найден";
 
-		public string Search
+
+        public string Search
         {
             get { return GetValue<string>(); }
             set { SetValue(value, changedCallback: SearchPlayer); }
@@ -63,6 +65,7 @@ namespace Chess2.ViewModels
                     if (nick.Count == 0 && allCollapsed)
                     {
                         SVV = Visibility.Collapsed;
+                        NotFind = "Игрок не найден";
                         TBV = Visibility.Visible;
                     }
                     else
@@ -90,7 +93,7 @@ namespace Chess2.ViewModels
                     }
                 }
             }
-            catch (InvalidOperationException ex) { BV = Visibility.Collapsed;SVV = Visibility.Collapsed; }
+            catch (InvalidOperationException ex) { BV = Visibility.Collapsed;SVV = Visibility.Collapsed; TBV = Visibility.Visible; NotFind = "Все игроки забанены"; }
 			 
         }
         public class MyItemComparer : IEqualityComparer<LeaderboardModel>

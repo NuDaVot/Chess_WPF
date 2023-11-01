@@ -56,7 +56,7 @@
                         </Grid>
                     </StackPanel>
                 </Border>
-                <TextBlock Text="Игрок не найден" 
+                <TextBlock Text="{Binding NotFind}" 
                            Style="{StaticResource TextBlockStyle}"
                            FontSize="43"
                            TextAlignment="Center"
