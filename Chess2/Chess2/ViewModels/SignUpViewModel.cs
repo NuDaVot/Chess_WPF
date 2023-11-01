@@ -35,12 +35,14 @@ namespace Chess2.ViewModels
             string salt = BCrypt.Net.BCrypt.GenerateSalt(12);
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(UserPassword, salt);
             await _model.AddNewUser(UserNick, UserLogin, hashedPassword);
-            _model.IsRegistr();
-            UserSetting.Default.Rating = 0;
-            UserSetting.Default.Nick = UserNick;
-            UserSetting.Default.Login = UserLogin;
-            UserSetting.Default.Password = UserPassword;
-        }, bool () =>
+            var users = _model.GetAllUserNick().SingleOrDefault(u => u.Nick == UserNick);
+			UserSetting.Default.Rating = 0;
+			UserSetting.Default.Nick = UserNick;
+			UserSetting.Default.Login = UserLogin;
+			UserSetting.Default.Password = UserPassword;
+			UserSetting.Default.IdUser = users.Iduser;
+			_model.IsRegistr();
+		}, bool () =>
         {
             if (string.IsNullOrWhiteSpace(UserNick)
                 || string.IsNullOrWhiteSpace(UserLogin)

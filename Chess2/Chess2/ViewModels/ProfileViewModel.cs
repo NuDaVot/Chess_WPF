@@ -19,6 +19,8 @@ namespace Chess2.ViewModels
 		public string FastMode => _model.FastMode;
         public string ClassicMode => _model.ClassicMode;
 		public string ProfileIcon => _model.ProfileIcon;
+        public Visibility VBParties { get; set; } = Visibility.Visible;
+		public Visibility TBV { get; set; } = Visibility.Collapsed;
 
 		public string Variable1 { get; set; }
         public string Variable2 { get; set; }
@@ -42,7 +44,12 @@ namespace Chess2.ViewModels
                 data.WhiteUserImage = WhiteRect;
                 data.BlackUserImage = BlackRect;
             });
-            Variable1 = UserSetting.Default.Nick;
+            if (Parties.Count == 0)
+            {
+				VBParties = Visibility.Collapsed; 
+                TBV = Visibility.Visible;
+			}
+			Variable1 = UserSetting.Default.Nick;
 			Variable2 = UserSetting.Default.Rating.ToString();
             var party = _model.GetParty().Where(p => p.WhiteUser == UserSetting.Default.IdUser || p.BlackUser == UserSetting.Default.IdUser).ToList();
             Partys = party.Count;

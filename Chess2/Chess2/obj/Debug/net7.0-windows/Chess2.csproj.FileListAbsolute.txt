@@ -316,7 +316,6 @@ D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Search.pn
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\SecondPlace.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\ThirdPlace.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\WhileRect.png
-D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Белый.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Jackdaw.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Icon.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\CrossRed.png
@@ -324,7 +323,6 @@ D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Cross.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Order.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Percent.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Registr.png
-D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\Черный.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Resources\Pictures\ChessBoard.png
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Chess2.exe
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Chess2.dll.config
@@ -338,7 +336,6 @@ D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\BouncyCastle.Crypto.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\DevExpress.Mvvm.UI.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\DevExpress.Mvvm.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Humanizer.dll
-D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itextsharp.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\MaterialDesignColors.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
 D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.dll
@@ -449,3 +446,17 @@ C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.commons.dll
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.barcodes.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.forms.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.io.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.kernel.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.layout.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.pdfa.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.sign.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.styledxmlparser.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.svg.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\itext.commons.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Chess_WPF\Chess2\Chess2\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
