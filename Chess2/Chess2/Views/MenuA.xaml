@@ -12,6 +12,15 @@
         <vm:MenuAViewModel/>
     </Page.DataContext>
     <Grid>
+        <Button Style="{StaticResource help}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="#C31818"
+                Foreground="White"
+                Command="{Binding InfoCommand, IsAsync=True}" 
+                Margin="10" 
+                Content="i" Width="25" Height="25"/>
+
         <Viewbox Stretch="Uniform" 
                  MaxWidth="550"
                  MaxHeight="550">

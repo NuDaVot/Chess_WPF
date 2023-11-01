@@ -12,6 +12,8 @@
 		public DelegateCommand SignInCommand => new(() => _model.IsSignIn());
         public DelegateCommand SignUpCommand => new(() => _model.IsSignUp());
         public DelegateCommand LeaderboardCommand => new(() => _model.IsLeaderboard());
+		public DelegateCommand InfoCommand => new(() => _model.IsInfo());
 
-    }
+
+	}
 }

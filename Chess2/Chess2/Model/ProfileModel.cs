@@ -5,6 +5,8 @@ using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Properties;
+using Microsoft.Win32;
+
 namespace Chess2.Model
 {
     class ProfileModel : BindableBase
@@ -12,7 +14,7 @@ namespace Chess2.Model
 		MainWindowModel _mainWindow;
         HistoryChessContext _historyChessContext;
         private readonly IMapper _mapper;
-        public string CrossRed = "/Resources/Pictures/CrossRed.png";
+        public string CrossRed = "/Resources/Pictures/RedCross.png";
         public string Cross = "/Resources/Pictures/Cross.png";
         public string ChessBoard = "/Resources/Pictures/ChessBoard.png";
 		public string ChessIcon = "/Resources/Pictures/ChessIcon.png";
@@ -56,43 +58,48 @@ namespace Chess2.Model
         }
         public async Task GetReport(string player, int rating, int party, int wins, int lose, int draws)
         {
-            PdfWriter writer = new($"{player}.pdf");
-            PdfDocument pdf = new(writer);
-            Document document = new(pdf);
+			SaveFileDialog saveFileDialog = new SaveFileDialog
+			{
+				Filter = "PDF files (*.pdf)|*.pdf",
+				Title = "Создание отчета профиля"
+			};
+			PdfFont comic = PdfFontFactory.CreateFont(@"Resources\Fonts\Oswald-Bold.ttf", PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_NOT_EMBEDDED);
+			if (saveFileDialog.ShowDialog() == true)
+			{
+				string outputPath = saveFileDialog.FileName;
+				using (var writer = new PdfWriter(outputPath))
+				{
+					using (var pdf = new PdfDocument(writer))
+					{
+						var document = new Document(pdf);
+						var content = new Paragraph("Отчет по профилю")
+							.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
+							.SetFont(comic)
+							.SetFontSize(16);
 
-            PdfFont comic = PdfFontFactory.CreateFont(@"Resources\Fonts\Oswald-Bold.ttf", PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_NOT_EMBEDDED);
+						document.Add(content);
 
-            var content = new Paragraph("Отчет по профилю")
-                .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
-                .SetFont(comic)
-                .SetFontSize(16);
+						content = new Paragraph($"Дата: {DateOnly.FromDateTime(DateTime.Now).ToString("D")}")
+							.SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)
+							.SetFont(comic)
+							.SetFontSize(16);
 
-            document.Add(content);
-
-            content = new Paragraph($"Дата: {DateOnly.FromDateTime(DateTime.Now).ToString("D")}")
-                .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
-                .SetFont(comic)
-                .SetFontSize(16);
-
-            document.Add(content);
-
-
-
-            content = new Paragraph($"Ник: {player}.\n" +
-                $"Рейтинг: {rating}.\n" +
-                $"Кол-во сыгранных игр:{party}.\n" +
-                $"Кол-во побед: {wins}.\n" +
-                $"Кол-во проигрышей: {lose}\n" +
-                $"Кол-во ничьи: {draws}")
-                .SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT)
-                .SetFont(comic)
-                .SetFontSize(16);
-
-            document.Add(content);
-            document.Close();
-            await Task.CompletedTask;
-
-
-        }
+						document.Add(content);
+						content = new Paragraph($"Ник: {player}.\n" +
+									 $"Рейтинг: {rating}.\n" +
+									 $"Кол-во сыгранных игр:{party}.\n" +
+									 $"Кол-во побед: {wins}.\n" +
+									 $"Кол-во проигрышей: {lose}\n" +
+									 $"Кол-во ничьи: {draws}")
+									 .SetTextAlignment(iText.Layout.Properties.TextAlignment.LEFT)
+									 .SetFont(comic)
+									 .SetFontSize(16);
+						document.Add(content);
+						document.Close();
+						await Task.CompletedTask;
+					}
+				}
+			}
+		}
     }
 }

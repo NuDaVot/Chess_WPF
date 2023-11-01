@@ -22,5 +22,9 @@
 			_mainWindow.Navipage("Leaderboard.xaml");
 			LeaderboardModel.MenuAOrMenu = true;
 		}
+		public void IsInfo()
+		{
+			_mainWindow.Navipage("Info.xaml");
+		}
 	}
 }

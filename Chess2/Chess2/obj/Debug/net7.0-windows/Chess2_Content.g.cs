@@ -26,9 +26,11 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/background.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/authorization.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/blackrect.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/br.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessboardempty.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessiconwhite.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/classicmode.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/fastmode.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/firstplace.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/fiveplace.png")]
@@ -40,6 +42,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/percentred.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/profileicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/ramka.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/redcross.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/redrect.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/reshka.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/search.png")]
@@ -54,5 +57,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/percent.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/registr.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/chessboard.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pictures/wr.png")]
 
 

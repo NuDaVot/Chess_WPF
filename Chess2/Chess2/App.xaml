@@ -298,7 +298,30 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-
+            
+            <Style TargetType="Button" x:Key="help">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" 
+                                    CornerRadius="5" 
+                                    BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Button.Effect">
+                            <Setter.Value>
+                                <DropShadowEffect ShadowDepth="1" Direction="240" Color="Black" Opacity="0.5" />
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
