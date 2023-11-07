@@ -7,11 +7,84 @@
       xmlns:vm="clr-namespace:Chess2.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Info">
+      Title="Info" Background="#9F1719">
     <Page.DataContext>
         <vm:InfoViewModel/>
     </Page.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="240"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding ChessIcon}"
+                   Height="210"
+                   Width="210"
+                       Grid.Column="0"/>
+            <Image Source="{Binding JackdawRed}"
+                   Height="250"
+                   Width="250"
+                       Grid.Column="1"/>
+            <Image Source="{Binding CrossRed}"
+                   Height="250"
+                   Width="250"
+                       Grid.Column="2"/>
+            <Image Source="{Binding PercentRed}"
+                   Height="250"
+                   Width="250"
+                       Grid.Column="3"/>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Сыгранная партия" 
+                       Style="{StaticResource TextBlockStyle}"
+                       FontSize="43"
+                       TextAlignment="Center"
+                       Grid.Column="0"/>
+            <TextBlock Text="Победа" 
+                       Style="{StaticResource TextBlockStyle}"
+                       FontSize="43"
+                       TextAlignment="Center"
+                       Grid.Column="1"/>
+            <TextBlock Text="Поражения" 
+                       Style="{StaticResource TextBlockStyle}"
+                       FontSize="43"
+                       TextAlignment="Center"
+                       Grid.Column="2"/>
+            <TextBlock Text="Ничья" 
+                       Style="{StaticResource TextBlockStyle}"
+                       FontSize="43"
+                       TextAlignment="Center"
+                       Grid.Column="3"/>
+
+        </Grid>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button 
+                Content="Правила игры" 
+                Command="{Binding PerehodCommand}"
+                Width="200"
+                Margin="0,0,5,0"/>
+            <Button 
+                Content="Главное меню" 
+                Command="{Binding BackCommand}"
+                Width="200"
+                Margin="5,0,0,0"/>
+        </StackPanel>
         
     </Grid>
+
 </Page>
