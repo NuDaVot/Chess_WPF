@@ -5,8 +5,8 @@ namespace Chess2.ViewModels
     public class SignInViewModel : BindableBase
     {
 		readonly SignInModel _model = new SignInModel();
-        public string UserLogin { get; set; } = "Akim1";
-        public string Password { get; set; } = "1234";
+        public string UserLogin { get; set; }
+        public string Password { get; set; }
         public string ErrorMessage { get; set; }
         public string ErrorMessageButton { get; set; }
         public string Authorization => _model.Authorization;
