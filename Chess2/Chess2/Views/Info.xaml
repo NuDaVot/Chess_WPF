@@ -7,7 +7,7 @@
       xmlns:vm="clr-namespace:Chess2.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Info" Background="#9F1719">
+      Title="Info" Background="#FFFFF0">
     <Page.DataContext>
         <vm:InfoViewModel/>
     </Page.DataContext>
