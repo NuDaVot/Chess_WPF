@@ -152,18 +152,19 @@
                             HorizontalAlignment="Center" 
                             Margin="0,20,0,0" >
                 <Button Margin="0,0,140,0"
-                            Height="76"
-                            Width="320"
-                            Style="{StaticResource ButtonStyle}"
-                            FontSize="45"
-                            Content="Doc"/>
+                        Height="76"
+                        Width="320"
+                        Style="{StaticResource ButtonStyle}"
+                        Command="{Binding DocCommand, IsAsync=True}"
+                        FontSize="45"
+                        Content="Отчет"/>
                 <Button Height="76"
-                            Margin="0,0,20,0"
-                            Width="320"
-                            Style="{StaticResource ButtonStyleBlue}"
-                            Command="{Binding CancelCommand, IsAsync=True}"
-                            Content="Назад"
-                            FontSize="45"/>
+                        Margin="0,0,20,0"
+                        Width="320"
+                        Style="{StaticResource ButtonStyleBlue}"
+                        Command="{Binding CancelCommand, IsAsync=True}"
+                        Content="Назад"
+                        FontSize="45"/>
             </StackPanel>
         </StackPanel>
     </Grid>

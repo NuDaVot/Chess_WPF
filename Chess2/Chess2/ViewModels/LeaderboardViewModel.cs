@@ -1,4 +1,6 @@
-﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+﻿using Chess2.Data;
+using Newtonsoft.Json.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace Chess2.ViewModels
 {
@@ -108,7 +110,12 @@ namespace Chess2.ViewModels
 			}
 		}
         public DelegateCommand CancelCommand => new(() => _model.IsCancel());
-        public DelegateCommand SignUpCommand { get; set; }
-	}
+        public AsyncCommand DocCommand => new(async () =>
+        {
+            var players = _model.GetAllUser().OrderByDescending(player => player.Rating);
+
+            await _model.GetReport(players);
+        });
+    }
 
 }
