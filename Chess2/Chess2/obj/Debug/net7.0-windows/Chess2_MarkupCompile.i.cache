@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\User\Documents\GitHub\Chess_WPF\Chess2\Chess2\App.xaml
-17849026383
+181677636160
 50-113570461
-75-474292793
+79-176687502
 254-1617622467
-Views\AdminPanel.xaml;Views\Banned.xaml;Views\BoardView.xaml;Views\ChooseColor.xaml;Views\GamePage.xaml;Views\HeadsOrTails.xaml;Views\Info.xaml;Views\Leaderboard.xaml;Views\MainWindow.xaml;Views\Menu.xaml;Views\MenuA.xaml;Views\ModeVariation.xaml;Views\Profile.xaml;Views\ProfileSet.xaml;Views\Search.xaml;Views\SignIn.xaml;Views\SignUp.xaml;
+Views\AdminPanel.xaml;Views\Banned.xaml;Views\BoardView.xaml;Views\CheckProfile.xaml;Views\ChooseColor.xaml;Views\GamePage.xaml;Views\HeadsOrTails.xaml;Views\Info.xaml;Views\Leaderboard.xaml;Views\MainWindow.xaml;Views\Menu.xaml;Views\MenuA.xaml;Views\ModeVariation.xaml;Views\Profile.xaml;Views\ProfileSet.xaml;Views\Search.xaml;Views\SignIn.xaml;Views\SignUp.xaml;
 
 False
 

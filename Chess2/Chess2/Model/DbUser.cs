@@ -10,7 +10,8 @@ namespace Chess2.Model
 {
     public class DbUser : User, INotifyPropertyChanged
 	{
-		public event PropertyChangedEventHandler PropertyChanged;
+        readonly AdminPanelModel _model = new AdminPanelModel();
+        public event PropertyChangedEventHandler PropertyChanged;
 		protected virtual void OnPropertyChanged(string propertyName)
 		{
 			if (PropertyChanged != null)
@@ -50,6 +51,13 @@ namespace Chess2.Model
         public AsyncCommand BanCommand => new(async () =>
         {
             await UpdateStatusInDatabase();
+        });
+        public DelegateCommand ProfileCommand => new(() => 
+        {
+            UserCheck.Default.Nick = Nick;
+            UserCheck.Default.Rating = (int)Rating;
+            UserCheck.Default.IdUser = Iduser;
+            _model.IsProfile(); 
         });
     }
 }

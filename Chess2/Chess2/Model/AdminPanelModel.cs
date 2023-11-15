@@ -46,6 +46,10 @@ namespace Chess2.Model
 		{
 			_mainWindow.Navipage("SignIn.xaml");
 		}
-       
+        public void IsProfile()
+        {
+            _mainWindow.Navipage("CheckProfile.xaml");
+        }
+
     }
 }

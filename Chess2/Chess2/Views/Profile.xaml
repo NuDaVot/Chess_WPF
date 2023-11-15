@@ -267,7 +267,7 @@
                                                         <TextBlock.Text>
                                                             <MultiBinding StringFormat="{}{0}({1})">
                                                                 <Binding Path="BlackUserNavigation.Nick"/>
-                                                                <Binding Path="WhiteUserNavigation.Rating"/>
+                                                                <Binding Path="BlackUserNavigation.Rating"/>
                                                             </MultiBinding>
                                                         </TextBlock.Text>
                                                     </TextBlock>
@@ -292,7 +292,6 @@
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                        
                     </StackPanel>
                 </ScrollViewer>
             </StackPanel>
