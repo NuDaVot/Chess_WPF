@@ -9,6 +9,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Profile" >
+    <Page.DataContext>
+        <vm:ProfileSetViewModel/>
+    </Page.DataContext>
     <Grid>
         <Viewbox Stretch="Uniform" 
                  MaxWidth="500"
@@ -18,41 +21,54 @@
                 <TextBlock Text="Профиль" 
                                Style="{StaticResource TextBlockStyle}"
                                FontSize="100"/>
-                    <TextBox Height="55"
+                <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Логин"
                          FontSize="30"
                          FontFamily="Resources\Fonts\#Oswald" 
                          Margin="0,50,0,10"
-                         BorderBrush="#C31818"/>
+                         BorderBrush="#C31818"
+                         Text="{Binding Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Ник"
                          FontSize="30"
                          FontFamily="Resources\Fonts\#Oswald" 
                          Margin="0,0,0,10"
-                         BorderBrush="#C31818"/>
+                         BorderBrush="#C31818"
+                         Text="{Binding Nick, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox Height="55"
                          materialDesign:HintAssist.Hint="Пароль"
                          FontSize="30"
                          FontFamily="Resources\Fonts\#Oswald"
                          Margin="0,0,0,10"
-                         BorderBrush="#C31818"/>
+                         BorderBrush="#C31818"
+                         Text="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox Height="55"
-                         materialDesign:HintAssist.Hint="Проверка"
+                         materialDesign:HintAssist.Hint="Новый пароль"
                          FontSize="30"
                          FontFamily="Resources\Fonts\#Oswald"
                          Margin="0,0,0,10"
-                         BorderBrush="#C31818"/>
+                         BorderBrush="#C31818"
+                         Text="{Binding NewPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Height="55"
+                         materialDesign:HintAssist.Hint="Повторить новый пароль"
+                         FontSize="30"
+                         FontFamily="Resources\Fonts\#Oswald"
+                         Margin="0,0,0,10"
+                         BorderBrush="#C31818"
+                         Text="{Binding ConfirmNewPass, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <StackPanel Orientation="Horizontal">
                     <Button Margin="0,30,0,0"
                             Height="63"
                             Width="235"
                             Style="{StaticResource ButtonStyle}"
+                            Command="{Binding EditCommand, IsAsync=True}"
                             FontSize="45"
                             Content="Сохранить"/>
                     <Button Margin="60,30,0,0"
                             Height="63"
                             Width="235"
                             Style="{StaticResource ButtonStyleBlue}"
+                            Command="{Binding CanselCommand, IsAsync=True}"
                             Content="Отмена"
                             FontSize="45"/>
                 </StackPanel>
