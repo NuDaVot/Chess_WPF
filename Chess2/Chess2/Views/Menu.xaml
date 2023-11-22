@@ -53,7 +53,7 @@
                         Width="530" 
                         Style="{StaticResource ButtonStyleBlue}"
                         Command="{Binding ExitCommand, IsAsync=True}"
-                        Content="Выйти"/>
+                        Content="Выйти из профиля"/>
             </StackPanel>
         </Viewbox>
     </Grid>

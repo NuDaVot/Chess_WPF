@@ -60,7 +60,7 @@ namespace Chess2.ViewModels
 			}
 			else if (users1.Any(i => i.Nick == UserNick))
             {
-                ErrorMessageNick = "Никнейм занят";
+                ErrorMessageNick = "Ник занят";
 				return false;
 
 			}

@@ -48,7 +48,7 @@
                             Height="63"
                             Width="235"
                             Style="{StaticResource ButtonStyleBlue}"
-                            Content="Отмена"
+                            Content="Назад"
                             Command="{Binding CanselCommand, IsAsync=True}"
                             FontSize="45"/>
                 </StackPanel>
