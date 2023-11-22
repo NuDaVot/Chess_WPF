@@ -72,6 +72,10 @@ namespace Chess2.ViewModels
 		public AsyncCommand ReportCommand => new(async() =>
         {
             await _model.GetReport(UserSetting.Default.Nick, UserSetting.Default.Rating, Partys, Wins, Losses, Draws);
+        }, bool () =>
+        {
+            if (Partys == 0) return false;
+            else return true;
         });
     }
 }

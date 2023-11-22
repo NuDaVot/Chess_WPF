@@ -115,6 +115,11 @@ namespace Chess2.ViewModels
             var players = _model.GetAllUser().OrderByDescending(player => player.Rating);
 
             await _model.GetReport(players);
+        }, bool () =>
+        {
+            if (NotFind == "Все игроки забанены")
+                return false;
+            else return true;
         });
     }
 
